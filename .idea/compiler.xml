@@ -24,10 +24,18 @@
         <processorPath useClasspath="true" />
         <module name="frame-core" />
       </profile>
+      <profile default="false" name="Annotation profile for frame-dao" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="frame-dao" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="frame" target="1.8" />
       <module name="frame-core" target="1.8" />
+      <module name="frame-dao" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

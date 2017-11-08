@@ -2,238 +2,87 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_40.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_kryo_4_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_minlog_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_reflectasm_1_11_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jai_imageio_jai_imageio_core_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_9_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_web_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_anim_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_awt_util_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_bridge_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_codec_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_constants_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_css_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_dom_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ext_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_gvt_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_i18n_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_parser_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_script_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svg_dom_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svggen_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_transcoder_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_util_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_xml_1_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_xmlgraphics_commons_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_27_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mozilla_rhino_1_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_python_jython_2_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_12_1_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_04.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_ext_1_3_04.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClients.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientsImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServerListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServersImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/HandlerSupport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/ReceiveHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/ReceiveHandlerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/atomic/Atomicable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/atomic/Closable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/atomic/Closables.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/atomic/ClosablesImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/atomic/Failable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/BeanFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/ClassReloader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/ClassReloaderImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/Container.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/ContainerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/ContextClosedListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/ContextRefreshedListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/DynamicClassLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/bean/Injecter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/Cache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/CacheImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/Handler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Channel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/ChannelImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Element.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/HandlerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/ListenerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Local.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/LocalImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Remote.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/RemoteImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/Chrome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeClientImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/CipherSupport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Crypto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des3Impl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DesImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Digest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DigestImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Rsa.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/RsaImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Sign.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/SignImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/XorShift.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/XorShiftImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/ModelImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ClientImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ClientListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ClientManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ClientManagerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/Handler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/Listener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/NioHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/NioHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/Server.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ServerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ServerListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ServerManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/ServerManagerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Excel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/ExcelImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Pptx.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/PptxImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ImageParserImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/Parser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ParserHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ParserHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/SvgParserImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/TextParserImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/DateJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/DateScheduler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/DateSchedulerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/HourJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/HourScheduler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/HourSchedulerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/MinuteJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/MinuteScheduler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/MinuteSchedulerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/Scheduler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerSupport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SchedulerTaskImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SecondsJob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SecondsScheduler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SecondsSchedulerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/DiskStorageImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/Storage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/StorageListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/Storages.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/StoragesImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Compresser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CompresserImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Context.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/ContextImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Converter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/ConverterImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/DateTime.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/DateTimeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Generator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Http.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/HttpImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Io.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/IoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Json.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Logger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/LoggerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/MessageImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Numeric.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/NumericImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/QrCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/QrCodeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Serializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/SerializerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Thread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/ThreadImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/TimeHash.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/TimeUnit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Validator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/ValidatorImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Xml.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClients.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientsImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/resources/core.frame.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/resources/org/lwd/frame/util/message.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/scale/org/lwd/frame/util/GeneratorImpl.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/scale/org/lwd/frame/util/TimeHashImpl.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core/src/main/scale/org/lwd/frame/util/XmlImpl.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/Connection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/ConnectionFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/ConnectionSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/Mode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/AutoModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Create.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/CreateImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Executer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/ExecuterImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Memory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/MemoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Update.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/UpdateImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/Dialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/DialectFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/DialectFactoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/DialectSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/MssqlDialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/MysqlDialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/OracleDialect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Connection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/ConnectionImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/DataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/DataSourceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Jdbc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/JdbcSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Procedure.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/ProcedureImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Sql.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlTableImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Transactional.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/DataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Jsonable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Memory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Model.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTableImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTables.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTablesImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/mongo/Mongo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/mongo/MongoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/Orm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/OrmSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/PageList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/PageListImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/Query.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/QuerySupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateOrm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateOrmImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateQuery.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/Session.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionFactoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteOrm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteOrmImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteQuery.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisOrm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisOrmImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/Session.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionFactoryImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/resources/dao.frame.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao/src/main/resources/org/lwd/frame/dao/auto/create.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/frame-core.iml" afterPath="$PROJECT_DIR$/frame-core/frame-core.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/pom.xml" afterPath="$PROJECT_DIR$/frame-core/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="frame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -241,6 +90,7 @@
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/frame-core/target/" />
+    <ignored path="$PROJECT_DIR$/frame-dao/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -272,57 +122,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClient.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientListener.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClients.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientsImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioHelper.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioHelperImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioListener.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServer.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServerImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServerListener.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServers.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServersImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/HandlerSupport.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/ReceiveHandler.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/ReceiveHandlerImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientListener.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClients.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientsImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeClient.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/Chrome.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeClientImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/CipherSupport.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Crypto.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des3.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des3Impl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DesImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Digest.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DigestImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Rsa.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/RsaImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Sign.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/SignImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/XorShift.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/XorShiftImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/ModelImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ImageParserImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/Parser.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ParserHelper.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ParserHelperImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/SvgParserImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/TextParserImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Excel.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/ExcelImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Pptx.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/PptxImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Update.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/UpdateImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/Dialect.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/DialectFactory.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/DialectFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/DialectSupport.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/MssqlDialect.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/MysqlDialect.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/dialect/OracleDialect.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/mongo/Mongo.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/mongo/MongoImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Connection.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/ConnectionImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/DataSource.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/Connection.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/ConnectionSupport.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/Mode.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/DataSourceImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Jdbc.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/JdbcSupport.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Procedure.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/ProcedureImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Sql.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlTable.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlTableImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Transactional.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/Orm.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/PageList.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/OrmSupport.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/PageListImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/Query.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/QuerySupport.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteQuery.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteOrm.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteOrmImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateOrm.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateQuery.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateOrmImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionFactory.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/Session.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisBuilder.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisOrm.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisOrmImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/Session.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionFactory.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionImpl.java" />
       </list>
     </option>
   </component>
@@ -371,7 +221,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -400,7 +252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
+              <option name="myItemId" value="frame-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,25 +266,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
+              <option name="myItemId" value="frame-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -450,29 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
+              <option name="myItemId" value="frame-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -484,11 +296,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,7 +310,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
+              <option name="myItemId" value="frame-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -518,11 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poi" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,7 +370,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
+              <option name="myItemId" value="frame-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -552,22 +386,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="frame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="poi" />
+              <option name="myItemId" value="frame-dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pptx" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -581,18 +457,18 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame" />
-      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame\ws" />
-      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame\scheduler" />
-      <recent name="C:\project\frame\frame-core\src\main\resources" />
-      <recent name="C:\project\frame\frame-core\src\main\resources\org\lwd\frame\util" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\frame\frame-core\src\main\scale" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.lwd.frame.storage" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\project\frame\frame-core\src\main\scale" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\frame\frame-dao\src\main\java\org\lwd\frame\dao" />
+      <recent name="C:\project\frame\frame-dao\src\main\resources" />
+      <recent name="C:\project\frame\frame-dao\src\main\resources\org\lwd\frame\dao\auto" />
+      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame" />
+      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame\ws" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat">
@@ -1145,7 +1021,8 @@
       <updated>1510039012698</updated>
       <workItem from="1510039017588" duration="1437000" />
       <workItem from="1510040521657" duration="5937000" />
-      <workItem from="1510103008994" duration="282000" />
+      <workItem from="1510103008994" duration="1747000" />
+      <workItem from="1510123973077" duration="1150000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1510039271864</created>
@@ -1159,11 +1036,17 @@
       <option name="project" value="LOCAL" />
       <updated>1510040021011</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="frame-core完成">
+      <created>1510103398308</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510103398308</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7656000" />
+    <option name="totallyTimeSpent" value="10271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1177,6 +1060,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1185,14 +1069,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1208,7 +1091,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="项目初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目初始化" />
+    <MESSAGE value="frame-core完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="frame-core完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1219,266 +1103,167 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClients.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientsImpl.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.457627">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioHelper.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTableImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTablesImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1457976">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/mongo/Mongo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38931298">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/mongo/MongoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.03244275">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioHelperImpl.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="75" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="75" />
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioListener.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/ConnectionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServer.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServerImpl.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/DataSourceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0169492">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state vertical-scroll-proportion="-6.338983">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServerListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServersImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.457627">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/HandlerSupport.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Jdbc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/ReceiveHandler.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/JdbcSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state vertical-scroll-proportion="-2.3050847">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/ReceiveHandlerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5515267">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20411664">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioClient.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Procedure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/aio/AioServers.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/ProcedureImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2915952">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state vertical-scroll-proportion="-1.440678">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClients.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/ws/WsClientsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33206108">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20411664">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/Chrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17495711">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5515267">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/chrome/ChromeImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.48664123">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/CipherSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Crypto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Des3Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22709924">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Digest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DigestImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1864405">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Rsa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/RsaImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1525424">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/Sign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/SignImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9491525">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/XorShift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/XorShiftImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0648855">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Sql.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
@@ -1486,112 +1271,280 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/ModelImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1080618">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ImageParserImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2881356">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ParserHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-1.440678">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ParserHelperImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.440678">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/SvgParserImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.440678">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/TextParserImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.440678">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Excel.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/ExcelImpl.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/SqlTableImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.440678">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state vertical-scroll-proportion="-2.0169492">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Pptx.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/jdbc/Transactional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6415094">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/Orm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/OrmSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3728814">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/PageList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/PageListImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/QuerySupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0648855">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/PptxImpl.java">
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3728814">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteOrm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3050847">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/lite/LiteOrmImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40823328">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateOrmImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.762712">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.259542">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/SessionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.519084">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateOrm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/hibernate/HibernateQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02915952">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23327616">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisOrm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/MybatisOrmImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.440678">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1864405">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/mybatis/SessionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16221374">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/Mode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/ConnectionSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.087478556">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/resources/dao.frame.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1659,7 +1612,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>frame</last-edited>
+          <last-edited>frame-dao</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1684,6 +1637,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: com.alibaba:fastjson:1.2.40</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

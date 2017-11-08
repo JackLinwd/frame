@@ -13,6 +13,7 @@
     <packaging>jar</packaging>
 
     <name>frame-core</name>
+    <url>https://github.com/JackLinwd/frame</url>
 
     <properties>
         <scala-library.version>2.12.1</scala-library.version>

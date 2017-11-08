@@ -9,6 +9,7 @@
     <version>0.0.1</version>
     <modules>
         <module>frame-core</module>
+        <module>frame-dao</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>
