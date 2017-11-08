@@ -15,6 +15,7 @@
         <module>frame-ctrl-socket</module>
         <module>frame-script</module>
         <module>frame-hadoop</module>
+        <module>frame-carousel</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>

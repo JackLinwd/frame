@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/frame.iml" filepath="$PROJECT_DIR$/frame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame-carousel/frame-carousel.iml" filepath="$PROJECT_DIR$/frame-carousel/frame-carousel.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-core/frame-core.iml" filepath="$PROJECT_DIR$/frame-core/frame-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" filepath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" filepath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
