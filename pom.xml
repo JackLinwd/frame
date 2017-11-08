@@ -11,6 +11,7 @@
         <module>frame-core</module>
         <module>frame-dao</module>
         <module>frame-ctrl</module>
+        <module>frame-ctrl-http</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>

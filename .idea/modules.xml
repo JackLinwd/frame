@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/frame.iml" filepath="$PROJECT_DIR$/frame.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-core/frame-core.iml" filepath="$PROJECT_DIR$/frame-core/frame-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" filepath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" filepath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-dao/frame-dao.iml" filepath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
     </modules>
   </component>
