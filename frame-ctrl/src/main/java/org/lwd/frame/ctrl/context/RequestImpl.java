@@ -148,7 +148,7 @@ public class RequestImpl implements Request, RequestAware {
 
     @Override
     public boolean checkSign() {
-        return sign.verify(getMap(), get(signName));
+        return sign.verify(getMap(), signName);
     }
 
     @Override
