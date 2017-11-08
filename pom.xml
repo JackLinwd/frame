@@ -12,6 +12,7 @@
         <module>frame-dao</module>
         <module>frame-ctrl</module>
         <module>frame-ctrl-http</module>
+        <module>frame-ctrl-socket</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>

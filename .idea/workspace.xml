@@ -2,42 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/IgnoreTimeHash.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/IgnoreUri.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/SecurityFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/SecurityHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/SecurityHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ServiceFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ServiceHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ServiceHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/Cookie.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/CookieAware.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/CookieImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/HeaderAdapterImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/RequestAdapterImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/ResponseAdapterImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/SessionAdapterImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/JsonConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/JsonConfigImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/JsonConfigs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/JsonConfigsImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/UploadHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/UploadHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/UploadListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/upload/UploadServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WebSocket.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WsHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WsHelperImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WsListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-http/src/main/resources/http.ctrl.frame.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/ServerListenerImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelperImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/HeaderAdapterImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/JsonSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/RequestAdapterImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/ResponseAdapterImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/SessionAdapterImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/resources/socket.ctrl.frame.config" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
@@ -53,6 +28,7 @@
     <ignored path="$PROJECT_DIR$/frame-dao/target/" />
     <ignored path="$PROJECT_DIR$/frame-ctrl/target/" />
     <ignored path="$PROJECT_DIR$/frame-ctrl-http/target/" />
+    <ignored path="$PROJECT_DIR$/frame-ctrl-socket/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,38 +45,7 @@
     <favorites_list name="frame" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IgnoreTimeHash.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/IgnoreTimeHash.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceHelperImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ServiceHelperImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="183" column="33" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="http.ctrl.frame.config" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frame-ctrl-http/src/main/resources/http.ctrl.frame.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57117116">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -115,16 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/GreaterThanValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/IdValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/IdValidatorSupport.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/LatitudeValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/LessThanValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/LongitudeValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/MatchRegexValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/MaxLengthValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/MobileValidatorImpl.java" />
-        <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/NotEmptyValidatorImpl.java" />
         <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/NotEqualsValidatorImpl.java" />
         <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/SignValidator.java" />
         <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/SignValidatorImpl.java" />
@@ -166,6 +101,16 @@
         <option value="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WsHelper.java" />
         <option value="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WsHelperImpl.java" />
         <option value="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ws/WsListener.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/pom.xml" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/resources/socket.ctrl.frame.config" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/ServerListenerImpl.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelper.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelperImpl.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/HeaderAdapterImpl.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/JsonSupport.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/RequestAdapterImpl.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/ResponseAdapterImpl.java" />
+        <option value="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/SessionAdapterImpl.java" />
       </list>
     </option>
   </component>
@@ -245,7 +190,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
+              <option name="myItemId" value="frame-ctrl-socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -259,7 +204,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
+              <option name="myItemId" value="frame-ctrl-socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -277,7 +222,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
+              <option name="myItemId" value="frame-ctrl-socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -303,7 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
+              <option name="myItemId" value="frame-ctrl-socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -319,7 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
+              <option name="myItemId" value="socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,7 +278,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
+              <option name="myItemId" value="frame-ctrl-socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -349,79 +294,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-ctrl-http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
+              <option name="myItemId" value="socket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="context" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-ctrl-http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,11 +338,11 @@
       <recent name="org.lwd.frame.storage" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\frame\frame-ctrl-socket\src\main\java\org\lwd\frame\ctrl\socket" />
+      <recent name="C:\project\frame\frame-ctrl-socket\src\main\resources" />
       <recent name="C:\project\frame\frame-ctrl-http\src\main\java\org\lwd\frame\ctrl\http" />
       <recent name="C:\project\frame\frame-ctrl-http\src\main\resources" />
       <recent name="C:\project\frame\frame-ctrl\src\main\resources" />
-      <recent name="C:\project\frame\frame-ctrl\src\main\java\org\lwd\frame\ctrl" />
-      <recent name="C:\project\frame\frame-ctrl\src\main\resources\org\lwd\frame\ctrl\validate" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat">
@@ -1005,7 +896,7 @@
       <workItem from="1510039017588" duration="1437000" />
       <workItem from="1510040521657" duration="5937000" />
       <workItem from="1510103008994" duration="1747000" />
-      <workItem from="1510123973077" duration="3792000" />
+      <workItem from="1510123973077" duration="4160000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1510039271864</created>
@@ -1037,15 +928,21 @@
       <option name="project" value="LOCAL" />
       <updated>1510127240721</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="frame-ctrl-http完成">
+      <created>1510127864699</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1510127864699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12913000" />
+    <option name="totallyTimeSpent" value="13281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1093,7 +990,8 @@
     <MESSAGE value="frame-core完成" />
     <MESSAGE value="frame-dao完成" />
     <MESSAGE value="frame-ctrl完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="frame-ctrl完成" />
+    <MESSAGE value="frame-ctrl-http完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="frame-ctrl-http完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1104,102 +1002,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/IdValidatorSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/LatitudeValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/LessThanValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/LongitudeValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/MatchRegexValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/MaxLengthValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/MobileValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/NotEmptyValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/NotEqualsValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/SignValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/SignValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.86440676">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/TrustfulIpValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.86440676">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/validate/Validate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1268,14 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6693548">
           <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27468583">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1530,6 +1324,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frame.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3195691">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6409336">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/resources/socket.ctrl.frame.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30846775">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/ServerListenerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16221374">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/HeaderAdapterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.86440676">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/JsonSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/RequestAdapterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="20" selection-start-line="23" selection-start-column="13" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/ResponseAdapterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.86440676">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/context/SessionAdapterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1457976">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1593,7 +1498,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>frame-ctrl-http</last-edited>
+          <last-edited>frame-ctrl-socket</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
