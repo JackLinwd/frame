@@ -31,10 +31,18 @@
         <processorPath useClasspath="true" />
         <module name="frame-dao" />
       </profile>
+      <profile default="false" name="Annotation profile for frame-ctrl" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="frame-ctrl" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="frame" target="1.8" />
       <module name="frame-core" target="1.8" />
+      <module name="frame-ctrl" target="1.8" />
       <module name="frame-dao" target="1.8" />
     </bytecodeTargetLevel>
   </component>
