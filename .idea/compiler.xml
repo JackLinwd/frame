@@ -52,6 +52,13 @@
         <processorPath useClasspath="true" />
         <module name="frame-ctrl-socket" />
       </profile>
+      <profile default="false" name="Annotation profile for frame-script" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="frame-script" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="frame" target="1.8" />
@@ -60,6 +67,7 @@
       <module name="frame-ctrl-http" target="1.8" />
       <module name="frame-ctrl-socket" target="1.8" />
       <module name="frame-dao" target="1.8" />
+      <module name="frame-script" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

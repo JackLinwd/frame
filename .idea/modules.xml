@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" filepath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" filepath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-dao/frame-dao.iml" filepath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame-script/frame-script.iml" filepath="$PROJECT_DIR$/frame-script/frame-script.iml" />
     </modules>
   </component>
 </project>

@@ -13,6 +13,7 @@
         <module>frame-ctrl</module>
         <module>frame-ctrl-http</module>
         <module>frame-ctrl-socket</module>
+        <module>frame-script</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>
