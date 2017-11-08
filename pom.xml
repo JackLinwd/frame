@@ -14,6 +14,7 @@
         <module>frame-ctrl-http</module>
         <module>frame-ctrl-socket</module>
         <module>frame-script</module>
+        <module>frame-hadoop</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>
