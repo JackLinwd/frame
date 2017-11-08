@@ -107,7 +107,7 @@ public abstract class SchedulerSupport<T> implements ContextRefreshedListener, C
 
     @Override
     public int getContextRefreshedSort() {
-        return 99;
+        return 9;
     }
 
     @Override
@@ -118,7 +118,7 @@ public abstract class SchedulerSupport<T> implements ContextRefreshedListener, C
 
     @Override
     public int getContextClosedSort() {
-        return 99;
+        return 9;
     }
 
     @Override
