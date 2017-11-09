@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <property name="pattern">%-5level %d{yyyy-MM-dd HH:mm:ss} %msg%n</property>
+        <property name="size">50 MB</property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+            <Filters>
+                <RegexFilter regex=".*org.lwd.frame.scheduler.SecondsSchedulerImpl.*" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <RegexFilter regex=".*org.lwd.frame.util.HttpImpl.*" onMatch="DENY" onMismatch="ACCEPT"/>
+            </Filters>
+        </Console>
+        <RollingFile name="file.debug" fileName="logs/frame.debug.log" filePattern="logs/frame.debug-%i.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <SizeBasedTriggeringPolicy size="${size}"/>
+            <Filters>
+                <ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+        <RollingFile name="file.info" fileName="logs/frame.info.log" filePattern="logs/frame.info-%i.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <SizeBasedTriggeringPolicy size="${size}"/>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+        <RollingFile name="file.warn" fileName="logs/frame.warn.log" filePattern="logs/frame.warn-%i.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <SizeBasedTriggeringPolicy size="${size}"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+        <RollingFile name="file.error" fileName="logs/frame.error.log" filePattern="logs/frame.error-%i.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <SizeBasedTriggeringPolicy size="${size}"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="console"/>
+        </Root>
+        <Logger name="frame.util.logger" level="debug">
+            <appender-ref ref="file.debug"/>
+            <appender-ref ref="file.info"/>
+            <appender-ref ref="file.warn"/>
+            <appender-ref ref="file.error"/>
+        </Logger>
+        <Logger name="org.mongodb" level="warn"/>
+    </Loggers>
+</Configuration>

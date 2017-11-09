@@ -1,0 +1,13 @@
+{
+    "origin": [
+        "*"
+    ],
+    "methods": [
+        "GET",
+        "POST"
+    ],
+    "headers": [
+        "Content-Type",
+        "frame-session-id"
+    ]
+}

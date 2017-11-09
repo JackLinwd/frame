@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/frame-dao/frame-dao.iml" filepath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" filepath="$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-script/frame-script.iml" filepath="$PROJECT_DIR$/frame-script/frame-script.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame-web/frame-web.iml" filepath="$PROJECT_DIR$/frame-web/frame-web.iml" />
     </modules>
   </component>
 </project>

@@ -73,6 +73,13 @@
         <processorPath useClasspath="true" />
         <module name="frame-carousel" />
       </profile>
+      <profile default="false" name="Annotation profile for frame-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="frame-web" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="frame" target="1.8" />
@@ -84,6 +91,7 @@
       <module name="frame-dao" target="1.8" />
       <module name="frame-hadoop" target="1.8" />
       <module name="frame-script" target="1.8" />
+      <module name="frame-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

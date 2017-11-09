@@ -1,0 +1,8 @@
+{
+  "path-comment": "文件类型保存路径。key为文件类型（Content Type），支持正则表达式；value为保存的路径。",
+  "path": {
+    "image/.+": ""
+  },
+  "image-size-comment": "图片大小[宽,高]。",
+  "image-size": [0,0]
+}
