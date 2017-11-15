@@ -14,11 +14,8 @@ public interface LiteOrm extends Orm<LiteQuery> {
      * 此过程会先删除内存表现有数据再导入磁盘表数据到内存表中。
      *
      * @param modelClass Model类。
-     * @param count      是否检查记录数，如果设置为true并且内存表记录数与磁盘表记录数相同则不重置。
      */
-    default void resetMemory(Class<? extends Model> modelClass, boolean count) {
-        resetMemory(null, modelClass, count);
-    }
+    void resetMemory(Class<? extends Model> modelClass);
 
     /**
      * 重置内存表数据。
@@ -26,7 +23,6 @@ public interface LiteOrm extends Orm<LiteQuery> {
      *
      * @param dataSource 数据源名称，为空则使用默认数据源。
      * @param modelClass Model类。
-     * @param count      是否检查记录数，如果设置为true并且内存表记录数与磁盘表记录数相同则不重置。
      */
-    void resetMemory(String dataSource, Class<? extends Model> modelClass, boolean count);
+    void resetMemory(String dataSource, Class<? extends Model> modelClass);
 }

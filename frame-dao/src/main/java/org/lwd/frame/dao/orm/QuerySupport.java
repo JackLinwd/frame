@@ -13,6 +13,7 @@ public class QuerySupport implements Query {
     protected String group;
     protected String order;
     protected boolean locked;
+    protected boolean countable;
     protected int size;
     protected int page;
 
@@ -49,6 +50,11 @@ public class QuerySupport implements Query {
     @Override
     public boolean isLocked() {
         return locked;
+    }
+
+    @Override
+    public boolean isCountable() {
+        return countable;
     }
 
     @Override

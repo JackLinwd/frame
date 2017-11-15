@@ -20,6 +20,7 @@ public class HibernateQuery extends QuerySupport implements Query {
             throw new NullPointerException("Model类不允许为空！");
 
         this.modelClass = modelClass;
+        countable = true;
     }
 
     /**
@@ -89,6 +90,18 @@ public class HibernateQuery extends QuerySupport implements Query {
      */
     public HibernateQuery lock() {
         locked = true;
+
+        return this;
+    }
+
+    /**
+     * 设置是否统计记录总数。
+     *
+     * @param countable true-统计；false-不统计。
+     * @return 当前Query实例。
+     */
+    public HibernateQuery countable(boolean countable) {
+        this.countable = countable;
 
         return this;
     }

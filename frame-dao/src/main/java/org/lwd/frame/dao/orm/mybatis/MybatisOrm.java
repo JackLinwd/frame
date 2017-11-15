@@ -1,6 +1,5 @@
 package org.lwd.frame.dao.orm.mybatis;
 
-
 import org.lwd.frame.atomic.Atomicable;
 import org.lwd.frame.dao.Mode;
 

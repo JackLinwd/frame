@@ -58,21 +58,17 @@ public class LiteOrmImpl extends OrmSupport<LiteQuery> implements LiteOrm {
 
     @SuppressWarnings("unchecked")
     private <T extends Model> T queryOne(LiteQuery query, Object[] args) {
-        List<T> list = (List<T>) query(query, args, false).getList();
+        List<T> list = (List<T>) query(query.countable(false), args).getList();
 
         return validator.isEmpty(list) ? null : list.get(0);
     }
 
     @Override
-    public <T extends Model> PageList<T> query(LiteQuery query, Object[] args) {
-        return query(query, args, true);
-    }
-
     @SuppressWarnings("unchecked")
-    private <T extends Model> PageList<T> query(LiteQuery query, Object[] args, boolean countable) {
+    public <T extends Model> PageList<T> query(LiteQuery query, Object[] args) {
         PageList<T> models = BeanFactory.getBean(PageList.class);
-        if (query.getSize() > 0 && query.getSize() > 0)
-            models.setPage(countable ? count(query, args) : query.getSize() * query.getPage(), query.getSize(), query.getPage());
+        if (query.getSize() > 0)
+            models.setPage(query.isCountable() ? count(query, args) : query.getSize() * query.getPage(), query.getSize(), query.getPage());
         models.setList(new ArrayList<>());
 
         ModelTable modelTable = modelTables.get(query.getModelClass());
@@ -205,12 +201,8 @@ public class LiteOrmImpl extends OrmSupport<LiteQuery> implements LiteOrm {
             insertSql.append('?');
         }
         insertSql.append(")");
-        int n = update(dataSource, modelTable, insertSql, args.toArray());
 
-        if (n == 0)
-            logger.warn(null, "新增操作失败！jdbc:{};args:{}", insertSql, modelHelper.toJson(model));
-
-        return n;
+        return update(dataSource, modelTable, insertSql, args.toArray());
     }
 
     /**
@@ -234,12 +226,8 @@ public class LiteOrmImpl extends OrmSupport<LiteQuery> implements LiteOrm {
         }
         updateSql.append(" WHERE ").append(modelTable.getIdColumnName()).append("=?");
         args.add(model.getId());
-        int n = update(dataSource, modelTable, updateSql, args.toArray());
 
-        if (n == 0)
-            logger.warn(null, "更新操作失败！jdbc:{};args:{}", updateSql, modelHelper.toJson(model));
-
-        return n;
+        return update(dataSource, modelTable, updateSql, args.toArray());
     }
 
     @Override
@@ -248,12 +236,8 @@ public class LiteOrmImpl extends OrmSupport<LiteQuery> implements LiteOrm {
         StringBuilder updateSql = new StringBuilder().append("UPDATE ").append(modelTable.getTableName()).append(" SET ").append(query.getSet());
         if (!validator.isEmpty(query.getWhere()))
             updateSql.append(" WHERE ").append(query.getWhere());
-        int n = update(query.getDataSource(), modelTable, updateSql, args);
 
-        if (n == 0)
-            logger.warn(null, "更新操作失败！jdbc:{};args:{}", updateSql, converter.toString(args));
-
-        return n > 0;
+        return update(query.getDataSource(), modelTable, updateSql, args) > 0;
     }
 
     private int update(String dataSource, ModelTable modelTable, StringBuilder updateSql, Object[] args) {
@@ -278,12 +262,8 @@ public class LiteOrmImpl extends OrmSupport<LiteQuery> implements LiteOrm {
         StringBuilder deleteSql = new StringBuilder().append("DELETE FROM ").append(modelTable.getTableName());
         if (!validator.isEmpty(query.getWhere()))
             deleteSql.append(" WHERE ").append(query.getWhere());
-        int n = update(query.getDataSource(), modelTable, deleteSql, args);
 
-        if (n == 0)
-            logger.warn(null, "删除操作失败！jdbc:{};args:{}", deleteSql, converter.toString(args));
-
-        return n > 0;
+        return update(query.getDataSource(), modelTable, deleteSql, args) > 0;
     }
 
     @Override
@@ -292,7 +272,12 @@ public class LiteOrmImpl extends OrmSupport<LiteQuery> implements LiteOrm {
     }
 
     @Override
-    public void resetMemory(String dataSource, Class<? extends Model> modelClass, boolean count) {
+    public void resetMemory(Class<? extends Model> modelClass) {
+        resetMemory(null, modelClass);
+    }
+
+    @Override
+    public void resetMemory(String dataSource, Class<? extends Model> modelClass) {
         ModelTable modelTable = modelTables.get(modelClass);
         if (modelClass == null) {
             logger.warn(null, "ModelClass不存在！");

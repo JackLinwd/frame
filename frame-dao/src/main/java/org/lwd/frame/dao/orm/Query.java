@@ -58,6 +58,13 @@ public interface Query {
     boolean isLocked();
 
     /**
+     * 是否统计记录总数。
+     *
+     * @return 如果统计则返回true；否则返回false；默认为true。
+     */
+    boolean isCountable();
+
+    /**
      * 获取最大返回的记录数。
      *
      * @return 最大返回的记录数。
