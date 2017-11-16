@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="frame-script,frame-hadoop,frame-dao,frame-core,frame-carousel,frame-ctrl,frame-ctrl-http,frame-ctrl-socket,frame-web" />
+    <profile name="Maven 1" modules="frame-ctrl,frame-carousel,frame-core,frame-web,frame-hadoop,frame-dao,frame-ctrl-http,frame-script,frame-ctrl-socket" />
   </component>
 </project>

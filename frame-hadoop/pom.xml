@@ -13,7 +13,7 @@
     <packaging>jar</packaging>
 
     <name>frame-hadoop</name>
-    <url>https://github.com/JackLinwd/frame</url>
+    <url>http://maven.apache.org</url>
 
     <properties>
         <version.netty>4.1.9.Final</version.netty>

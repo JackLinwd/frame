@@ -13,7 +13,7 @@
     <packaging>jar</packaging>
 
     <name>frame-dao</name>
-    <url>https://github.com/JackLinwd/frame</url>
+    <url>http://maven.apache.org</url>
 
     <properties>
         <version.mysql>5.1.40</version.mysql>

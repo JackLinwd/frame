@@ -21,7 +21,7 @@
     <packaging>pom</packaging>
     <name>frame</name>
     <description>j2ee快速开发框架</description>
-    <url>https://github.com/JackLinwd/frame</url>
+    <url>http://maven.apache.org</url>
 
     <developers>
         <developer>
