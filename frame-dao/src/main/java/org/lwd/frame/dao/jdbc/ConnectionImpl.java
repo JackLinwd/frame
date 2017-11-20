@@ -43,8 +43,12 @@ public class ConnectionImpl extends ConnectionSupport<Connection> implements org
             connections = new HashMap<>();
         String key = dataSource + mode.ordinal();
         Connection connection = connections.get(key);
-        if (connection != null)
-            return connection;
+        if (connection != null) {
+            if (isOpen(connection))
+                return connection;
+
+            connections.remove(key);
+        }
 
         try {
             DataSource ds = null;
@@ -68,54 +72,60 @@ public class ConnectionImpl extends ConnectionSupport<Connection> implements org
     @Override
     public void fail(Throwable throwable) {
         Map<String, Connection> connections = this.connections.get();
-        if (validator.isEmpty(connections))
-            return;
-
-        connections.forEach((key, connection) -> {
-            try {
-                if (!connection.isClosed()) {
-                    if (!connection.getAutoCommit())
-                        connection.rollback();
-                    connection.close();
+        if (connections != null) {
+            connections.forEach((key, connection) -> {
+                try {
+                    if (isOpen(connection)) {
+                        if (!connection.getAutoCommit())
+                            connection.rollback();
+                        connection.close();
+                    }
+                } catch (SQLException e) {
+                    logger.warn(e, "回滚数据库连接时发生异常！");
                 }
-            } catch (SQLException e) {
-                logger.warn(e, "回滚数据库连接时发生异常！");
-            }
-        });
+            });
 
-        if (logger.isDebugEnable())
-            logger.debug("回滚[{}]个数据库连接！", connections.size());
-
+            if (logger.isDebugEnable())
+                logger.debug("回滚[{}]个数据库连接！", connections.size());
+        }
         remove();
     }
 
     @Override
     public void close() {
         Map<String, Connection> connections = this.connections.get();
-        if (validator.isEmpty(connections))
-            return;
+        if (connections != null) {
+            connections.forEach((key, connection) -> {
+                try {
+                    if (isOpen(connection)) {
+                        if (!connection.getAutoCommit())
+                            connection.commit();
+                        connection.close();
+                    }
+                } catch (SQLException e) {
+                    logger.warn(e, "关闭数据库连接时发生异常！");
 
-        connections.forEach((key, connection) -> {
-            try {
-                if (!connection.isClosed()) {
-                    if (!connection.getAutoCommit())
-                        connection.commit();
-                    connection.close();
+                    fail(e);
                 }
-            } catch (SQLException e) {
-                logger.warn(e, "关闭数据库连接时发生异常！");
+            });
 
-                fail(e);
-            }
-        });
-
-        if (logger.isDebugEnable())
-            logger.debug("关闭[{}]个数据库连接！", connections.size());
-
+            if (logger.isDebugEnable())
+                logger.debug("关闭[{}]个数据库连接！", connections.size());
+        }
         remove();
     }
 
-    private void remove(){
+    private boolean isOpen(Connection connection) {
+        try {
+            return !connection.isClosed();
+        } catch (SQLException e) {
+            logger.warn(e, "验证连接是否关闭时发生异常！");
+
+            return false;
+        }
+    }
+
+    private void remove() {
         connections.remove();
         transactional.remove();
     }

@@ -64,7 +64,7 @@
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-codec:1.9.1" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.9.Final" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.27-incubating" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.40" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.41" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware:kryo:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware:reflectasm:1.11.3" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />

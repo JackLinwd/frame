@@ -3,7 +3,6 @@ package org.lwd.frame.dao.jdbc;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.commons.dbcp.BasicDataSource;
 import org.lwd.frame.bean.ContextRefreshedListener;
 import org.lwd.frame.dao.dialect.Dialect;
 import org.lwd.frame.dao.dialect.DialectFactory;
@@ -16,7 +15,11 @@ import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -40,9 +43,9 @@ public class DataSourceImpl implements org.lwd.frame.dao.jdbc.DataSource, Contex
     private int maxActive;
     @Value("${frame.dao.database.max-wait:5000}")
     private int maxWait;
-    @Value("${frame.dao.database.test-interval:600000}")
+    @Value("${frame.dao.database.test-interval:30000}")
     private int testInterval;
-    @Value("${frame.dao.database.remove-abandoned-timeout:300}")
+    @Value("${frame.dao.database.remove-abandoned-timeout:60}")
     private int removeAbandonedTimeout;
     @Value("${frame.dao.database.config:}")
     private String config;
@@ -136,7 +139,7 @@ public class DataSourceImpl implements org.lwd.frame.dao.jdbc.DataSource, Contex
             return;
 
         for (int i = 0; i < ips.size(); i++) {
-            BasicDataSource dataSource = new BasicDataSource();
+            org.apache.tomcat.jdbc.pool.DataSource dataSource = new org.apache.tomcat.jdbc.pool.DataSource();
             dataSource.setDriverClassName(dialect.getDriver());
             dataSource.setUrl(dialect.getUrl(ips.getString(i), schema));
             dataSource.setUsername(username);
@@ -144,17 +147,19 @@ public class DataSourceImpl implements org.lwd.frame.dao.jdbc.DataSource, Contex
             dataSource.setInitialSize(initialSize);
             dataSource.setMaxActive(maxActive);
             dataSource.setMaxIdle(maxActive);
+            dataSource.setMinIdle(initialSize);
             dataSource.setMaxWait(maxWait);
-            dataSource.setTestWhileIdle(true);
-            dataSource.setTestOnBorrow(false);
-            dataSource.setTestOnReturn(false);
+            dataSource.setTestWhileIdle(false);
+            dataSource.setTestOnBorrow(true);
             dataSource.setValidationQuery(dialect.getValidationQuery());
-            dataSource.setValidationQueryTimeout(maxWait);
+            dataSource.setTestOnReturn(false);
+            dataSource.setValidationInterval(testInterval);
             dataSource.setTimeBetweenEvictionRunsMillis(testInterval);
-            dataSource.setNumTestsPerEvictionRun(maxActive);
-            dataSource.setRemoveAbandoned(true);
             dataSource.setRemoveAbandonedTimeout(removeAbandonedTimeout);
-            dataSource.setLogAbandoned(true);
+            dataSource.setMinEvictableIdleTimeMillis(testInterval);
+            dataSource.setRemoveAbandoned(true);
+            dataSource.setJdbcInterceptors("org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;" +
+                    "org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer");
 
             if (i == 0)
                 writeables.put(key, dataSource);
