@@ -54,4 +54,10 @@ public interface Generator {
      * @return UUID随机数。
      */
     String uuid();
+
+    /**
+     * 生成订单号码
+     * @return
+     */
+    String orderNo();
 }

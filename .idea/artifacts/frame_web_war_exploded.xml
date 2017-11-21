@@ -44,8 +44,6 @@
           <element id="archive" name="frame-core-0.0.1.jar">
             <element id="module-output" name="frame-core" />
           </element>
-          <element id="library" level="project" name="Maven: org.scala-lang:scala-library:2.12.1" />
-          <element id="library" level="project" name="Maven: org.scala-lang.modules:scala-xml_2.12:1.0.6" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.1.RELEASE" />

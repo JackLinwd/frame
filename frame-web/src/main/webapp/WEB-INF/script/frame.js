@@ -1,46 +1,46 @@
-function tephra() {
+function frame() {
 };
 
-tephra.BeanFactory = Java.type("org.lpw.tephra.bean.BeanFactory");
-tephra.cache = tephra.BeanFactory.getBean("tephra.cache");
-tephra.message = tephra.BeanFactory.getBean("tephra.util.message");
-tephra.logger = tephra.BeanFactory.getBean("tephra.util.logger");
-tephra.sql = tephra.BeanFactory.getBean("tephra.dao.sql");
-tephra.ctrl = {
-    header: tephra.BeanFactory.getBean("tephra.ctrl.context.header"),
-    session: tephra.BeanFactory.getBean("tephra.ctrl.context.session"),
-    request: tephra.BeanFactory.getBean("tephra.ctrl.context.request")
+frame.BeanFactory = Java.type("org.lwd.frame.bean.BeanFactory");
+frame.cache = frame.BeanFactory.getBean("frame.cache");
+frame.message = frame.BeanFactory.getBean("frame.util.message");
+frame.logger = frame.BeanFactory.getBean("frame.util.logger");
+frame.sql = frame.BeanFactory.getBean("frame.dao.sql");
+frame.ctrl = {
+    header: frame.BeanFactory.getBean("frame.ctrl.context.header"),
+    session: frame.BeanFactory.getBean("frame.ctrl.context.session"),
+    request: frame.BeanFactory.getBean("frame.ctrl.context.request")
 };
-tephra.args = tephra.BeanFactory.getBean("tephra.script.arguments");
+frame.args = frame.BeanFactory.getBean("frame.script.arguments");
 
-tephra.ready = function (func) {
-    tephra.ready.functions[tephra.ready.functions.length] = func;
+frame.ready = function (func) {
+    frame.ready.functions[frame.ready.functions.length] = func;
 };
 
-tephra.ready.functions = [];
+frame.ready.functions = [];
 
-tephra.ready.execute = function () {
-    if (tephra.ready.functions.length == 0)
+frame.ready.execute = function () {
+    if (frame.ready.functions.length == 0)
         return;
 
-    for (var i = 0; i < tephra.ready.functions.length; i++) {
-        if (!tephra.ready.functions[i])
+    for (var i = 0; i < frame.ready.functions.length; i++) {
+        if (!frame.ready.functions[i])
             continue;
 
-        if (typeof (tephra.ready.functions[i]) == "function")
-            tephra.ready.functions[i]();
-        else if (typeof (tephra.ready.functions[i]) == "string")
-            eval(tephra.ready.functions[i]);
+        if (typeof (frame.ready.functions[i]) == "function")
+            frame.ready.functions[i]();
+        else if (typeof (frame.ready.functions[i]) == "string")
+            eval(frame.ready.functions[i]);
 
-        tephra.ready.functions[i] = null;
+        frame.ready.functions[i] = null;
     }
 };
 
-tephra.existsMethod = function () {
+frame.existsMethod = function () {
     try {
-        var method = tephra.arguments.get("method");
+        var method = frame.arguments.get("method");
         if (!method)
-            method = tephra.ctrl.request.get("method");
+            method = frame.ctrl.request.get("method");
 
         return typeof (eval(method)) == "function";
     } catch (e) {

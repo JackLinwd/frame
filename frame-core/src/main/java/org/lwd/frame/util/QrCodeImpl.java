@@ -10,6 +10,7 @@ import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import org.lwd.frame.storage.Storage;
 import org.springframework.stereotype.Component;
 
 import javax.imageio.ImageIO;
@@ -35,9 +36,41 @@ public class QrCodeImpl implements QrCode {
     @Inject
     private Validator validator;
     @Inject
+    private Storage storage;
+    @Inject
+    private Generator generator;
+    @Inject
+    private DateTime dateTime;
+    @Inject
     private Logger logger;
     private QRCodeWriter writer = new QRCodeWriter();
     private QRCodeReader reader = new QRCodeReader();
+
+    @Override
+    public String create(String content) {
+        String path = getPath();
+        String file = createFileName();
+        String absolutePath = storage.getAbsolutePath(path);
+        if (!storage.exists(absolutePath)) {
+            storage.mkdirs(absolutePath);
+        }
+        try {
+            create(content, 300, null, absolutePath + "/" + file);
+        } catch (Throwable e) {
+            logger.warn(e, "生成二维码图片[{}:{}]时发生异常！", content, absolutePath);
+        }
+        return path + file;
+    }
+
+    private String getPath() {
+        StringBuilder path = new StringBuilder("qrcode").append('/').append(dateTime.toString(dateTime.now(), "yyyyMMdd")).append('/');
+        return path.toString().replaceAll("[/]+", "/");
+    }
+
+    private String createFileName() {
+        StringBuilder file = new StringBuilder(generator.random(32)).append(".png");
+        return file.toString().replaceAll("[/]+", "/");
+    }
 
     @Override
     public void create(String content, int size, String logo, String path) {

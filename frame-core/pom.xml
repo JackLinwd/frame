@@ -18,19 +18,10 @@
         <scala-library.version>2.12.1</scala-library.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <netty.version>4.1.9.Final</netty.version>
+        <version.dom4j>1.6.1</version.dom4j>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>${scala-library.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.scala-lang.modules</groupId>
-            <artifactId>scala-xml_2.12</artifactId>
-            <version>LATEST</version>
-        </dependency>
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
@@ -135,6 +126,11 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>LATEST</version>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${version.dom4j}</version>
         </dependency>
         <dependency>
             <groupId>com.google.zxing</groupId>

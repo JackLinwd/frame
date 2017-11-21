@@ -10,6 +10,11 @@ import java.io.OutputStream;
  */
 public interface QrCode {
     /**
+     * @param content 二维码内容
+     * @return
+     */
+    String create(String content);
+    /**
      * 生成二维码图片。
      *
      * @param content 二维码内容。
