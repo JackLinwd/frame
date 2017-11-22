@@ -4,16 +4,27 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.bean.BeanFactory;
 import org.lwd.frame.ctrl.Dispatcher;
+import org.lwd.frame.ctrl.Handler;
 import org.lwd.frame.ctrl.context.HeaderAware;
 import org.lwd.frame.ctrl.context.RequestAware;
 import org.lwd.frame.ctrl.context.ResponseAware;
 import org.lwd.frame.ctrl.context.SessionAware;
-import org.lwd.frame.ctrl.http.context.*;
+import org.lwd.frame.ctrl.http.context.CookieAware;
+import org.lwd.frame.ctrl.http.context.HeaderAdapterImpl;
+import org.lwd.frame.ctrl.http.context.RequestAdapterImpl;
+import org.lwd.frame.ctrl.http.context.ResponseAdapterImpl;
+import org.lwd.frame.ctrl.http.context.SessionAdapterImpl;
 import org.lwd.frame.ctrl.http.upload.UploadHelper;
 import org.lwd.frame.ctrl.status.Status;
 import org.lwd.frame.storage.StorageListener;
 import org.lwd.frame.storage.Storages;
-import org.lwd.frame.util.*;
+import org.lwd.frame.util.Context;
+import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.Io;
+import org.lwd.frame.util.Json;
+import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.TimeHash;
+import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
@@ -58,6 +69,8 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
     @Inject
     private ResponseAware responseAware;
     @Inject
+    private Handler handler;
+    @Inject
     private Dispatcher dispatcher;
     @Inject
     private Status status;
@@ -99,9 +112,7 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
 
     @Override
     public boolean service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String uri = request.getRequestURI();
-        if (contextPath > 0)
-            uri = uri.substring(contextPath);
+        String uri = getUri(request);
         String lowerCaseUri = uri.toLowerCase();
         if (lowerCaseUri.startsWith(UploadHelper.ROOT)) {
             if (!lowerCaseUri.startsWith(UploadHelper.ROOT + "image/"))
@@ -120,9 +131,29 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
             return false;
         }
 
+        String sessionId = getSessionId(request);
+        try {
+            return handler.call(sessionId, () -> service(request, response, uri, sessionId));
+        } catch (Exception e) {
+            logger.warn(e, "处理请求[{}]时发生异常！", uri);
+
+            return false;
+        }
+    }
+
+    private String getUri(HttpServletRequest request) {
+        String uri = request.getRequestURI();
+        if (contextPath > 0)
+            uri = uri.substring(contextPath);
+
+        return uri;
+    }
+
+    private boolean service(HttpServletRequest request, HttpServletResponse response, String uri, String sessionId) throws IOException {
         setCors(request, response);
-        OutputStream outputStream = setContext(request, response, uri);
-        if (timeHash.isEnable() && !timeHash.valid(request.getIntHeader("time-hash")) && !status.isStatus(uri) && (!ignoreTimeHash.isPresent() || !ignoreTimeHash.get().ignore())) {
+        OutputStream outputStream = setContext(request, response, uri, sessionId);
+        if (timeHash.isEnable() && !timeHash.valid(request.getIntHeader("time-hash")) && !status.isStatus(uri)
+                && (!ignoreTimeHash.isPresent() || !ignoreTimeHash.get().ignore())) {
             if (logger.isDebugEnable())
                 logger.debug("请求[{}]TimeHash[{}]验证不通过。", uri, request.getIntHeader("time-hash"));
 
@@ -179,10 +210,15 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
         response.addHeader("Access-Control-Allow-Credentials", "true");
     }
 
+    @Override
     public OutputStream setContext(HttpServletRequest request, HttpServletResponse response, String uri) throws IOException {
+        return setContext(request, response, uri, getSessionId(request));
+    }
+
+    private OutputStream setContext(HttpServletRequest request, HttpServletResponse response, String uri, String sessionId) throws IOException {
         context.setLocale(request.getLocale());
         headerAware.set(new HeaderAdapterImpl(request));
-        sessionAware.set(new SessionAdapterImpl(getSessionId(request)));
+        sessionAware.set(new SessionAdapterImpl(sessionId));
         requestAware.set(new RequestAdapterImpl(request, uri));
         cookieAware.set(request, response);
         response.setCharacterEncoding(context.getCharset(null));

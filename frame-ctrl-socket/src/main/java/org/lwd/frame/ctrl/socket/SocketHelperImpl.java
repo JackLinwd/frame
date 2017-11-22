@@ -1,5 +1,6 @@
 package org.lwd.frame.ctrl.socket;
 
+import org.lwd.frame.ctrl.Handler;
 import org.lwd.frame.ctrl.context.Session;
 import org.lwd.frame.nio.NioHelper;
 import org.lwd.frame.util.Compresser;
@@ -26,6 +27,8 @@ public class SocketHelperImpl implements SocketHelper {
     @Inject
     private NioHelper nioHelper;
     @Inject
+    private Handler handler;
+    @Inject
     private Session session;
     @Value("${frame.ctrl.socket.zip-size:4096}")
     private int zipSize;
@@ -33,9 +36,9 @@ public class SocketHelperImpl implements SocketHelper {
     private Map<String, String> sids = new ConcurrentHashMap<>();
 
     @Override
-    public void bind(String sessionId, String frameSessionId) {
-        tsids.put(frameSessionId, sessionId);
-        sids.put(sessionId, frameSessionId);
+    public void bind(String sessionId, String tephraSessionId) {
+        tsids.put(tephraSessionId, sessionId);
+        sids.put(sessionId, tephraSessionId);
     }
 
     @Override
@@ -71,19 +74,24 @@ public class SocketHelperImpl implements SocketHelper {
     }
 
     @Override
-    public void unbind(String sessionId, String frameSessionId) {
+    public void unbind(String sessionId, String tephraSessionId) {
         if (sessionId != null) {
             String tsid = sids.remove(sessionId);
-            if (tsid != null)
+            if (tsid != null) {
                 tsids.remove(tsid);
+                handler.clear(tsid);
+            }
+            handler.clear(sessionId);
         }
 
-        if (frameSessionId != null) {
-            String sid = tsids.remove(frameSessionId);
+        if (tephraSessionId != null) {
+            String sid = tsids.remove(tephraSessionId);
             if (sid != null) {
                 sids.remove(sid);
+                handler.clear(sid);
                 nioHelper.close(sid);
             }
+            handler.clear(tephraSessionId);
         }
     }
 }
