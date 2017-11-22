@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.bean.BeanFactory;
 import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Logger;
 import org.lwd.frame.util.Numeric;
 import org.lwd.frame.util.Validator;
@@ -11,7 +12,12 @@ import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
 import java.sql.Timestamp;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author lwd
@@ -24,6 +30,8 @@ public class ModelHelperImpl implements ModelHelper {
     private Converter converter;
     @Inject
     private Numeric numeric;
+    @Inject
+    private Json json;
     @Inject
     private Logger logger;
     @Inject
@@ -64,7 +72,26 @@ public class ModelHelperImpl implements ModelHelper {
             if (jsonable == null)
                 continue;
 
-            Object json = getJson(modelTable, name, modelTable.get(model, name), jsonable);
+            Object value = modelTable.get(model, name);
+            if (jsonable.extend()) {
+                JSONObject json = this.json.toObject(value);
+                if (json == null)
+                    continue;
+
+                JSONObject extend = object.containsKey("extend") ? object.getJSONObject("extend") : new JSONObject();
+                json.forEach((k, v) -> {
+                    if ("id".equals(k) || modelTable.containsPropertyName(k))
+                        extend.put(k, v);
+                    else
+                        object.put(k, v);
+                });
+                if (!extend.isEmpty())
+                    object.put("extend", extend);
+
+                continue;
+            }
+
+            Object json = getJson(modelTable, name, value, jsonable);
             if (json != null)
                 object.put(name, json);
         }
@@ -164,8 +191,7 @@ public class ModelHelperImpl implements ModelHelper {
         T model = BeanFactory.getBean(modelClass);
         if (json.containsKey("id"))
             model.setId(json.getString("id"));
-        for (Object key : json.keySet())
-            modelTable.set(model, (String) key, json.get(key));
+        json.forEach((key, value) -> modelTable.set(model, key, value));
 
         return model;
     }

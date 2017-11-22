@@ -160,6 +160,14 @@ public interface ModelTable {
     Set<String> getPropertyNames();
 
     /**
+     * 是否包含属性名。
+     *
+     * @param propertyName 属性名。
+     * @return 如果包含则返回true；否则返回false。
+     */
+    boolean containsPropertyName(String propertyName);
+
+    /**
      * 获取Jsonable配置对象。
      *
      * @param name 名称。

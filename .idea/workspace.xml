@@ -7,20 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_6_0_rc0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frame-ctrl-http/src/main/java/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frame-script/src/main/java/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/frame_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/frame_web_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-carousel/frame-carousel.iml" afterPath="$PROJECT_DIR$/frame-carousel/frame-carousel.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" afterPath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" afterPath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" afterPath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/frame-dao.iml" afterPath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" afterPath="$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-script/frame-script.iml" afterPath="$PROJECT_DIR$/frame-script/frame-script.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-web/frame-web.iml" afterPath="$PROJECT_DIR$/frame-web/frame-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Jsonable.java" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Jsonable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTable.java" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTableImpl.java" afterPath="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTableImpl.java" />
     </list>
     <ignored path="frame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +43,28 @@
     <favorites_list name="frame" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Jsonable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Jsonable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelHelperImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.26243567">
+              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -74,9 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Executer.java" />
-        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/ExecuterImpl.java" />
-        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Memory.java" />
         <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/MemoryImpl.java" />
         <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/Update.java" />
         <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/auto/UpdateImpl.java" />
@@ -125,6 +134,9 @@
         <option value="$PROJECT_DIR$/frame-web/src/main/resources/http.ctrl.frame.config" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/GeneratorImpl.java" />
         <option value="$PROJECT_DIR$/frame-web/pom.xml" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTableImpl.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Jsonable.java" />
+        <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java" />
       </list>
     </option>
   </component>
@@ -201,6 +213,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-ctrl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-ctrl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -216,20 +260,20 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project\frame\frame-core\src\main" />
-      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame\util" />
-      <recent name="C:\project\frame\frame-web\src\main\webapp" />
-      <recent name="C:\project\frame\frame-dao\src\main\java\org\lwd\frame\dao\orm\hibernate" />
-      <recent name="C:\project\frame\frame-dao\src\main\java\org\lwd\frame\dao\orm\lite" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\frame\frame-web\src\main\webapp\html" />
+      <recent name="C:\project\frame\frame-core\src\main\scale" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.lwd.frame.util" />
       <recent name="org.lwd.frame.storage" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\project\frame\frame-web\src\main\webapp\html" />
-      <recent name="C:\project\frame\frame-core\src\main\scale" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\frame\frame-dao\src\main\java\org\lwd\frame\dao\model" />
+      <recent name="C:\project\frame\frame-core\src\main" />
+      <recent name="C:\project\frame\frame-core\src\main\java\org\lwd\frame\util" />
+      <recent name="C:\project\frame\frame-web\src\main\webapp" />
+      <recent name="C:\project\frame\frame-dao\src\main\java\org\lwd\frame\dao\orm\hibernate" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat">
@@ -810,7 +854,7 @@
       <workItem from="1511228382205" duration="2660000" />
       <workItem from="1511231408191" duration="1448000" />
       <workItem from="1511233715214" duration="1270000" />
-      <workItem from="1511314000431" duration="142000" />
+      <workItem from="1511314000431" duration="451000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1510039271864</created>
@@ -932,11 +976,17 @@
       <option name="project" value="LOCAL" />
       <updated>1511232703583</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="代码优化">
+      <created>1511314168205</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1511314168205</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35468000" />
+    <option name="totallyTimeSpent" value="35777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -944,6 +994,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -957,6 +1008,7 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -967,10 +1019,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1011,21 +1061,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/OrmSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26243567">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/orm/QuerySupport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1354,6 +1389,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45698926">
           <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelTableImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11663808">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/Jsonable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.186964">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26243567">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
           <folding />
         </state>
       </provider>

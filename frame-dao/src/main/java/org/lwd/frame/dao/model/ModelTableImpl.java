@@ -3,7 +3,12 @@ package org.lwd.frame.dao.model;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.bean.BeanFactory;
-import org.lwd.frame.util.*;
+import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.DateTime;
+import org.lwd.frame.util.Json;
+import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.Numeric;
+import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
@@ -339,6 +344,11 @@ public class ModelTableImpl implements ModelTable {
     @Override
     public Set<String> getPropertyNames() {
         return getMethods.keySet();
+    }
+
+    @Override
+    public boolean containsPropertyName(String propertyName) {
+        return getMethods.containsKey(propertyName);
     }
 
     @Override
