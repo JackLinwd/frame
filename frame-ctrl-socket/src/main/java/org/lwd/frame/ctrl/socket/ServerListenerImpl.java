@@ -2,6 +2,7 @@ package org.lwd.frame.ctrl.socket;
 
 import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.ctrl.Dispatcher;
+import org.lwd.frame.ctrl.Handler;
 import org.lwd.frame.ctrl.context.HeaderAware;
 import org.lwd.frame.ctrl.context.RequestAware;
 import org.lwd.frame.ctrl.context.ResponseAware;
@@ -12,7 +13,11 @@ import org.lwd.frame.ctrl.socket.context.ResponseAdapterImpl;
 import org.lwd.frame.ctrl.socket.context.SessionAdapterImpl;
 import org.lwd.frame.nio.NioHelper;
 import org.lwd.frame.nio.ServerListener;
-import org.lwd.frame.util.*;
+import org.lwd.frame.util.Compresser;
+import org.lwd.frame.util.Context;
+import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.Json;
+import org.lwd.frame.util.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
@@ -43,6 +48,8 @@ public class ServerListenerImpl implements ServerListener {
     private RequestAware requestAware;
     @Inject
     private ResponseAware responseAware;
+    @Inject
+    private Handler handler;
     @Inject
     private Dispatcher dispatcher;
     @Inject
@@ -87,7 +94,8 @@ public class ServerListenerImpl implements ServerListener {
                     break;
                 }
 
-                execute(sessionId, object);
+                String tsid = object.getString("frame-session-id");
+                handler.run(tsid == null ? sessionId : object.getString("frame-session-id"), () -> execute(sessionId, tsid, object));
             }
         } catch (Throwable throwable) {
             nioHelper.close(sessionId);
@@ -126,15 +134,13 @@ public class ServerListenerImpl implements ServerListener {
         return length;
     }
 
-    private void execute(String sessionId, JSONObject object) {
-        headerAware.set(new HeaderAdapterImpl(object.getJSONObject("header"), nioHelper.getIp(sessionId)));
-        if (object.containsKey("frame-session-id")) {
-            sessionAware.set(new SessionAdapterImpl(object.getString("frame-session-id")));
-            socketHelper.bind(sessionId, object.getString("frame-session-id"));
-        } else
-            sessionAware.set(new SessionAdapterImpl(sessionId));
+    private void execute(String sid, String tsid, JSONObject object) {
+        headerAware.set(new HeaderAdapterImpl(object.getJSONObject("header"), nioHelper.getIp(sid)));
+        sessionAware.set(new SessionAdapterImpl(tsid == null ? sid : tsid));
+        if (tsid != null)
+            socketHelper.bind(sid, tsid);
         requestAware.set(new RequestAdapterImpl(object.getJSONObject("request"), port, object.getString("uri")));
-        responseAware.set(new ResponseAdapterImpl(socketHelper, sessionId));
+        responseAware.set(new ResponseAdapterImpl(socketHelper, sid));
         dispatcher.execute();
     }
 

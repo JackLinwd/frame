@@ -10,9 +10,9 @@ public interface SocketHelper {
      * 绑定。
      *
      * @param sessionId       Socket session ID。
-     * @param tephraSessionId Tephra session ID。
+     * @param frameSessionId frame session ID。
      */
-    void bind(String sessionId, String tephraSessionId);
+    void bind(String sessionId, String frameSessionId);
 
     /**
      * 发送数据到客户端。
@@ -26,7 +26,7 @@ public interface SocketHelper {
      * 解除绑定。
      *
      * @param sessionId       Socket session ID，为null则不使用。
-     * @param tephraSessionId Tephra session ID，为null则不使用。
+     * @param frameSessionId frame session ID，为null则不使用。
      */
-    void unbind(String sessionId, String tephraSessionId);
+    void unbind(String sessionId, String frameSessionId);
 }

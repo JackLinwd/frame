@@ -36,9 +36,9 @@ public class SocketHelperImpl implements SocketHelper {
     private Map<String, String> sids = new ConcurrentHashMap<>();
 
     @Override
-    public void bind(String sessionId, String tephraSessionId) {
-        tsids.put(tephraSessionId, sessionId);
-        sids.put(sessionId, tephraSessionId);
+    public void bind(String sessionId, String frameSessionId) {
+        tsids.put(frameSessionId, sessionId);
+        sids.put(sessionId, frameSessionId);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class SocketHelperImpl implements SocketHelper {
     }
 
     @Override
-    public void unbind(String sessionId, String tephraSessionId) {
+    public void unbind(String sessionId, String frameSessionId) {
         if (sessionId != null) {
             String tsid = sids.remove(sessionId);
             if (tsid != null) {
@@ -84,14 +84,14 @@ public class SocketHelperImpl implements SocketHelper {
             handler.clear(sessionId);
         }
 
-        if (tephraSessionId != null) {
-            String sid = tsids.remove(tephraSessionId);
+        if (frameSessionId != null) {
+            String sid = tsids.remove(frameSessionId);
             if (sid != null) {
                 sids.remove(sid);
                 handler.clear(sid);
                 nioHelper.close(sid);
             }
-            handler.clear(tephraSessionId);
+            handler.clear(frameSessionId);
         }
     }
 }
