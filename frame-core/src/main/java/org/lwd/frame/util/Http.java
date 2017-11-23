@@ -18,9 +18,7 @@ public interface Http {
      * @param parameters 参数集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    default String get(String url, Map<String, String> headers, Map<String, String> parameters) {
-        return get(url, headers, parameters, null);
-    }
+    String get(String url, Map<String, String> headers, Map<String, String> parameters);
 
     /**
      * 通过GET方式获取远程页面数据。
@@ -41,9 +39,7 @@ public interface Http {
      * @param parameters 参数集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    default String get(String url, Map<String, String> headers, String parameters) {
-        return get(url, headers, parameters, null);
-    }
+    String get(String url, Map<String, String> headers, String parameters);
 
     /**
      * 通过GET方式获取远程页面数据。
@@ -64,9 +60,7 @@ public interface Http {
      * @param parameters 参数集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    default String post(String url, Map<String, String> headers, Map<String, String> parameters) {
-        return post(url, headers, parameters, null);
-    }
+    String post(String url, Map<String, String> headers, Map<String, String> parameters);
 
     /**
      * 通过POST方式获取远程页面数据。
@@ -87,9 +81,7 @@ public interface Http {
      * @param content 参数内容。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    default String post(String url, Map<String, String> headers, String content) {
-        return post(url, headers, content, null);
-    }
+    String post(String url, Map<String, String> headers, String content);
 
     /**
      * 通过POST方式获取远程页面数据。
@@ -111,9 +103,7 @@ public interface Http {
      * @param files      文件集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    default String upload(String url, Map<String, String> headers, Map<String, String> parameters, Map<String, File> files) {
-        return upload(url, headers, parameters, files, null);
-    }
+    String upload(String url, Map<String, String> headers, Map<String, String> parameters, Map<String, File> files);
 
     /**
      * 上传文件。
@@ -136,9 +126,7 @@ public interface Http {
      * @param dest       下载文件保存路径。
      * @return HTTP请求返回头部信息集。
      */
-    default Map<String, String> download(String url, Map<String, String> headers, Map<String, String> parameters, String dest) {
-        return download(url, headers, parameters, null, dest);
-    }
+    Map<String, String> download(String url, Map<String, String> headers, Map<String, String> parameters, String dest);
 
     /**
      * 下载文件。

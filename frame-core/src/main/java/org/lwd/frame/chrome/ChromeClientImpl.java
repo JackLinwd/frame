@@ -1,8 +1,12 @@
 package org.lwd.frame.chrome;
 
 import com.alibaba.fastjson.JSONObject;
-import org.lwd.frame.util.*;
+import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.Http;
+import org.lwd.frame.util.Json;
+import org.lwd.frame.util.Logger;
 import org.lwd.frame.util.Thread;
+import org.lwd.frame.util.TimeUnit;
 import org.lwd.frame.ws.WsClient;
 import org.lwd.frame.ws.WsClientListener;
 import org.lwd.frame.ws.WsClients;
@@ -38,15 +42,15 @@ public class ChromeClientImpl implements WsClientListener, ChromeClient {
     private String service;
     private String url;
     private int wait;
-    private JSONObject message;
+    private JSONObject[] messages;
     private String result;
 
     @Override
-    public ChromeClient set(String service, String url, int wait, JSONObject message) {
+    public ChromeClient set(String service, String url, int wait, JSONObject... messages) {
         this.service = service;
         this.url = url;
         this.wait = wait;
-        this.message = message;
+        this.messages = messages;
 
         return this;
     }
@@ -70,7 +74,7 @@ public class ChromeClientImpl implements WsClientListener, ChromeClient {
                 thread.sleep(1, TimeUnit.Second);
             }
             if (result == null) {
-                logger.warn(null, "请求[{}]等待[{}]秒未获得Chrome推送的数据！", message, maxWait);
+                logger.warn(null, "请求[{}]等待[{}]秒未获得Chrome推送的数据！", converter.toString(messages), maxWait);
 
                 return null;
             }
@@ -98,7 +102,8 @@ public class ChromeClientImpl implements WsClientListener, ChromeClient {
 
     @Override
     public void connect() {
-        wsClient.send(message.toJSONString());
+        for (JSONObject object : messages)
+            wsClient.send(object.toJSONString());
     }
 
     @Override
