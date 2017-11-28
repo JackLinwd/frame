@@ -13,154 +13,136 @@ public interface Http {
     /**
      * 通过GET方式获取远程页面数据。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String get(String url, Map<String, String> headers, Map<String, String> parameters);
+    String get(String url, Map<String, String> requestHeaders, Map<String, String> parameters);
 
     /**
      * 通过GET方式获取远程页面数据。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param charset    编码，为null则使用默认配置。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
+     * @param charset        编码，为null则使用默认配置。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String get(String url, Map<String, String> headers, Map<String, String> parameters, String charset);
+    String get(String url, Map<String, String> requestHeaders, Map<String, String> parameters, String charset);
 
     /**
      * 通过GET方式获取远程页面数据。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String get(String url, Map<String, String> headers, String parameters);
+    String get(String url, Map<String, String> requestHeaders, String parameters);
 
     /**
      * 通过GET方式获取远程页面数据。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param charset    编码，为null则使用默认配置。
-     * @return 如果成功则返回页面数据；否则返回null。
+     * @param url             目标URL地址。
+     * @param requestHeaders  HTTP请求头信息集。
+     * @param parameters      参数集。
+     * @param responseHeaders HTTP返回头信息集，用于接收返回的头信息。
+     * @param outputStream    HTTP返回数据输出流。
      */
-    String get(String url, Map<String, String> headers, String parameters, String charset);
+    void get(String url, Map<String, String> requestHeaders, String parameters,
+             Map<String, String> responseHeaders, OutputStream outputStream);
 
     /**
      * 通过POST方式获取远程页面数据。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String post(String url, Map<String, String> headers, Map<String, String> parameters);
+    String post(String url, Map<String, String> requestHeaders, Map<String, String> parameters);
 
     /**
      * 通过POST方式获取远程页面数据。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param charset    编码，为null则使用默认配置。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
+     * @param charset        编码，为null则使用默认配置。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String post(String url, Map<String, String> headers, Map<String, String> parameters, String charset);
+    String post(String url, Map<String, String> requestHeaders, Map<String, String> parameters, String charset);
 
     /**
      * 通过POST方式获取远程页面数据。
      *
-     * @param url     目标URL地址。
-     * @param headers HTTP头信息集。
-     * @param content 参数内容。
-     * @return 如果成功则返回页面数据；否则返回null。
+     * @param url             目标URL地址。
+     * @param requestHeaders  HTTP请求头信息集。
+     * @param parameters      参数集。
+     * @param charset         编码，为null则使用默认配置。
+     * @param responseHeaders HTTP返回头信息集，用于接收返回的头信息。
+     * @param outputStream    HTTP返回数据输出流。
      */
-    String post(String url, Map<String, String> headers, String content);
+    void post(String url, Map<String, String> requestHeaders, Map<String, String> parameters, String charset,
+              Map<String, String> responseHeaders, OutputStream outputStream);
 
     /**
      * 通过POST方式获取远程页面数据。
      *
-     * @param url     目标URL地址。
-     * @param headers HTTP头信息集。
-     * @param content 参数内容。
-     * @param charset 编码，为null则使用默认配置。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param content        参数内容。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String post(String url, Map<String, String> headers, String content, String charset);
+    String post(String url, Map<String, String> requestHeaders, String content);
+
+    /**
+     * 通过POST方式获取远程页面数据。
+     *
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param content        参数内容。
+     * @param charset        编码，为null则使用默认配置。
+     * @return 如果成功则返回页面数据；否则返回null。
+     */
+    String post(String url, Map<String, String> requestHeaders, String content, String charset);
+
+    /**
+     * 通过POST方式获取远程页面数据。
+     *
+     * @param url             目标URL地址。
+     * @param requestHeaders  HTTP请求头信息集。
+     * @param content         参数内容。
+     * @param charset         编码，为null则使用默认配置。
+     * @param responseHeaders HTTP返回头信息集，用于接收返回的头信息。
+     * @param outputStream    HTTP返回数据输出流。
+     */
+    void post(String url, Map<String, String> requestHeaders, String content, String charset,
+              Map<String, String> responseHeaders, OutputStream outputStream);
 
     /**
      * 上传文件。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param files      文件集。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
+     * @param files          文件集。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String upload(String url, Map<String, String> headers, Map<String, String> parameters, Map<String, File> files);
+    String upload(String url, Map<String, String> requestHeaders, Map<String, String> parameters, Map<String, File> files);
 
     /**
      * 上传文件。
      *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param files      文件集。
-     * @param charset    编码，为null则使用默认配置。
+     * @param url            目标URL地址。
+     * @param requestHeaders HTTP头信息集。
+     * @param parameters     参数集。
+     * @param files          文件集。
+     * @param charset        编码，为null则使用默认配置。
      * @return 如果成功则返回页面数据；否则返回null。
      */
-    String upload(String url, Map<String, String> headers, Map<String, String> parameters, Map<String, File> files, String charset);
-
-    /**
-     * 下载文件。
-     *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param dest       下载文件保存路径。
-     * @return HTTP请求返回头部信息集。
-     */
-    Map<String, String> download(String url, Map<String, String> headers, Map<String, String> parameters, String dest);
-
-    /**
-     * 下载文件。
-     *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param charset    编码，为null则使用默认配置。
-     * @param dest       下载文件保存路径。
-     * @return HTTP请求返回头部信息集。
-     */
-    Map<String, String> download(String url, Map<String, String> headers, Map<String, String> parameters, String charset, String dest);
-
-    /**
-     * 下载文件。
-     *
-     * @param url        目标URL地址。
-     * @param headers    HTTP头信息集。
-     * @param parameters 参数集。
-     * @param dest       下载文件保存路径。
-     * @return HTTP请求返回头部信息集。
-     */
-    Map<String, String> download(String url, Map<String, String> headers, String parameters, String dest);
-
-    /**
-     * 下载文件。
-     *
-     * @param url          目标URL地址。
-     * @param headers      HTTP头信息集。
-     * @param parameters   参数集。
-     * @param outputStream 下载文件输出流。
-     * @return HTTP请求返回头部信息集。
-     */
-    Map<String, String> download(String url, Map<String, String> headers, String parameters, OutputStream outputStream);
+    String upload(String url, Map<String, String> requestHeaders, Map<String, String> parameters, Map<String, File> files, String charset);
 
     /**
      * 获取最近一次请求返回状态码。

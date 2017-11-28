@@ -3,7 +3,9 @@ package org.lwd.frame.poi.pptx;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.xslf.usermodel.XSLFSimpleShape;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
@@ -46,13 +48,13 @@ public interface ParserHelper {
     Color getColor(JSONObject object, String key);
 
     /**
-     * 截取图片。
+     * 获取图片数据。
      *
-     * @param data   图片数据。
-     * @param object JSON数据。
-     * @param format 输出图片格式。
-     * @return 截取图片数据。
+     * @param object       JSON数据。
+     * @param contentType  图片格式。
+     * @param outputStream 图片数据。
+     * @return 图片数据。
      * @throws IOException 未处理IOException。
      */
-    byte[] subImage(byte[] data, JSONObject object, String format) throws IOException;
+    byte[] getImage(JSONObject object, String contentType, ByteArrayOutputStream outputStream) throws IOException;
 }

@@ -64,25 +64,26 @@ public class BatchUpdateImpl implements BatchUpdate {
         if (tlDataSource.get() == null)
             return;
 
-        tlIgnore.remove();
-        List<String> dataSource = tlDataSource.get();
-        tlDataSource.remove();
-        List<String> sql = tlSql.get();
-        tlSql.remove();
+        List<String> dataSources = tlDataSource.get();
+        List<String> sqls = tlSql.get();
         List<Object[]> args = tlArgs.get();
-        tlArgs.remove();
-
-        long time = System.currentTimeMillis();
-        int size = dataSource.size();
-        for (int i = 0; i < size; i++)
-            this.sql.update(dataSource.get(i), sql.get(i), args.get(i));
-        this.sql.close();
-        if (logger.isDebugEnable())
-            logger.debug("批量执行收集的SQL[{}:{}]。", size, System.currentTimeMillis() - time);
+        clear();
+        try {
+            long time = System.currentTimeMillis();
+            for (int i = 0, size = dataSources.size(); i < size; i++)
+                sql.update(dataSources.get(i), sqls.get(i), args.get(i));
+            sql.close();
+            if (logger.isDebugEnable())
+                logger.debug("批量执行收集的SQL[{}:{}:{}:{}]。", converter.toString(dataSources),
+                        converter.toString(sqls), converter.toString(args), System.currentTimeMillis() - time);
+        } catch (Throwable throwable) {
+            logger.warn(throwable, "批量执行收集的SQL[{}:{}:{}]时发生异常！", converter.toString(dataSources),
+                    converter.toString(sqls), converter.toString(args));
+        }
     }
 
     @Override
-    public void cancel() {
+    public void clear() {
         tlIgnore.remove();
         tlDataSource.remove();
         tlSql.remove();

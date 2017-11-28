@@ -22,7 +22,6 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 import org.lwd.frame.bean.ContextRefreshedListener;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -31,15 +30,14 @@ import javax.inject.Inject;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -54,6 +52,10 @@ public class HttpImpl implements Http, ContextRefreshedListener {
     private Validator validator;
     @Inject
     private Converter converter;
+    @Inject
+    private Coder coder;
+    @Inject
+    private Numeric numeric;
     @Inject
     private Io io;
     @Inject
@@ -70,39 +72,30 @@ public class HttpImpl implements Http, ContextRefreshedListener {
     private ThreadLocal<Integer> statusCode = new ThreadLocal<>();
 
     @Override
-    public String get(String url, Map<String, String> headers, Map<String, String> parameters) {
-        return get(url, headers, parameters, null);
+    public String get(String url, Map<String, String> requestHeaders, Map<String, String> parameters) {
+        return get(url, requestHeaders, parameters, null);
     }
 
     @Override
-    public String get(String url, Map<String, String> headers, Map<String, String> parameters, String charset) {
-        return get(url, headers, toStringParameters(parameters, charset), charset);
+    public String get(String url, Map<String, String> requestHeaders, Map<String, String> parameters, String charset) {
+        return get(url, requestHeaders, toStringParameters(parameters, charset));
+    }
+
+    private String toStringParameters(Map<String, String> parameters, String charset) {
+        if (validator.isEmpty(parameters))
+            return "";
+
+        StringBuilder sb = new StringBuilder();
+        parameters.forEach((name, value) -> sb.append('&').append(name).append('=').append(coder.encodeUrl(value, charset)));
+
+        return sb.substring(1);
     }
 
     @Override
-    public String get(String url, Map<String, String> headers, String parameters) {
-        return get(url, headers, parameters, null);
-    }
-
-    @Override
-    public String get(String url, Map<String, String> headers, String parameters, String charset) {
-        if (validator.isEmpty(url))
-            return null;
-
-        if (!validator.isEmpty(parameters))
-            url = url + (url.indexOf('?') == -1 ? '?' : '&') + parameters;
-
-        if (logger.isDebugEnable())
-            logger.debug("使用GET访问[{}]。", url);
-
-        String content = null;
-        try {
-            HttpGet get = new HttpGet(url);
-            get.setConfig(getRequestConfig());
-            content = execute(get, headers, charset);
-        } catch (Exception e) {
-            logger.warn(e, "使用GET访问[{}]时发生异常！", url);
-        }
+    public String get(String url, Map<String, String> requestHeaders, String parameters) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        get(url, requestHeaders, parameters, null, outputStream);
+        String content = outputStream.toString();
 
         if (logger.isDebugEnable())
             logger.debug("使用GET访问[{}]结果[{}]。", url, content);
@@ -111,81 +104,52 @@ public class HttpImpl implements Http, ContextRefreshedListener {
     }
 
     @Override
-    public String post(String url, Map<String, String> headers, Map<String, String> parameters) {
-        return post(url, headers, parameters, null);
-    }
-
-    @Override
-    public String post(String url, Map<String, String> headers, Map<String, String> parameters, String charset) {
-        if (validator.isEmpty(parameters))
-            return postByEntity(url, headers, null, charset);
-
-        try {
-            List<NameValuePair> nvps = new ArrayList<>();
-            parameters.forEach((key, value) -> nvps.add(new BasicNameValuePair(key, value)));
-
-            return postByEntity(url, headers, new UrlEncodedFormEntity(nvps, context.getCharset(charset)), charset);
-        } catch (Exception e) {
-            logger.warn(e, "使用POST访问[{}]时发生异常！", url);
-
-            return null;
-        }
-    }
-
-    @Override
-    public String post(String url, Map<String, String> headers, String content) {
-        return post(url, headers, content, null);
-    }
-
-    @Override
-    public String post(String url, Map<String, String> headers, String content, String charset) {
-        try {
-            return postByEntity(url, headers, validator.isEmpty(content) ? null : new StringEntity(content, context.getCharset(charset)),
-                    charset);
-        } catch (Exception e) {
-            logger.warn(e, "使用POST访问[{}]时发生异常！", url);
-
-            return null;
-        }
-    }
-
-    @Override
-    public String upload(String url, Map<String, String> headers, Map<String, String> parameters, Map<String, File> files) {
-        return upload(url, headers, parameters, files, null);
-    }
-
-    @Override
-    public String upload(String url, Map<String, String> headers, Map<String, String> parameters, Map<String, File> files, String charset) {
-        if (validator.isEmpty(files))
-            return post(url, headers, parameters, charset);
-
-        MultipartEntityBuilder entity = MultipartEntityBuilder.create();
-        ContentType contentType = ContentType.create("text/plain", context.getCharset(charset));
-        if (!validator.isEmpty(parameters))
-            parameters.forEach((key, value) -> entity.addTextBody(key, value, contentType));
-        files.forEach(entity::addBinaryBody);
-
-        return postByEntity(url, headers, entity.build(), charset);
-    }
-
-    private String postByEntity(String url, Map<String, String> headers, HttpEntity entity, String charset) {
+    public void get(String url, Map<String, String> requestHeaders, String parameters,
+                    Map<String, String> responseHeaders, OutputStream outputStream) {
         if (validator.isEmpty(url))
-            return null;
+            return;
+
+        if (!validator.isEmpty(parameters))
+            url = url + (url.indexOf('?') == -1 ? '?' : '&') + parameters;
 
         if (logger.isDebugEnable())
-            logger.debug("使用POST访问{}[{}]。", url, entity);
+            logger.debug("使用GET访问[{}]。", url);
 
-        String content = null;
-        try {
-            HttpPost post = new HttpPost(url);
-            post.setConfig(getRequestConfig());
-            if (entity != null)
-                post.setEntity(entity);
-            content = execute(post, headers, charset);
-        } catch (Exception e) {
-            logger.warn(e, "使用POST访问{}[{}]时发生异常！", url, entity);
-        }
+        HttpGet get = new HttpGet(url);
+        get.setConfig(getRequestConfig());
+        execute(get, requestHeaders, responseHeaders, outputStream);
+    }
 
+    @Override
+    public String post(String url, Map<String, String> requestHeaders, Map<String, String> parameters) {
+        return post(url, requestHeaders, parameters, null);
+    }
+
+    @Override
+    public String post(String url, Map<String, String> requestHeaders, Map<String, String> parameters, String charset) {
+        return post(url, requestHeaders, toEntiry(parameters, charset));
+    }
+
+    @Override
+    public void post(String url, Map<String, String> requestHeaders, Map<String, String> parameters, String charset,
+                     Map<String, String> responseHeaders, OutputStream outputStream) {
+        postByEntity(url, requestHeaders, toEntiry(parameters, charset), responseHeaders, outputStream);
+    }
+
+    @Override
+    public String post(String url, Map<String, String> requestHeaders, String content) {
+        return post(url, requestHeaders, content, null);
+    }
+
+    @Override
+    public String post(String url, Map<String, String> requestHeaders, String content, String charset) {
+        return post(url, requestHeaders, toEntiry(content, charset));
+    }
+
+    private String post(String url, Map<String, String> requestHeaders, HttpEntity entity) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        postByEntity(url, requestHeaders, entity, null, outputStream);
+        String content = outputStream.toString();
         if (logger.isDebugEnable())
             logger.debug("使用POST访问[{}]结果[{}]。", url, content);
 
@@ -193,118 +157,99 @@ public class HttpImpl implements Http, ContextRefreshedListener {
     }
 
     @Override
-    public Map<String, String> download(String url, Map<String, String> headers, Map<String, String> parameters, String dest) {
-        return download(url, headers, parameters, null, dest);
+    public void post(String url, Map<String, String> requestHeaders, String content, String charset,
+                     Map<String, String> responseHeaders, OutputStream outputStream) {
+        postByEntity(url, requestHeaders, toEntiry(content, charset), responseHeaders, outputStream);
     }
 
     @Override
-    public Map<String, String> download(String url, Map<String, String> headers, Map<String, String> parameters, String charset, String dest) {
-        return download(url, headers, toStringParameters(parameters, charset), dest);
+    public String upload(String url, Map<String, String> requestHeaders, Map<String, String> parameters, Map<String, File> files) {
+        return upload(url, requestHeaders, parameters, files, null);
     }
 
-    private String toStringParameters(Map<String, String> parameters, String charset) {
+    @Override
+    public String upload(String url, Map<String, String> requestHeaders, Map<String, String> parameters,
+                         Map<String, File> files, String charset) {
+        if (validator.isEmpty(files))
+            return post(url, requestHeaders, parameters, charset);
+
+        MultipartEntityBuilder entity = MultipartEntityBuilder.create();
+        ContentType contentType = ContentType.create("text/plain", context.getCharset(charset));
+        if (!validator.isEmpty(parameters))
+            parameters.forEach((key, value) -> entity.addTextBody(key, value, contentType));
+        files.forEach(entity::addBinaryBody);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        postByEntity(url, requestHeaders, entity.build(), null, outputStream);
+
+        return outputStream.toString();
+    }
+
+    private HttpEntity toEntiry(String parameters, String charset) {
         if (validator.isEmpty(parameters))
-            return "";
-
-        StringBuilder sb = new StringBuilder();
-        parameters.forEach((name, value) -> sb.append('&').append(name).append('=').append(converter.encodeUrl(value, charset)));
-
-        return sb.substring(1);
-    }
-
-    @Override
-    public Map<String, String> download(String url, Map<String, String> headers, String parameters, String dest) {
-        if (validator.isEmpty(url))
             return null;
 
+        return new StringEntity(parameters, context.getCharset(charset));
+    }
+
+    private HttpEntity toEntiry(Map<String, String> map, String charset) {
+        if (validator.isEmpty(map))
+            return null;
+
+        List<NameValuePair> nvps = new ArrayList<>();
+        map.forEach((key, value) -> nvps.add(new BasicNameValuePair(key, value)));
+
         try {
-            if (!new File(dest.substring(0, dest.lastIndexOf('/'))).mkdirs())
-                return null;
-
-            Map<String, String> map = download(url, headers, parameters, new FileOutputStream(dest));
-
-            if (logger.isDebugEnable())
-                logger.debug("使用GET下载文件[{}]到[{}]。", url, dest);
-
-            return map;
-        } catch (Exception e) {
-            logger.warn(e, "使用GET下载文件[{}]时发生异常！", url);
+            return new UrlEncodedFormEntity(nvps, context.getCharset(charset));
+        } catch (UnsupportedEncodingException e) {
+            logger.warn(e, "转化参数[{}:{}]时发生异常！", converter.toString(map), charset);
 
             return null;
         }
     }
 
-    @Override
-    public Map<String, String> download(String url, Map<String, String> headers, String parameters, OutputStream outputStream) {
+    private void postByEntity(String url, Map<String, String> requestHeaders, HttpEntity entity,
+                              Map<String, String> responseHeaders, OutputStream outputStream) {
         if (validator.isEmpty(url))
-            return null;
-
-        if (!validator.isEmpty(parameters))
-            url = url + (url.indexOf('?') == -1 ? '?' : '&') + parameters;
+            return;
 
         if (logger.isDebugEnable())
-            logger.debug("使用GET下载文件[{}]。", url);
+            logger.debug("使用POST访问{}[{}]。", url, entity);
 
-        try {
-            HttpGet get = new HttpGet(url);
-            get.setConfig(getRequestConfig());
-            CloseableHttpResponse response = execute(get, headers);
-            Map<String, String> map = toMap(response.getAllHeaders());
-            InputStream inputStream = response.getEntity().getContent();
-            io.copy(inputStream, outputStream);
-            inputStream.close();
-            outputStream.close();
-            response.close();
-
-            if (logger.isDebugEnable())
-                logger.debug("下载文件Header[{}]信息。", converter.toString(map));
-
-            return map;
-        } catch (Exception e) {
-            logger.warn(e, "使用GET下载文件[{}]时发生异常！", url);
-
-            return null;
-        }
-    }
-
-    private Map<String, String> toMap(Header[] headers) {
-        Map<String, String> map = new HashMap<>();
-        for (Header header : headers)
-            map.put(header.getName(), header.getValue());
-
-        return map;
+        HttpPost post = new HttpPost(url);
+        post.setConfig(getRequestConfig());
+        if (entity != null)
+            post.setEntity(entity);
+        execute(post, requestHeaders, responseHeaders, outputStream);
     }
 
     private RequestConfig getRequestConfig() {
         return RequestConfig.custom().setConnectTimeout(connectTimeout).setSocketTimeout(readTimeout).build();
     }
 
-    private String execute(HttpUriRequest request, Map<String, String> headers, String charset) throws IOException {
-        CloseableHttpResponse response = execute(request, headers);
-        statusCode.set(response.getStatusLine().getStatusCode());
-        String content = EntityUtils.toString(response.getEntity(), context.getCharset(charset));
-        response.close();
-
-        return content;
-    }
-
-    private CloseableHttpResponse execute(HttpUriRequest request, Map<String, String> headers) throws IOException {
-        if (!validator.isEmpty(headers)) {
-            headers.forEach((name, value) -> {
-                if (!name.toLowerCase().equals("content-length"))
-                    request.addHeader(name, value);
-            });
+    private void execute(HttpUriRequest request, Map<String, String> requestHeaders, Map<String, String> responseHeaders,
+                         OutputStream outputStream) {
+        if (!validator.isEmpty(requestHeaders))
+            requestHeaders.keySet().stream().filter(key -> !key.toLowerCase().equals("content-length"))
+                    .forEach(key -> request.addHeader(key, requestHeaders.get(key)));
+        request.addHeader("time-hash", numeric.toString(timeHash.generate(), "0"));
+        try {
+            CloseableHttpResponse response = HttpClients.custom().setConnectionManager(manager).build()
+                    .execute(request, HttpClientContext.create());
+            if (responseHeaders != null)
+                for (Header header : response.getAllHeaders())
+                    responseHeaders.put(header.getName(), header.getValue());
+            statusCode.set(response.getStatusLine().getStatusCode());
+            io.copy(response.getEntity().getContent(), outputStream);
+            response.close();
+            outputStream.close();
+        } catch (IOException e) {
+            logger.warn(e, "执行HTTP请求时发生异常！");
         }
-        request.addHeader("time-hash", converter.toString(timeHash.generate()));
-
-        return HttpClients.custom().setConnectionManager(manager).build().execute(request, HttpClientContext.create());
     }
 
     @Override
     public int getStatusCode() {
-        Integer code = statusCode.get();
-
-        return code == null ? 0 : code;
+        return numeric.toInt(statusCode.get());
     }
 
     @Override

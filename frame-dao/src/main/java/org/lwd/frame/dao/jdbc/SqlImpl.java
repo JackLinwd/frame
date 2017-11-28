@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import org.lwd.frame.dao.Mode;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
@@ -99,7 +100,8 @@ public class SqlImpl extends JdbcSupport<PreparedStatement> implements Sql {
         return update(dataSource, "DELETE FROM " + from + " WHERE " + where, args);
     }
 
-    protected PreparedStatement newPreparedStatement(String dataSource, Mode mode, String sql) throws SQLException {
-        return getConnection(dataSource, mode).prepareStatement(sql);
+    @Override
+    protected PreparedStatement newPreparedStatement(Connection connection, String sql) throws SQLException {
+        return connection.prepareStatement(sql);
     }
 }

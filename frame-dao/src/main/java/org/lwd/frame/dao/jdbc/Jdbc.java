@@ -3,6 +3,8 @@ package org.lwd.frame.dao.jdbc;
 import com.alibaba.fastjson.JSONArray;
 import org.lwd.frame.atomic.Atomicable;
 
+import java.util.List;
+
 /**
  * JDBC操作接口。
  *
@@ -16,9 +18,7 @@ public interface Jdbc extends Atomicable {
      * @param args 参数集。
      * @return 数据集。
      */
-    default SqlTable query(String sql, Object[] args) {
-        return query(null, sql, args);
-    }
+    SqlTable query(String sql, Object[] args);
 
     /**
      * 执行检索操作。
@@ -37,9 +37,7 @@ public interface Jdbc extends Atomicable {
      * @param args 参数集。
      * @return 数据集。
      */
-    default JSONArray queryAsJson(String sql, Object[] args) {
-        return queryAsJson(null, sql, args);
-    }
+    JSONArray queryAsJson(String sql, Object[] args);
 
     /**
      * 执行检索操作，并将结果集以JSON数组格式返回。
@@ -58,9 +56,7 @@ public interface Jdbc extends Atomicable {
      * @param args 参数集。
      * @return 影响记录数。
      */
-    default int update(String sql, Object[] args) {
-        return update(null, sql, args);
-    }
+    int update(String sql, Object[] args);
 
     /**
      * 执行更新操作。

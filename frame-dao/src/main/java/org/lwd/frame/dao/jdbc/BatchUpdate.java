@@ -35,7 +35,7 @@ public interface BatchUpdate {
     void commit();
 
     /**
-     * 取消。
+     * 清除收集信息。
      */
-    void cancel();
+    void clear();
 }

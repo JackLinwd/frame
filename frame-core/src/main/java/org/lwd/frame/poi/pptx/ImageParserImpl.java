@@ -7,12 +7,14 @@ import org.apache.poi.xslf.usermodel.XSLFPictureData;
 import org.apache.poi.xslf.usermodel.XSLFPictureShape;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 import org.lwd.frame.util.Http;
+import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -22,6 +24,8 @@ import java.util.Map;
 public class ImageParserImpl implements Parser {
     @Inject
     private Http http;
+    @Inject
+    private Json json;
     @Inject
     private Logger logger;
     @Inject
@@ -34,16 +38,17 @@ public class ImageParserImpl implements Parser {
 
     @Override
     public boolean parse(XMLSlideShow xmlSlideShow, XSLFSlide xslfSlide, JSONObject object) {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         String image = object.getString("image");
-        Map<String, String> map = http.download(image, null, null, outputStream);
-        if (map == null)
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        Map<String, String> map = new HashMap<>();
+        http.get(image, null, null, map, outputStream);
+        if (map.isEmpty())
             return false;
 
         try {
             String contenType = map.get("Content-Type");
-            XSLFPictureData xslfPictureData = xmlSlideShow.addPicture(parserHelper.subImage(outputStream.toByteArray(),
-                    object, contenType.substring(contenType.indexOf('/') + 1).toUpperCase()), getPictureType(contenType));
+            XSLFPictureData xslfPictureData = xmlSlideShow.addPicture(parserHelper.getImage(object, contenType, outputStream),
+                    getPictureType(image, contenType));
             XSLFPictureShape xslfPictureShape = xslfSlide.createPicture(xslfPictureData);
             xslfPictureShape.setAnchor(parserHelper.getRectangle(object));
             parserHelper.rotate(xslfPictureShape, object);
@@ -56,16 +61,16 @@ public class ImageParserImpl implements Parser {
         }
     }
 
-    private PictureData.PictureType getPictureType(String contentType) {
-        if (contentType.equals("image/jpeg"))
-            return PictureData.PictureType.JPEG;
-
-        if (contentType.equals("image/gif"))
-            return PictureData.PictureType.GIF;
-
-        if (!contentType.equals("image/png"))
-            logger.warn(null, "未处理图片类型[{}]！", contentType);
-
-        return PictureData.PictureType.PNG;
+    private PictureData.PictureType getPictureType(String url, String contentType) {
+        switch (contentType) {
+            case "image/jpeg":
+                return PictureData.PictureType.JPEG;
+            case "image/gif":
+                return PictureData.PictureType.GIF;
+            default:
+                if (!contentType.equals("image/png"))
+                    logger.warn(null, "未处理图片类型[{}:{}]！", url, contentType);
+                return PictureData.PictureType.PNG;
+        }
     }
 }

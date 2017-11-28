@@ -9,12 +9,12 @@ import org.apache.ibatis.session.RowBounds;
  * @author lwd
  */
 public class MybatisBuilder {
-    protected String dataSource;
-    protected String statement;
-    protected Object parameter;
-    protected String mapKey;
-    protected RowBounds rowBounds;
-    protected ResultHandler resultHandler;
+    private String dataSource;
+    private String statement;
+    private Object parameter;
+    private String mapKey;
+    private RowBounds rowBounds;
+    private ResultHandler resultHandler;
 
     /**
      * 设置数据源。

@@ -2,15 +2,20 @@ package org.lwd.frame.poi.pptx;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.poi.common.usermodel.fonts.FontGroup;
 import org.apache.poi.sl.usermodel.Insets2D;
 import org.apache.poi.sl.usermodel.TextParagraph;
-import org.apache.poi.xslf.usermodel.*;
+import org.apache.poi.xslf.usermodel.XMLSlideShow;
+import org.apache.poi.xslf.usermodel.XSLFSlide;
+import org.apache.poi.xslf.usermodel.XSLFTextBox;
+import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
+import org.apache.poi.xslf.usermodel.XSLFTextRun;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Numeric;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.awt.*;
+import java.awt.Color;
 
 /**
  * @author lwd
@@ -53,7 +58,6 @@ public class TextParserImpl implements Parser {
             return newParagraph(xslfTextBox, object);
 
         XSLFTextRun xslfTextRun = xslfTextParagraph.addNewTextRun();
-        xslfTextRun.setText(text);
         font(xslfTextParagraph, xslfTextRun, object, child);
         color(xslfTextRun, object, child);
         if (json.hasTrue(object, "bold") || json.hasTrue(child, "bold"))
@@ -64,6 +68,7 @@ public class TextParserImpl implements Parser {
             xslfTextRun.setItalic(true);
         if (object.containsKey("spacing") || child.containsKey("spacing"))
             xslfTextRun.setCharacterSpacing((child.containsKey("spacing") ? child : object).getDoubleValue("spacing"));
+        xslfTextRun.setText(text);
 
         return xslfTextParagraph;
     }
@@ -100,17 +105,11 @@ public class TextParserImpl implements Parser {
 
         JSONObject font = (child.containsKey("font") ? child : object).getJSONObject("font");
         if (font.containsKey("family"))
-            xslfTextRun.setFontFamily(font.getString("family"));
-        if (font.containsKey("size")) {
-            double height = 0.0D;
-            if (font.containsKey("height"))
-                height = Math.max(0.0D, font.getDoubleValue("height") - 1);
-            double size = numeric.toDouble(font.getDoubleValue("size"));
-            double space = size * height / 2;
-            xslfTextParagraph.setSpaceBefore(space);
-            xslfTextParagraph.setSpaceAfter(space);
-            xslfTextRun.setFontSize(size);
-        }
+            xslfTextRun.setFontFamily(font.getString("family"), FontGroup.LATIN);
+        if (font.containsKey("size"))
+            xslfTextRun.setFontSize(font.getDoubleValue("size"));
+        if (font.containsKey("height"))
+            xslfTextParagraph.setLineSpacing(font.getDoubleValue("height") * 100);
     }
 
     private void color(XSLFTextRun xslfTextRun, JSONObject object, JSONObject child) {

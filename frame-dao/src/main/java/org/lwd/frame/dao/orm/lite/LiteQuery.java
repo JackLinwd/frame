@@ -1,5 +1,6 @@
 package org.lwd.frame.dao.orm.lite;
 
+import org.lwd.frame.dao.jdbc.IndexBuilder;
 import org.lwd.frame.dao.model.Model;
 import org.lwd.frame.dao.orm.Query;
 import org.lwd.frame.dao.orm.QuerySupport;
@@ -12,6 +13,7 @@ import org.lwd.frame.dao.orm.QuerySupport;
 public class LiteQuery extends QuerySupport implements Query {
     private String select;
     private String from;
+    private IndexBuilder indexBuilder;
 
     /**
      * 检索构造器。
@@ -58,6 +60,38 @@ public class LiteQuery extends QuerySupport implements Query {
      */
     public LiteQuery from(String from) {
         this.from = from;
+
+        return this;
+    }
+
+    /**
+     * 设置使用、忽略索引。
+     *
+     * @param type 索引类型。
+     * @param name 索引名称。
+     * @return 当前Query实例。
+     */
+    public LiteQuery index(IndexBuilder.Type type, String name) {
+        if (indexBuilder == null)
+            indexBuilder = new IndexBuilder();
+        indexBuilder.append(type, name);
+
+        return this;
+    }
+
+    /**
+     * 设置使用、忽略索引。
+     *
+     * @param type     索引类型。
+     * @param key      索引关键字。
+     * @param name     索引名称。
+     * @param indexFor 指向。
+     * @return 当前Query实例。
+     */
+    public LiteQuery index(IndexBuilder.Type type, IndexBuilder.Key key, String name, IndexBuilder.For indexFor) {
+        if (indexBuilder == null)
+            indexBuilder = new IndexBuilder();
+        indexBuilder.append(type, key, name, indexFor);
 
         return this;
     }
@@ -173,5 +207,14 @@ public class LiteQuery extends QuerySupport implements Query {
      */
     public String getFrom() {
         return from;
+    }
+
+    /**
+     * 获取索引设置集。
+     *
+     * @return 索引设置集。
+     */
+    public IndexBuilder getIndex() {
+        return indexBuilder;
     }
 }

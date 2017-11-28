@@ -2,12 +2,20 @@ package org.lwd.frame.crypto;
 
 import org.lwd.frame.storage.StorageListener;
 import org.lwd.frame.storage.Storages;
-import org.lwd.frame.util.*;
+import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.Io;
+import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.Numeric;
+import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author lwd
@@ -40,7 +48,7 @@ public class SignImpl implements Sign, StorageListener {
         if (map == null)
             return;
 
-        map.put(SIGN_TIME, converter.toString(System.currentTimeMillis(), "0"));
+        map.put(SIGN_TIME, numeric.toString(System.currentTimeMillis(), "0"));
         map.put(SIGN, get(map, name));
     }
 

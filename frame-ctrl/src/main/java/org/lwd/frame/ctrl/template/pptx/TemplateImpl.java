@@ -5,8 +5,8 @@ import org.lwd.frame.ctrl.context.Response;
 import org.lwd.frame.ctrl.template.TemplateSupport;
 import org.lwd.frame.ctrl.template.Templates;
 import org.lwd.frame.poi.Pptx;
+import org.lwd.frame.util.Coder;
 import org.lwd.frame.util.Context;
-import org.lwd.frame.util.Converter;
 import org.springframework.stereotype.Controller;
 
 import javax.inject.Inject;
@@ -21,7 +21,7 @@ public class TemplateImpl extends TemplateSupport {
     @Inject
     private Context context;
     @Inject
-    private Converter converter;
+    private Coder coder;
     @Inject
     private Pptx pptx;
     @Inject
@@ -44,7 +44,8 @@ public class TemplateImpl extends TemplateSupport {
 
         JSONObject object = (JSONObject) data;
         if (object.containsKey("filename"))
-            response.setHeader("Content-Disposition", "attachment; filename*=" + context.getCharset(null) + "''" + converter.encodeUrl(object.getString("filename"), null) + ".pptx");
+            response.setHeader("Content-Disposition", "attachment; filename*=" + context.getCharset(null)
+                    + "''" + coder.encodeUrl(object.getString("filename"), null) + ".pptx");
         pptx.write(object, outputStream);
     }
 }

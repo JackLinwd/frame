@@ -27,4 +27,11 @@ public interface Counter {
      * @param ip  请求方IP地址。
      */
     void decrease(String uri, String ip);
+
+    /**
+     * 获取最大并发请求总数设置。
+     *
+     * @return 最大并发请求总数设置。
+     */
+    int max();
 }

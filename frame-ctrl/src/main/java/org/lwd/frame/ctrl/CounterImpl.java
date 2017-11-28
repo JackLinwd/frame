@@ -98,6 +98,11 @@ public class CounterImpl implements Counter, StorageListener {
     }
 
     @Override
+    public int max() {
+        return max;
+    }
+
+    @Override
     public String getStorageType() {
         return Storages.TYPE_DISK;
     }

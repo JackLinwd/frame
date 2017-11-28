@@ -87,7 +87,7 @@ public class ExecutorHelperImpl implements ExecutorHelper, FailureCode, ContextR
     }
 
     private int getCode(String prefix, int code) {
-        int n = numeric.toInt(prefix + converter.toString(code, "00"));
+        int n = numeric.toInt(prefix + numeric.toString(code, "00"));
 
         return n == 0 ? -1 : n;
     }

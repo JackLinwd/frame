@@ -4,9 +4,14 @@ import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author lwd
@@ -23,6 +28,8 @@ public class ConverterImpl implements Converter {
     private Numeric numeric;
     @Inject
     private DateTime dateTime;
+    @Inject
+    private Coder coder;
     @Inject
     private Logger logger;
 
@@ -48,17 +55,12 @@ public class ConverterImpl implements Converter {
     }
 
     @Override
-    public String toString(Number number, String format) {
-        return numeric.toString(number, format);
-    }
-
-    @Override
     public String toString(Object number, int decimal, int point) {
         StringBuilder sb = new StringBuilder().append("0.");
         for (int i = 0; i < point; i++)
             sb.append('0');
 
-        return toString(numeric.toLong(number) * Math.pow(0.1D, decimal), sb.toString());
+        return numeric.toString(numeric.toLong(number) * Math.pow(0.1D, decimal), sb.toString());
     }
 
     @Override
@@ -96,6 +98,17 @@ public class ConverterImpl implements Converter {
         map.forEach((key, value) -> sb.append(separator).append(toString(key)).append('=').append(toString(value)));
 
         return sb.substring(separator.length());
+    }
+
+    @Override
+    public String toString(byte[] bytes, String charset) {
+        try {
+            return new String(bytes, context.getCharset(charset));
+        } catch (UnsupportedEncodingException e) {
+            logger.warn(e, "将byte数组转化为字符串[{}]时发生异常！", charset);
+
+            return null;
+        }
     }
 
     @Override
@@ -157,7 +170,7 @@ public class ConverterImpl implements Converter {
         if (size >= 1024 && pattern < BIT_SIZE_FORMAT.length - 1)
             return toBitSize(size / 1024, pattern + 1);
 
-        return toString(size, BIT_SIZE_FORMAT[pattern]);
+        return numeric.toString(size, BIT_SIZE_FORMAT[pattern]);
     }
 
     @Override
@@ -193,34 +206,6 @@ public class ConverterImpl implements Converter {
             logger.warn(e, "将对象[{}]转化为布尔值时发生异常！", object);
 
             return false;
-        }
-    }
-
-    @Override
-    public String encodeUrl(String string, String charset) {
-        if (string == null)
-            return null;
-
-        try {
-            return URLEncoder.encode(string, context.getCharset(charset));
-        } catch (UnsupportedEncodingException e) {
-            logger.warn(e, "将字符串[{}]进行URL编码[{}]转换时发生异常！", string, charset);
-
-            return string;
-        }
-    }
-
-    @Override
-    public String decodeUrl(String string, String charset) {
-        if (string == null)
-            return null;
-
-        try {
-            return URLDecoder.decode(string, context.getCharset(charset));
-        } catch (UnsupportedEncodingException e) {
-            logger.warn(e, "将字符串[{}]进行URL解码[{}]转换时发生异常！", string, charset);
-
-            return string;
         }
     }
 
@@ -261,7 +246,7 @@ public class ConverterImpl implements Converter {
 
                 continue;
             }
-            map.put(string.substring(0, indexOf), decodeUrl(string.substring(indexOf + 1) + value, null));
+            map.put(string.substring(0, indexOf), coder.decodeUrl(string.substring(indexOf + 1) + value, null));
             value = "";
         }
 

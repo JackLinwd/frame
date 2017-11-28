@@ -40,8 +40,8 @@ public class SvgParserImpl implements Parser {
     @Override
     public boolean parse(XMLSlideShow xmlSlideShow, XSLFSlide xslfSlide, JSONObject object) {
         try {
-            XSLFPictureData xslfPictureData = xmlSlideShow.addPicture(parserHelper.subImage(readSvg(object.getString("svg")),
-                    object, "PNG"), PictureData.PictureType.PNG);
+            XSLFPictureData xslfPictureData = xmlSlideShow.addPicture(parserHelper.getImage(object, "image/png",
+                    readSvg(object.getString("svg"))), PictureData.PictureType.PNG);
             XSLFPictureShape xslfPictureShape = xslfSlide.createPicture(xslfPictureData);
             xslfPictureShape.setAnchor(parserHelper.getRectangle(object));
             parserHelper.rotate(xslfPictureShape, object);
@@ -54,7 +54,7 @@ public class SvgParserImpl implements Parser {
         }
     }
 
-    private byte[] readSvg(String image) throws IOException, TranscoderException {
+    private ByteArrayOutputStream readSvg(String image) throws IOException, TranscoderException {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         Reader reader = new StringReader(image);
         new PNGTranscoder().transcode(new TranscoderInput(reader), new TranscoderOutput(outputStream));
@@ -62,6 +62,6 @@ public class SvgParserImpl implements Parser {
         outputStream.flush();
         outputStream.close();
 
-        return outputStream.toByteArray();
+        return outputStream;
     }
 }

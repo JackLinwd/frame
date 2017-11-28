@@ -5,6 +5,7 @@ import org.lwd.frame.dao.Mode;
 import org.springframework.stereotype.Repository;
 
 import java.sql.CallableStatement;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -89,7 +90,8 @@ public class ProcedureImpl extends JdbcSupport<CallableStatement> implements Pro
         }
     }
 
-    protected CallableStatement newPreparedStatement(String dataSource, Mode mode, String sql) throws SQLException {
-        return getConnection(dataSource, mode).prepareCall(sql);
+    @Override
+    protected CallableStatement newPreparedStatement(Connection connection, String sql) throws SQLException {
+        return connection.prepareCall(sql);
     }
 }

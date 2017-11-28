@@ -18,15 +18,6 @@ public interface Converter {
     String toString(Object object);
 
     /**
-     * 按指定格式将数值格式化为字符串。
-     *
-     * @param number 要进行格式化的数值。
-     * @param format 目标格式。
-     * @return 格式化后的数值字符串。
-     */
-    String toString(Number number, String format);
-
-    /**
      * 将整数数值对象转化为指定精度的浮点数字符串。
      *
      * @param number  数值对象。
@@ -62,6 +53,15 @@ public interface Converter {
      * @return 字符串。
      */
     String toString(Map<?, ?> map, String separator);
+
+    /**
+     * 将byte数组数据转化为字符串。
+     *
+     * @param bytes   数据。
+     * @param charset 字符集。
+     * @return 字符串；如果转化失败则返回null。
+     */
+    String toString(byte[] bytes, String charset);
 
     /**
      * 将字符串按指定分隔符转化为字符串数组。
@@ -113,24 +113,6 @@ public interface Converter {
      * @return boolean值；如果转化失败则返回false。
      */
     boolean toBoolean(Object object);
-
-    /**
-     * 将字符串进行URL编码转换。
-     *
-     * @param string  要转化的字符串。
-     * @param charset 目标编码格式，如果为空则使用默认编码。
-     * @return 转化后的字符串，如果转化失败将返回原字符串。
-     */
-    String encodeUrl(String string, String charset);
-
-    /**
-     * 将字符串进行URL解码。
-     *
-     * @param string  要转化的字符串。
-     * @param charset 目标编码格式，如果为空则使用默认编码。
-     * @return 转化后的字符串，如果转化失败将返回原字符串。
-     */
-    String decodeUrl(String string, String charset);
 
     /**
      * 将字符串转化为首字母小写的字符串。

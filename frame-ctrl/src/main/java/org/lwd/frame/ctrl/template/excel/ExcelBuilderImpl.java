@@ -6,8 +6,8 @@ import org.lwd.frame.ctrl.context.Response;
 import org.lwd.frame.dao.model.Model;
 import org.lwd.frame.dao.model.ModelHelper;
 import org.lwd.frame.poi.Excel;
+import org.lwd.frame.util.Coder;
 import org.lwd.frame.util.Context;
-import org.lwd.frame.util.Converter;
 import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
@@ -28,7 +28,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
     @Inject
     private Validator validator;
     @Inject
-    private Converter converter;
+    private Coder coder;
     @Inject
     private Excel excel;
     @Inject
@@ -71,7 +71,8 @@ public class ExcelBuilderImpl implements ExcelBuilder {
         }
 
         if (!validator.isEmpty(name))
-            response.setHeader("Content-Disposition", "attachment; filename*=" + context.getCharset(null) + "''" + converter.encodeUrl(name, null) + ".xls");
+            response.setHeader("Content-Disposition", "attachment; filename*=" + context.getCharset(null)
+                    + "''" + coder.encodeUrl(name, null) + ".xls");
 
         excel.write(titles, names, array, outputStream);
     }
