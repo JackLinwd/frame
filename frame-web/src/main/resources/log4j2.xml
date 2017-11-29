@@ -12,7 +12,7 @@
                 <RegexFilter regex=".*org.lwd.frame.util.HttpImpl.*" onMatch="DENY" onMismatch="ACCEPT"/>
             </Filters>
         </Console>
-        <RollingFile name="file.debug" fileName="logs/frame.debug.log" filePattern="logs/frame.debug-%i.log.gz">
+        <RollingFile name="file.debug" fileName="c:/logs/frame.debug.log" filePattern="c:/logs/frame.debug-%i.log.gz">
             <PatternLayout pattern="${pattern}"/>
             <SizeBasedTriggeringPolicy size="${size}"/>
             <Filters>
@@ -20,7 +20,7 @@
                 <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
         </RollingFile>
-        <RollingFile name="file.info" fileName="logs/frame.info.log" filePattern="logs/frame.info-%i.log.gz">
+        <RollingFile name="file.info" fileName="c:/logs/frame.info.log" filePattern="c:/logs/frame.info-%i.log.gz">
             <PatternLayout pattern="${pattern}"/>
             <SizeBasedTriggeringPolicy size="${size}"/>
             <Filters>
@@ -28,7 +28,7 @@
                 <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
         </RollingFile>
-        <RollingFile name="file.warn" fileName="logs/frame.warn.log" filePattern="logs/frame.warn-%i.log.gz">
+        <RollingFile name="file.warn" fileName="c:/logs/frame.warn.log" filePattern="c:/logs/frame.warn-%i.log.gz">
             <PatternLayout pattern="${pattern}"/>
             <SizeBasedTriggeringPolicy size="${size}"/>
             <Filters>
@@ -36,7 +36,7 @@
                 <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
         </RollingFile>
-        <RollingFile name="file.error" fileName="logs/frame.error.log" filePattern="logs/frame.error-%i.log.gz">
+        <RollingFile name="file.error" fileName="c:/logs/frame.error.log" filePattern="c:/logs/frame.error-%i.log.gz">
             <PatternLayout pattern="${pattern}"/>
             <SizeBasedTriggeringPolicy size="${size}"/>
             <Filters>
@@ -48,7 +48,7 @@
         <Root level="info">
             <AppenderRef ref="console"/>
         </Root>
-        <Logger name="frame.util.logger" level="debug">
+        <Logger name="frame.util.logger" level="info">
             <appender-ref ref="file.debug"/>
             <appender-ref ref="file.info"/>
             <appender-ref ref="file.warn"/>

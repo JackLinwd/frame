@@ -130,8 +130,8 @@ public class DataSourceImpl implements org.lwd.frame.dao.jdbc.DataSource, Contex
         dialects.put(key, dialect);
         createDataSource(key, dialect, config.getString("username"), config.getString("password"), config.getJSONArray("ips"), config.getString("schema"));
 
-        if (logger.isInfoEnable())
-            logger.info("成功创建数据库[{}]连接池。", config);
+//        if (logger.isInfoEnable())
+//            logger.info("成功创建数据库[{}]连接池。", config);
     }
 
     private void createDataSource(String key, Dialect dialect, String username, String password, JSONArray ips, String schema) {
@@ -172,8 +172,8 @@ public class DataSourceImpl implements org.lwd.frame.dao.jdbc.DataSource, Contex
                 readonly.put(key, true);
             }
 
-            if (logger.isInfoEnable())
-                logger.info("数据源[{}@{}]设置完成。", key, ips.getString(i));
+//            if (logger.isInfoEnable())
+//                logger.info("数据源[{}@{}]设置完成。", key, ips.getString(i));
         }
     }
 }
