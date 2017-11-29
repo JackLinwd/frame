@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.common.usermodel.fonts.FontGroup;
 import org.apache.poi.sl.usermodel.Insets2D;
 import org.apache.poi.sl.usermodel.TextParagraph;
+import org.apache.poi.sl.usermodel.VerticalAlignment;
 import org.apache.poi.xslf.usermodel.XMLSlideShow;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 import org.apache.poi.xslf.usermodel.XSLFTextBox;
@@ -12,6 +13,7 @@ import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
 import org.apache.poi.xslf.usermodel.XSLFTextRun;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Numeric;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeStyle;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -54,9 +56,9 @@ public class TextParserImpl implements Parser {
 
     private XSLFTextParagraph add(XSLFTextBox xslfTextBox, XSLFTextParagraph xslfTextParagraph, JSONObject object, JSONObject child) {
         String text = child.containsKey("text") ? child.getString("text") : object.getString("text");
-        if (text.equals("\n"))
-            return newParagraph(xslfTextBox, object);
-
+        boolean empty = text.equals("\n");
+        if (empty)
+            xslfTextParagraph = newParagraph(xslfTextBox, object);
         XSLFTextRun xslfTextRun = xslfTextParagraph.addNewTextRun();
         font(xslfTextParagraph, xslfTextRun, object, child);
         color(xslfTextRun, object, child);
@@ -68,7 +70,7 @@ public class TextParserImpl implements Parser {
             xslfTextRun.setItalic(true);
         if (object.containsKey("spacing") || child.containsKey("spacing"))
             xslfTextRun.setCharacterSpacing((child.containsKey("spacing") ? child : object).getDoubleValue("spacing"));
-        xslfTextRun.setText(text);
+        xslfTextRun.setText(empty ? "" : text);
 
         return xslfTextParagraph;
     }

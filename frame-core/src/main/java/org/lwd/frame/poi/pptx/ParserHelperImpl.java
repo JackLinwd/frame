@@ -80,8 +80,8 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
         if (image == null)
             return null;
 
-        if (json.hasTrue(object, "thumbnail"))
-            image = getThumbnail(object, image);
+        if (object.containsKey("thumbnail"))
+            image = getThumbnail(object.getJSONObject("thumbnail"), image);
         if (image == null)
             return null;
 
@@ -105,7 +105,8 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
         int width = object.getIntValue("width");
         int height = object.getIntValue("height");
         BufferedImage thumbnail = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        thumbnail.getGraphics().drawImage(image, 0, 0, width, height, null);
+        thumbnail.getGraphics().drawImage(image.getScaledInstance(width, height, BufferedImage.SCALE_SMOOTH),
+                0, 0, width, height, null);
 
         return thumbnail;
     }
