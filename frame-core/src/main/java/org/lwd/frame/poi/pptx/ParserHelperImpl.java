@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.xslf.usermodel.XSLFSimpleShape;
 import org.lwd.frame.bean.BeanFactory;
 import org.lwd.frame.bean.ContextRefreshedListener;
+import org.lwd.frame.util.Image;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Numeric;
 import org.springframework.stereotype.Component;
@@ -28,6 +29,8 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
     private Numeric numeric;
     @Inject
     private Json json;
+    @Inject
+    private Image image;
     private Map<String, Parser> parsers;
 
     @Override
@@ -76,71 +79,26 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
 
     @Override
     public byte[] getImage(JSONObject object, String contentType, ByteArrayOutputStream outputStream) throws IOException {
-        BufferedImage image = toImage(outputStream);
+        BufferedImage image = this.image.read(outputStream.toByteArray());
         if (image == null)
             return null;
 
-        if (object.containsKey("thumbnail"))
-            image = getThumbnail(object.getJSONObject("thumbnail"), image);
-        if (image == null)
-            return null;
-
-        if (object.containsKey("subimage"))
-            image = getSubimage(object.getJSONObject("subimage"), image);
-        if (image == null)
-            return null;
-
-        return toBytes(image, getFormat(contentType));
-    }
-
-    private BufferedImage toImage(ByteArrayOutputStream outputStream) throws IOException {
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
-        BufferedImage image = ImageIO.read(inputStream);
-        inputStream.close();
-
-        return image;
-    }
-
-    private BufferedImage getThumbnail(JSONObject object, BufferedImage image) {
-        int width = object.getIntValue("width");
-        int height = object.getIntValue("height");
-        BufferedImage thumbnail = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        thumbnail.getGraphics().drawImage(image.getScaledInstance(width, height, BufferedImage.SCALE_SMOOTH),
-                0, 0, width, height, null);
-
-        return thumbnail;
-    }
-
-    private BufferedImage getSubimage(JSONObject object, BufferedImage image) {
-        int x = object.getIntValue("x");
-        int y = object.getIntValue("y");
-        int w = object.getIntValue("width");
-        int h = object.getIntValue("height");
-        int width = image.getWidth();
-        int height = image.getHeight();
-        if (x == 0 && y == 0 && w >= width && h >= height)
-            return image;
-
-        return image.getSubimage(x, y, Math.min(w, width - x), Math.min(h, height - y));
-    }
-
-    private String getFormat(String contentType) {
-        switch (contentType) {
-            case "image/jpeg":
-                return "JPEG";
-            case "image/gif":
-                return "GIT";
-            default:
-                return "PNG";
+        if (object.containsKey("thumbnail")) {
+            JSONObject thumbnail = object.getJSONObject("thumbnail");
+            image = this.image.thumbnail(image, thumbnail.getIntValue("width"), thumbnail.getIntValue("height"));
         }
-    }
+        if (image == null)
+            return null;
 
-    private byte[] toBytes(BufferedImage image, String format) throws IOException {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        ImageIO.write(image, format, outputStream);
-        outputStream.close();
+        if (object.containsKey("subimage")) {
+            JSONObject subimage = object.getJSONObject("subimage");
+            image = this.image.subimage(image, subimage.getIntValue("x"), subimage.getIntValue("y"),
+                    subimage.getIntValue("width"), subimage.getIntValue("height"));
+        }
+        if (image == null)
+            return null;
 
-        return outputStream.toByteArray();
+        return this.image.write(image, this.image.formatFromContentType(contentType));
     }
 
     @Override
