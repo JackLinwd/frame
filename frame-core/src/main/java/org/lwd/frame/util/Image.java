@@ -96,4 +96,13 @@ public interface Image {
      * @return 图片格式；默认返回Format.Png。
      */
     Format formatFromContentType(String contentType);
+
+    /**
+     * 判断文件是否为图片。仅支持JPEG、PNG、GIF等格式验证。
+     *
+     * @param contentType 文件类型。
+     * @param name        文件名。
+     * @return 如果是图片则返回true；否则返回false。
+     */
+    boolean is(String contentType, String name);
 }

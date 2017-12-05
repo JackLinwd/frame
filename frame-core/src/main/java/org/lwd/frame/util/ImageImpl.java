@@ -3,6 +3,7 @@ package org.lwd.frame.util;
 import org.springframework.stereotype.Component;
 
 import javax.imageio.ImageIO;
+import javax.inject.Inject;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -15,6 +16,10 @@ import java.io.OutputStream;
  */
 @Component("frame.util.image")
 public class ImageImpl implements Image {
+
+    @Inject
+    private Validator validator;
+
     @Override
     public BufferedImage read(byte[] bytes) throws IOException {
         return read(new ByteArrayInputStream(bytes));
@@ -102,5 +107,18 @@ public class ImageImpl implements Image {
             default:
                 return Format.Png;
         }
+    }
+
+    @Override
+    public boolean is(String contentType, String name) {
+        int indexOf;
+        if (validator.isEmpty(contentType) || validator.isEmpty(name) || !contentType.startsWith("image/")
+                || (indexOf = name.lastIndexOf('.')) == -1)
+            return false;
+
+        String suffix = name.substring(indexOf);
+        return ((contentType.equals("image/jpeg") && (suffix.equals(".jpg") || suffix.equals(".jpeg"))) ||
+                (contentType.equals("image/png") && suffix.equals(".png"))
+                || (contentType.equals("image/gif") && suffix.equals(".gif")));
     }
 }

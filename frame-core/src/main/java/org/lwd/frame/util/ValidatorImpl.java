@@ -55,15 +55,4 @@ public class ValidatorImpl implements Validator {
     private Pattern getPattern(String regex) {
         return patterns.computeIfAbsent(regex, Pattern::compile);
     }
-
-    @Override
-    public boolean isImage(String contentType, String name) {
-        int indexOf;
-        if (isEmpty(contentType) || isEmpty(name) || !contentType.startsWith("image/") || (indexOf = name.lastIndexOf('.')) == -1)
-            return false;
-
-        String suffix = name.substring(indexOf);
-        return ((contentType.equals("image/jpeg") && (suffix.equals(".jpg") || suffix.equals(".jpeg"))) ||
-                (contentType.equals("image/png") && suffix.equals(".png")) || (contentType.equals("image/gif") && suffix.equals(".gif")));
-    }
 }

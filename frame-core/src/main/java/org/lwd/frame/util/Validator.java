@@ -39,13 +39,4 @@ public interface Validator {
      * @return 如果符合则返回true；否则返回false。
      */
     boolean isMatchRegex(String regex, String string);
-
-    /**
-     * 判断文件是否为图片。仅支持JPEG、PNG、GIF等格式验证。
-     *
-     * @param contentType 文件类型。
-     * @param name        文件名。
-     * @return 如果是图片则返回true；否则返回false。
-     */
-    boolean isImage(String contentType, String name);
 }
