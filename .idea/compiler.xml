@@ -80,11 +80,19 @@
         <processorPath useClasspath="true" />
         <module name="frame-web" />
       </profile>
+      <profile default="false" name="Annotation profile for frame-core-test" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="frame-core-test" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="frame" target="1.8" />
       <module name="frame-carousel" target="1.8" />
       <module name="frame-core" target="1.8" />
+      <module name="frame-core-test" target="1.8" />
       <module name="frame-ctrl" target="1.8" />
       <module name="frame-ctrl-http" target="1.8" />
       <module name="frame-ctrl-socket" target="1.8" />

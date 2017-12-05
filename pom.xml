@@ -16,6 +16,7 @@
         <module>frame-hadoop</module>
         <module>frame-carousel</module>
         <module>frame-web</module>
+        <module>frame-core-test</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>
