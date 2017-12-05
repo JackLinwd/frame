@@ -1,5 +1,7 @@
 package org.lwd.frame.ctrl.http.upload;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -10,13 +12,7 @@ import org.lwd.frame.ctrl.http.IgnoreUri;
 import org.lwd.frame.ctrl.http.ServiceHelper;
 import org.lwd.frame.storage.Storage;
 import org.lwd.frame.storage.Storages;
-import org.lwd.frame.util.Context;
-import org.lwd.frame.util.Converter;
-import org.lwd.frame.util.DateTime;
-import org.lwd.frame.util.Generator;
-import org.lwd.frame.util.Image;
-import org.lwd.frame.util.Logger;
-import org.lwd.frame.util.Validator;
+import org.lwd.frame.util.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -27,15 +23,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
  * @author lwd
  */
-@Service("frame.ctrl.http.upload-helper")
+@Service(UploadHelper.PREFIX + "helper")
 public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefreshedListener {
     @Inject
     private Context context;
@@ -48,7 +42,11 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
     @Inject
     private DateTime dateTime;
     @Inject
+    private Message message;
+    @Inject
     private Image image;
+    @Inject
+    private Json json;
     @Inject
     private Logger logger;
     @Inject
@@ -59,7 +57,7 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
     private ServiceHelper serviceHelper;
     @Inject
     private JsonConfigs jsonConfigs;
-    @Value("${frame.ctrl.http.upload.max-size:1m}")
+    @Value("${" + UploadHelper.PREFIX + "max-size:1m}")
     private String maxSize;
     private ServletFileUpload upload;
     private Map<String, UploadListener> listeners;
@@ -67,24 +65,12 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
     @Override
     public void upload(HttpServletRequest request, HttpServletResponse response) {
         try {
-            List<FileItem> items = new ArrayList<>();
-            getUpload(request).parseRequest(request).forEach(item -> {
-                if (item.isFormField())
-                    return;
-
-                items.add(item);
-            });
-
             OutputStream outputStream = serviceHelper.setContext(request, response, URI);
-            StringBuilder sb = new StringBuilder();
-            for (FileItem item : items) {
-                String result = save(item);
-                if (!validator.isEmpty(result))
-                    sb.append(';').append(result);
-            }
-
-            if (sb.length() > 0)
-                outputStream.write(sb.substring(1).getBytes(context.getCharset(null)));
+            JSONArray array = new JSONArray();
+            for (FileItem item : getUpload(request).parseRequest(request))
+                if (!item.isFormField())
+                    array.add(save(item));
+            outputStream.write(json.toBytes(array));
             outputStream.flush();
             outputStream.close();
         } catch (Throwable e) {
@@ -109,38 +95,44 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
         return upload;
     }
 
-    private String save(FileItem item) throws IOException {
+    private JSONObject save(FileItem item) throws IOException {
         String key = item.getFieldName();
         UploadListener listener = getListener(key);
         if (listener == null)
-            return null;
+            return failure(item, message.get(UploadHelper.PREFIX + "listener.not-exists", key));
 
         String contentType = listener.getContentType(key, item.getContentType(), item.getName());
         if (!listener.isUploadEnable(key, contentType, item.getName())) {
             logger.warn(null, "无法处理文件上传请求[key={}&content-type={}&name={}]！",
                     key, contentType, item.getName());
 
-            return null;
+            return failure(item, message.get(UploadHelper.PREFIX + "disable", key, contentType, item.getName()));
         }
 
         Storage storage = storages.get(listener.getStorage());
         if (storage == null) {
             logger.warn(null, "无法获得存储处理器[{}]，文件上传失败！", listener.getStorage());
 
-            return null;
+            return failure(item, message.get(UploadHelper.PREFIX + "storage.not-exists", listener.getStorage()));
         }
+
+        JSONObject object = new JSONObject();
+        object.put("success", true);
+        object.put("fieldName", item.getFieldName());
+        object.put("fileName", item.getName());
         String path = getPath(listener, item, contentType);
+        object.put("path", listener.upload(key, item.getName(), converter.toBitSize(item.getSize()), path));
         storage.write(path, item.getInputStream());
         String thumbnail = thumbnail(listener.getImageSize(key), storage, contentType, path);
-        String result = listener.upload(key, item.getName(), converter.toBitSize(item.getSize()),
-                thumbnail == null ? path : (path + "," + thumbnail));
+        if (thumbnail != null)
+            object.put("thumbnail", listener.upload(key, item.getName(), converter.toBitSize(item.getSize()), thumbnail));
         item.delete();
 
         if (logger.isDebugEnable())
             logger.debug("保存上传[{}:{}]的文件[{}:{}:{}]。", item.getFieldName(), item.getName(), path,
                     thumbnail, converter.toBitSize(item.getSize()));
 
-        return result;
+        return object;
     }
 
     private UploadListener getListener(String key) {
@@ -192,6 +184,16 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
 
             return null;
         }
+    }
+
+    private JSONObject failure(FileItem item, String message) {
+        JSONObject object = new JSONObject();
+        object.put("success", false);
+        object.put("fieldName", item.getFieldName());
+        object.put("fileName", item.getName());
+        object.put("message", message);
+
+        return object;
     }
 
     @Override

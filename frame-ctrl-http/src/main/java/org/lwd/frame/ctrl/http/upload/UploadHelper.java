@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface UploadHelper {
     /**
+     * 前缀。
+     */
+    String PREFIX = "frame.ctrl.http.upload.";
+    /**
      * 上传Servlet URI地址。
      */
     String URI = "/frame/ctrl-http/upload";
