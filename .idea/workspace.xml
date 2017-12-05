@@ -7,55 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/frame-core-test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/CoreTestSupport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/DateTimeAspect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/DateTimeAspectImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/GeneratorAspect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/GeneratorAspectImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/HttpAspect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/HttpAspectImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/LoggerAspect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/SchedulerAspect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/SchedulerAspectImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/resources/log4j2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-core-test/src/main/resources/spring.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_4.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_7.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_4.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_9_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_10_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_9_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_9_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_10_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_web_2_9_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_web_2_10_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_9_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_9_0_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_9_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_9_0_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_6_0_rc0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_6_0_rc1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_8_0_alpha2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_2_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_2_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_2_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_2_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_2_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_2_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_2_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/frame_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/frame_web_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao-test/frame-dao-test.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao-test/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/DaoTestSupport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTester.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTesterImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-carousel/frame-carousel.iml" afterPath="$PROJECT_DIR$/frame-carousel/frame-carousel.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/frame-core.iml" afterPath="$PROJECT_DIR$/frame-core/frame-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" afterPath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" afterPath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" afterPath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/frame-dao.iml" afterPath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" afterPath="$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-script/frame-script.iml" afterPath="$PROJECT_DIR$/frame-script/frame-script.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-web/frame-web.iml" afterPath="$PROJECT_DIR$/frame-web/frame-web.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="frame.iws" />
@@ -73,6 +32,7 @@
     <ignored path="$PROJECT_DIR$/frame-carousel/target/" />
     <ignored path="$PROJECT_DIR$/frame-web/target/" />
     <ignored path="$PROJECT_DIR$/frame-core-test/target/" />
+    <ignored path="$PROJECT_DIR$/frame-dao-test/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,12 +50,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoggerAspect.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/LoggerAspect.java">
+      <file leaf-file-name="DaoTestSupport.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/DaoTestSupport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26243567">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="0.40823328">
+              <caret line="14" column="21" selection-start-line="13" selection-start-column="25" selection-end-line="14" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,10 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Coder.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CoderImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Converter.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/ConverterImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Http.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/HttpImpl.java" />
         <option value="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/execute/ExecutorHelperImpl.java" />
@@ -173,6 +131,10 @@
         <option value="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/SchedulerAspect.java" />
         <option value="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/SchedulerAspectImpl.java" />
         <option value="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/LoggerAspect.java" />
+        <option value="$PROJECT_DIR$/frame-dao-test/pom.xml" />
+        <option value="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/DaoTestSupport.java" />
+        <option value="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTester.java" />
+        <option value="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTesterImpl.java" />
       </list>
     </option>
   </component>
@@ -271,7 +233,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-web" />
+              <option name="myItemId" value="frame-dao-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-dao-test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -293,91 +269,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="frame-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core-test" />
+              <option name="myItemId" value="frame-dao-test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -394,6 +286,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-core-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-core-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,11 +353,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\frame\frame-dao-test\src\main\java\org\lwd\frame\dao\test" />
       <recent name="C:\project\frame\frame-core-test\src\main\java\org\lwd\frame\test" />
       <recent name="C:\project\frame\frame-core-test\src\main\resources" />
       <recent name="C:\project\frame\frame-ctrl-http\src\main\resources\org\lwd\frame\ctrl\http\upload" />
       <recent name="C:\project\frame\frame-ctrl-http\src\main\java\org\lwd\frame\ctrl\http\upload" />
-      <recent name="C:\project\frame\frame-dao\src\main\java\org\lwd\frame\dao\orm\mybatis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.lwd.frame.test" />
@@ -1020,7 +958,7 @@
       <workItem from="1512374418692" duration="305000" />
       <workItem from="1512377308470" duration="2341000" />
       <workItem from="1512437093602" duration="3749000" />
-      <workItem from="1512455601005" duration="2978000" />
+      <workItem from="1512455601005" duration="4252000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1510039271864</created>
@@ -1226,11 +1164,17 @@
       <option name="project" value="LOCAL" />
       <updated>1512456503910</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="基本测试模块完成">
+      <created>1512458914898</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1512458914898</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55094000" />
+    <option name="totallyTimeSpent" value="56368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1279,7 +1223,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="项目初始化" />
     <MESSAGE value="frame-core完成" />
     <MESSAGE value="frame-dao完成" />
     <MESSAGE value="frame-ctrl-http完成" />
@@ -1304,7 +1247,8 @@
     <MESSAGE value="完善了上传文件" />
     <MESSAGE value="完善了本地缓存" />
     <MESSAGE value="完善文件上传到功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善文件上传到功能" />
+    <MESSAGE value="基本测试模块完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本测试模块完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1366,34 +1310,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20411664">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/StoragesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7667239">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/scheduler/SecondsSchedulerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7667239">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/nio/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/util/concurrent/Executor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1762,6 +1678,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao-test/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTesterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16221374">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/DaoTestSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40823328">
+          <caret line="14" column="21" selection-start-line="13" selection-start-column="25" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1827,7 +1777,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>frame-core-test</last-edited>
+          <last-edited>frame-dao-test</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

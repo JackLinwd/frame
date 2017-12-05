@@ -17,6 +17,7 @@
         <module>frame-carousel</module>
         <module>frame-web</module>
         <module>frame-core-test</module>
+        <module>frame-dao-test</module>
     </modules>
     <packaging>pom</packaging>
     <name>frame</name>

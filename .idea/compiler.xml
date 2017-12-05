@@ -87,6 +87,13 @@
         <processorPath useClasspath="true" />
         <module name="frame-core-test" />
       </profile>
+      <profile default="false" name="Annotation profile for frame-dao-test" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="frame-dao-test" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="frame" target="1.8" />
@@ -97,6 +104,7 @@
       <module name="frame-ctrl-http" target="1.8" />
       <module name="frame-ctrl-socket" target="1.8" />
       <module name="frame-dao" target="1.8" />
+      <module name="frame-dao-test" target="1.8" />
       <module name="frame-hadoop" target="1.8" />
       <module name="frame-script" target="1.8" />
       <module name="frame-web" target="1.8" />
