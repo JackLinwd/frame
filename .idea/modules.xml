@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" filepath="$PROJECT_DIR$/frame-ctrl/frame-ctrl.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" filepath="$PROJECT_DIR$/frame-ctrl-http/frame-ctrl-http.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" filepath="$PROJECT_DIR$/frame-ctrl-socket/frame-ctrl-socket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frame-ctrl-test/frame-ctrl-test.iml" filepath="$PROJECT_DIR$/frame-ctrl-test/frame-ctrl-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-dao/frame-dao.iml" filepath="$PROJECT_DIR$/frame-dao/frame-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-dao-test/frame-dao-test.iml" filepath="$PROJECT_DIR$/frame-dao-test/frame-dao-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" filepath="$PROJECT_DIR$/frame-hadoop/frame-hadoop.iml" />
