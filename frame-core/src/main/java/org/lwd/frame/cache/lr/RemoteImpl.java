@@ -110,9 +110,9 @@ public class RemoteImpl implements Remote, MinuteJob, StorageListener, ContextRe
                     continue;
 
                 String key = ip + ":" + port;
-                if (channels.get(key) != null) {
-                    map.put(key, channels.get(key));
 
+                if (channels != null && channels.get(key) != null) {
+                    map.put(key, channels.get(key));
                     continue;
                 }
 
