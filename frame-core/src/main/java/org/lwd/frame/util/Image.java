@@ -70,6 +70,25 @@ public interface Image {
     BufferedImage subimage(BufferedImage image, int x, int y, int width, int height);
 
     /**
+     * 缩放图片。
+     *
+     * @param image 原图。
+     * @param scale 缩放比例。
+     * @return 缩放后图片。
+     */
+    BufferedImage scale(BufferedImage image, double scale);
+
+    /**
+     * 缩放图片。
+     *
+     * @param image  原图。
+     * @param width  宽度。
+     * @param height 高度。
+     * @return 缩放后图片。
+     */
+    BufferedImage scale(BufferedImage image, int width, int height);
+
+    /**
      * 输出图片。
      *
      * @param image  图片。

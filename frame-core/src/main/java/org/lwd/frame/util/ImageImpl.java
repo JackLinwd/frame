@@ -19,6 +19,8 @@ public class ImageImpl implements Image {
 
     @Inject
     private Validator validator;
+    @Inject
+    private Numeric numeric;
 
     @Override
     public BufferedImage read(byte[] bytes) throws IOException {
@@ -69,6 +71,24 @@ public class ImageImpl implements Image {
             return image;
 
         return image.getSubimage(x, y, Math.min(width, w - x), Math.min(height, h - y));
+    }
+
+    @Override
+    public BufferedImage scale(BufferedImage image, double scale) {
+        return image == null || scale <= 0 || scale == 1.0D ? image :
+                scale(image, numeric.toInt(image.getWidth() * scale), numeric.toInt(image.getHeight() * scale));
+    }
+
+    @Override
+    public BufferedImage scale(BufferedImage image, int width, int height) {
+        if (image == null || width <= 0 || height <= 0)
+            return image;
+
+        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        bufferedImage.getGraphics().drawImage(image.getScaledInstance(width, height, java.awt.Image.SCALE_SMOOTH),
+                0, 0, width, height, null);
+
+        return bufferedImage;
     }
 
     @Override
