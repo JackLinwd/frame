@@ -92,6 +92,10 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
 
         if (object.containsKey("subimage")) {
             JSONObject subimage = object.getJSONObject("subimage");
+            if (json.hasTrue(object, "rotationX"))
+                subimage.put("y", image.getHeight() - subimage.getIntValue("y") - subimage.getIntValue("height"));
+            if (json.hasTrue(object, "rotationY"))
+                subimage.put("x", image.getWidth() - subimage.getIntValue("x") - subimage.getIntValue("width"));
             image = this.image.subimage(image, subimage.getIntValue("x"), subimage.getIntValue("y"),
                     subimage.getIntValue("width"), subimage.getIntValue("height"));
         }

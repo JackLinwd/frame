@@ -62,12 +62,14 @@ public class TextParserImpl implements Parser {
         XSLFTextRun xslfTextRun = xslfTextParagraph.addNewTextRun();
         font(xslfTextParagraph, xslfTextRun, object, child);
         color(xslfTextRun, object, child);
-        if (json.hasTrue(object, "bold") || json.hasTrue(child, "bold"))
+        if (hasTrue(object, child, "bold"))
             xslfTextRun.setBold(true);
-        if (json.hasTrue(object, "underline") || json.hasTrue(child, "underline"))
+        if (hasTrue(object, child, "underline"))
             xslfTextRun.setUnderlined(true);
-        if (json.hasTrue(object, "italic") || json.hasTrue(child, "italic"))
+        if (hasTrue(object, child, "italic"))
             xslfTextRun.setItalic(true);
+        if (hasTrue(object, child, "strikethrough"))
+            xslfTextRun.setStrikethrough(true);
         if (object.containsKey("spacing") || child.containsKey("spacing"))
             xslfTextRun.setCharacterSpacing((child.containsKey("spacing") ? child : object).getDoubleValue("spacing"));
         xslfTextRun.setText(empty ? "" : text);
@@ -111,7 +113,7 @@ public class TextParserImpl implements Parser {
         if (font.containsKey("size"))
             xslfTextRun.setFontSize(font.getDoubleValue("size"));
         if (font.containsKey("height"))
-            xslfTextParagraph.setLineSpacing(font.getDoubleValue("height") * 100);
+            xslfTextParagraph.setLineSpacing(font.getDoubleValue("height") * 75);
     }
 
     private void color(XSLFTextRun xslfTextRun, JSONObject object, JSONObject child) {
@@ -121,5 +123,9 @@ public class TextParserImpl implements Parser {
         Color color = parserHelper.getColor(child.containsKey("color") ? child : object, "color");
         if (color != null)
             xslfTextRun.setFontColor(color);
+    }
+
+    private boolean hasTrue(JSONObject object, JSONObject child, String key) {
+        return json.hasTrue(object, key) || json.hasTrue(child, key);
     }
 }
