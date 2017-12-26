@@ -1,5 +1,6 @@
 package org.lwd.frame.ctrl.validate;
 
+import org.lwd.frame.crypto.Sign;
 import org.lwd.frame.ctrl.context.Header;
 import org.lwd.frame.ctrl.security.TrustfulIp;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,8 @@ import javax.inject.Inject;
  */
 @Controller(Validators.SIGN)
 public class SignValidatorImpl extends ValidatorSupport implements SignValidator {
+    @Inject
+    private Sign sign;
     @Inject
     private Header header;
     @Inject
@@ -24,7 +27,8 @@ public class SignValidatorImpl extends ValidatorSupport implements SignValidator
 
     @Override
     public boolean validate(ValidateWrapper validate, String parameter) {
-        return !enable() || trustfulIp.contains(header.getIp()) || request.checkSign();
+        return !enable() || trustfulIp.contains(header.getIp())
+                || sign.verify(request.getMap(), validator.isEmpty(validate.getString()) ? null : validate.getString()[0]);
     }
 
     private boolean enable() {

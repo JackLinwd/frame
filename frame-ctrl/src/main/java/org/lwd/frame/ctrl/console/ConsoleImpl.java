@@ -3,9 +3,14 @@ package org.lwd.frame.ctrl.console;
 import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.bean.BeanFactory;
 import org.lwd.frame.bean.ContextRefreshedListener;
+import org.lwd.frame.crypto.Sign;
 import org.lwd.frame.ctrl.context.Header;
 import org.lwd.frame.ctrl.context.Request;
-import org.lwd.frame.util.*;
+import org.lwd.frame.util.Converter;
+import org.lwd.frame.util.Json;
+import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.Numeric;
+import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +26,8 @@ import java.util.Set;
  */
 @Service("frame.ctrl.console")
 public class ConsoleImpl implements Console, ContextRefreshedListener {
+    @Inject
+    private Sign sign;
     @Inject
     private Validator validator;
     @Inject
@@ -52,21 +59,21 @@ public class ConsoleImpl implements Console, ContextRefreshedListener {
         if (!isAllowIp())
             return json(9901, null);
 
-        if (!request.checkSign())
-            return json(9902, null);
+        if (!sign.verify(request.getMap(), "frame-ctrl-console"))
+            return json(9995, null);
 
         String beanName = request.get("beanName");
         if (validator.isEmpty(beanName))
-            return json(9903, null);
+            return json(9902, null);
 
         String fieldName = request.get("fieldName");
         String methodName = request.get("methodName");
         if (validator.isEmpty(methodName) && validator.isEmpty(fieldName))
-            return json(9904, null);
+            return json(9903, null);
 
         Object bean = BeanFactory.getBean(beanName);
         if (bean == null)
-            return json(9905, null);
+            return json(9904, null);
 
         List<Class<?>> classes = new ArrayList<>();
         List<Object> args = new ArrayList<>();

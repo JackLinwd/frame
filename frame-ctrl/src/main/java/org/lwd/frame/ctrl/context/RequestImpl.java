@@ -30,13 +30,9 @@ public class RequestImpl implements Request, RequestAware {
     @Inject
     private Logger logger;
     @Inject
-    private Sign sign;
-    @Inject
     private ModelTables modelTables;
     @Inject
     private Optional<Coder> coder;
-    @Value("${frame.ctrl.context.request.sign:frame-ctrl-sign}")
-    private String signName;
     private ThreadLocal<RequestAdapter> adapter = new ThreadLocal<>();
 
     @Override
@@ -133,8 +129,9 @@ public class RequestImpl implements Request, RequestAware {
         return model;
     }
 
-    private <T extends Model> void fillToModel(ModelTable modelTable, T model, String name, String value) throws NoSuchMethodException, SecurityException {
-        if ((name.endsWith("[id]") || name.endsWith(".id")) && name.indexOf('[') == name.lastIndexOf('[') && name.indexOf('.') == name.lastIndexOf('.')) {
+    private <T extends Model> void fillToModel(ModelTable modelTable, T model, String name, String value) throws SecurityException {
+        if ((name.endsWith("[id]") || name.endsWith(".id")) && name.indexOf('[') == name.lastIndexOf('[')
+                && name.indexOf('.') == name.lastIndexOf('.')) {
             modelTable.set(model, name.substring(0, name.indexOf('[') + name.indexOf('.') + 1), value);
 
             return;
@@ -144,16 +141,6 @@ public class RequestImpl implements Request, RequestAware {
             return;
 
         modelTable.set(model, name, value);
-    }
-
-    @Override
-    public boolean checkSign() {
-        return sign.verify(getMap(), signName);
-    }
-
-    @Override
-    public void putSign(Map<String, String> map) {
-        sign.put(map, get(signName));
     }
 
     @Override
