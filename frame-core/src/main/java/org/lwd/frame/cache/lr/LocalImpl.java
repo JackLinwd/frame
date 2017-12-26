@@ -3,11 +3,14 @@ package org.lwd.frame.cache.lr;
 import org.lwd.frame.scheduler.MinuteJob;
 import org.lwd.frame.util.Converter;
 import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.Numeric;
 import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.lang.management.ManagementFactory;
+import java.lang.management.MemoryUsage;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -21,10 +24,12 @@ public class LocalImpl implements Local, MinuteJob {
     @Inject
     private Converter converter;
     @Inject
+    private Numeric numeric;
+    @Inject
     private Logger logger;
-    @Value("${frame.cache.alive-time:30}")
+    @Value("${tephra.cache.alive-time:30}")
     private long aliveTime;
-    @Value("${frame.cache.max-memory:1g}")
+    @Value("${tephra.cache.max-memory:1g}")
     private String maxMemory;
     private Map<String, Element> map = new ConcurrentHashMap<>();
 
@@ -70,24 +75,16 @@ public class LocalImpl implements Local, MinuteJob {
         if (obsoletes.isEmpty())
             return;
 
-        if (logger.isInfoEnable())
-            logger.info("开始清理内存【可用/总】=[{}/{}]。", converter.toBitSize(Runtime.getRuntime().freeMemory()),
-                    converter.toBitSize(Runtime.getRuntime().totalMemory()));
-
+        MemoryUsage usage = ManagementFactory.getMemoryMXBean().getHeapMemoryUsage();
+        log("开始清理内存", usage);
         if (logger.isInfoEnable())
             logger.info("开始移除{}个本地缓存对象。", obsoletes.size());
-
         obsoletes.forEach(map::remove);
-
         if (logger.isInfoEnable())
             logger.info("移除{}个本地缓存对象。", obsoletes.size());
-
         obsoletes.clear();
         System.gc();
-
-        if (logger.isInfoEnable())
-            logger.info("内存清理完毕【可用/总】=[{}/{}]。", converter.toBitSize(Runtime.getRuntime().freeMemory()),
-                    converter.toBitSize(Runtime.getRuntime().totalMemory()));
+        log("内存清理完毕", usage);
     }
 
     private void clearByAliveTime(List<Element> elements, Set<String> obsoletes) {
@@ -111,5 +108,13 @@ public class LocalImpl implements Local, MinuteJob {
         for (int i = 0, max = elements.size() / 4; i < max; i++)
             if (!elements.get(i).isResident())
                 obsoletes.add(elements.get(i).getKey());
+    }
+
+    private void log(String prefix, MemoryUsage usage) {
+        if (!logger.isInfoEnable())
+            return;
+
+        logger.info("{}[used/max]=[{}/{}={}%]。", prefix, converter.toBitSize(usage.getUsed()),
+                converter.toBitSize(usage.getMax()), numeric.toString(100.0D * usage.getUsed() / usage.getMax(), "0.00"));
     }
 }
