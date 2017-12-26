@@ -23,9 +23,8 @@ public interface ServiceHelper {
      * @param request  请求HttpServletRequest信息。
      * @param response 输出HttpServletResponse信息。
      * @return 处理结果。如果处理成功则返回true；否则返回false。
-     * @throws IOException 如果写入流时发生IOException异常则抛出。
      */
-    boolean service(HttpServletRequest request, HttpServletResponse response) throws IOException;
+    boolean service(HttpServletRequest request, HttpServletResponse response);
 
     /**
      * 设置请求环境。

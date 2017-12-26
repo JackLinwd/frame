@@ -111,7 +111,14 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
     }
 
     @Override
-    public boolean service(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public boolean service(HttpServletRequest request, HttpServletResponse response) {
+        if (request.getMethod().equals("OPTIONS")) {
+            setCors(request, response);
+            response.setStatus(204);
+
+            return true;
+        }
+
         String uri = getUri(request);
         String lowerCaseUri = uri.toLowerCase();
         if (lowerCaseUri.startsWith(UploadHelper.ROOT)) {
