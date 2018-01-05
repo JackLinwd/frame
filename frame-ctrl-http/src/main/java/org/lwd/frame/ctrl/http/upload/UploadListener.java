@@ -1,5 +1,10 @@
 package org.lwd.frame.ctrl.http.upload;
 
+import com.alibaba.fastjson.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+
 /**
  * @author lwd
  */
@@ -32,6 +37,18 @@ public interface UploadListener {
      * @return 如果允许则返回true；否则返回false。
      */
     boolean isUploadEnable(String key, String contentType, String name);
+
+    /**
+     * 处理数据。
+     *
+     * @param contentType 文件内容。
+     * @param inputStream 文件输入流。
+     * @return 处理后的数据。如果返回为null则继续执行存储操作，否则不存储。
+     * @throws IOException IO异常。
+     */
+    default JSONObject settle(String contentType, InputStream inputStream) throws IOException {
+        return null;
+    }
 
     /**
      * 获取存储处理器。

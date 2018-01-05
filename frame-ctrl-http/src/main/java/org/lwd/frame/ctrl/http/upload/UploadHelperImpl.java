@@ -109,28 +109,10 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
             return failure(item, message.get(UploadHelper.PREFIX + "disable", key, contentType, item.getName()));
         }
 
-        Storage storage = storages.get(listener.getStorage());
-        if (storage == null) {
-            logger.warn(null, "无法获得存储处理器[{}]，文件上传失败！", listener.getStorage());
-
-            return failure(item, message.get(UploadHelper.PREFIX + "storage.not-exists", listener.getStorage()));
-        }
-
-        JSONObject object = new JSONObject();
-        object.put("success", true);
-        object.put("fieldName", item.getFieldName());
-        object.put("fileName", item.getName());
-        String path = getPath(listener, item, contentType);
-        object.put("path", listener.upload(key, item.getName(), converter.toBitSize(item.getSize()), path));
-        storage.write(path, item.getInputStream());
-        String thumbnail = thumbnail(listener.getImageSize(key), storage, contentType, path);
-        if (thumbnail != null)
-            object.put("thumbnail", listener.upload(key, item.getName(), converter.toBitSize(item.getSize()), thumbnail));
+        JSONObject object = listener.settle(contentType, item.getInputStream());
+        if (object == null)
+            object = save(key, listener, item, contentType);
         item.delete();
-
-        if (logger.isDebugEnable())
-            logger.debug("保存上传[{}:{}]的文件[{}:{}:{}]。", item.getFieldName(), item.getName(), path,
-                    thumbnail, converter.toBitSize(item.getSize()));
 
         return object;
     }
@@ -148,6 +130,32 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri, ContextRefresh
             logger.warn(null, "无法获得上传监听器[{}]，文件上传失败！", key);
 
         return listener;
+    }
+
+    private JSONObject save(String key, UploadListener listener, FileItem item, String contentType) throws IOException {
+        Storage storage = storages.get(listener.getStorage());
+        if (storage == null) {
+            logger.warn(null, "无法获得存储处理器[{}]，文件上传失败！", listener.getStorage());
+
+            return failure(item, message.get(UploadHelper.PREFIX + "storage.not-exists", listener.getStorage()));
+        }
+
+        JSONObject object = new JSONObject();
+        object.put("success", true);
+        object.put("fieldName", item.getFieldName());
+        object.put("fileName", item.getName());
+        String path = getPath(listener, item, contentType);
+        object.put("path", listener.upload(key, item.getName(), converter.toBitSize(item.getSize()), path));
+        storage.write(path, item.getInputStream());
+        String thumbnail = thumbnail(listener.getImageSize(key), storage, contentType, path);
+        if (thumbnail != null)
+            object.put("thumbnail", listener.upload(key, item.getName(), converter.toBitSize(item.getSize()), thumbnail));
+
+        if (logger.isDebugEnable())
+            logger.debug("保存上传[{}:{}]的文件[{}:{}:{}]。", item.getFieldName(), item.getName(), path,
+                    thumbnail, converter.toBitSize(item.getSize()));
+
+        return object;
     }
 
     private String getPath(UploadListener listener, FileItem item, String contentType) {

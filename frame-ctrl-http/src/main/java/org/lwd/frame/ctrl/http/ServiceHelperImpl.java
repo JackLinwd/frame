@@ -84,7 +84,7 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
     private String ignorePrefixes;
     @Value("${frame.ctrl.http.ignore.names:}")
     private String ignoreNames;
-    @Value("${frame.ctrl.http.ignore.suffixes:.ico,.js,.css,.html,.jpg,.jpeg,.gif,.png}")
+    @Value("${frame.ctrl.http.ignore.suffixes:.ico,.js,.css,.html,.jpg,.jpeg,.gif,.png,.eot,.woff,.ttf}")
     private String ignoreSuffixes;
     @Value("${frame.ctrl.http.cors:/WEB-INF/cors.json}")
     private String cors;
