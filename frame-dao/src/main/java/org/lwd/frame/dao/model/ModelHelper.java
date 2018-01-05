@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -92,6 +93,16 @@ public interface ModelHelper {
      * @return Model对象集；如果转化失败则返回null。
      */
     <T extends Model> List<T> fromJson(JSONArray array, Class<T> modelClass);
+
+    /**
+     * 获取扩展属性集。
+     *
+     * @param modelClass Model类。
+     * @param map        源属性集。
+     * @param <T>        Model类型。
+     * @return 扩展属性集。
+     */
+    <T extends Model> JSONObject getExtend(Class<T> modelClass, Map<String, String> map);
 
     /**
      * 复制Model属性。
