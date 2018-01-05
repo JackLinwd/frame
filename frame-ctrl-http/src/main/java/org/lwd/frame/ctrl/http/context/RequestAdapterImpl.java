@@ -5,8 +5,10 @@ import org.lwd.frame.ctrl.context.RequestAdapter;
 import org.lwd.frame.util.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,22 +63,38 @@ public class RequestAdapterImpl implements RequestAdapter {
         if (content != null)
             return content;
 
-        String contentType = request.getHeader("content-type");
+        String contentType = request.getHeader("Content-Type");
         if (!BeanFactory.getBean(Validator.class).isEmpty(contentType) && contentType.toLowerCase().contains("multipart/form-data"))
             return content = "";
 
+        StringBuilder buffer = new StringBuilder();
+        BufferedReader reader = null;
         try {
-            ByteArrayOutputStream output = new ByteArrayOutputStream();
-            BeanFactory.getBean(Io.class).copy(request.getInputStream(), output);
-            output.close();
-            content = output.toString();
+            reader = new BufferedReader(new InputStreamReader(
+                    request.getInputStream(), "ISO8859-1"));
 
-            return content;
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+            if (buffer.length() == 0)
+                content = "";
+            else
+                content = new String(buffer.toString().getBytes("ISO8859-1"), "UTF-8");
         } catch (IOException e) {
             BeanFactory.getBean(Logger.class).warn(e, "获取InputStream中的数据时发生异常！");
-
             return "";
+        } finally {
+            if (null != reader) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    BeanFactory.getBean(Logger.class).warn(e, "获取InputStream中的数据时发生异常！");
+                    return "";
+                }
+            }
         }
+        return content;
     }
 
     private void fromJson() {
