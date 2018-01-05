@@ -6,13 +6,11 @@ import org.apache.poi.common.usermodel.fonts.FontGroup;
 import org.apache.poi.sl.usermodel.Insets2D;
 import org.apache.poi.sl.usermodel.TextParagraph;
 import org.apache.poi.sl.usermodel.VerticalAlignment;
-import org.apache.poi.xslf.usermodel.XMLSlideShow;
-import org.apache.poi.xslf.usermodel.XSLFSlide;
-import org.apache.poi.xslf.usermodel.XSLFTextBox;
-import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
-import org.apache.poi.xslf.usermodel.XSLFTextRun;
+import org.apache.poi.xslf.usermodel.*;
+import org.lwd.frame.poi.StreamWriter;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Numeric;
+import org.lwd.frame.util.Validator;
 import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeStyle;
 import org.springframework.stereotype.Component;
 
@@ -29,11 +27,13 @@ public class TextParserImpl implements Parser {
     @Inject
     private Json json;
     @Inject
+    private Validator validator;
+    @Inject
     private ParserHelper parserHelper;
 
     @Override
     public String getType() {
-        return "text";
+        return TYPE_TEXT;
     }
 
     @Override
@@ -41,21 +41,20 @@ public class TextParserImpl implements Parser {
         XSLFTextBox xslfTextBox = xslfSlide.createTextBox();
         xslfTextBox.clearText();
         xslfTextBox.setAnchor(parserHelper.getRectangle(object));
-        xslfTextBox.setInsets(new Insets2D(0.0D, 0.0D, 0.0D, 0.0D));
         parserHelper.rotate(xslfTextBox, object);
         XSLFTextParagraph xslfTextParagraph = newParagraph(xslfTextBox, object);
         if (object.containsKey("texts")) {
             JSONArray texts = object.getJSONArray("texts");
             for (int i = 0, size = texts.size(); i < size; i++)
                 xslfTextParagraph = add(xslfTextBox, xslfTextParagraph, object, texts.getJSONObject(i));
-        } else if (object.containsKey("text"))
+        } else if (object.containsKey(getType()))
             add(xslfTextBox, xslfTextParagraph, object, new JSONObject());
 
         return true;
     }
 
     private XSLFTextParagraph add(XSLFTextBox xslfTextBox, XSLFTextParagraph xslfTextParagraph, JSONObject object, JSONObject child) {
-        String text = child.containsKey("text") ? child.getString("text") : object.getString("text");
+        String text = child.containsKey(getType()) ? child.getString(getType()) : object.getString(getType());
         boolean empty = text.equals("\n");
         if (empty)
             xslfTextParagraph = newParagraph(xslfTextBox, object);
@@ -127,5 +126,64 @@ public class TextParserImpl implements Parser {
 
     private boolean hasTrue(JSONObject object, JSONObject child, String key) {
         return json.hasTrue(object, key) || json.hasTrue(child, key);
+    }
+
+    @Override
+    public boolean parse(JSONObject object, XSLFShape xslfShape, StreamWriter writer) {
+        object.put("type", getType());
+        JSONArray texts = new JSONArray();
+        ((XSLFTextBox) xslfShape).getTextParagraphs().forEach(xslfTextParagraph -> {
+            JSONObject paragraph = new JSONObject();
+            paragraph.put("type", getType());
+            paragraph.put("align", getTextAlign(xslfTextParagraph));
+            String fontFamily = xslfTextParagraph.getDefaultFontFamily();
+            Double fontSize = xslfTextParagraph.getDefaultFontSize();
+            xslfTextParagraph.getTextRuns().forEach(xslfTextRun -> {
+                JSONObject text = new JSONObject();
+                text.putAll(paragraph);
+                text.put(getType(), xslfTextRun.getRawText());
+                text.put("spacing", xslfTextRun.getCharacterSpacing());
+                if (xslfTextRun.isBold())
+                    text.put("bold", true);
+                if (xslfTextRun.isItalic())
+                    text.put("italic", true);
+                if (xslfTextRun.isStrikethrough())
+                    text.put("strikethrough", true);
+                text.put("font", getFont(fontFamily, fontSize, xslfTextRun));
+                texts.add(text);
+            });
+        });
+        if (texts.isEmpty())
+            return false;
+
+        if (texts.size() == 1)
+            object.putAll(texts.getJSONObject(0));
+        else
+            object.put("texts", texts);
+
+        return true;
+    }
+
+    private String getTextAlign(XSLFTextParagraph xslfTextParagraph) {
+        switch (xslfTextParagraph.getTextAlign()) {
+            case LEFT:
+                return "left";
+            case CENTER:
+                return "center";
+            case RIGHT:
+                return "right";
+            default:
+                return "justify";
+        }
+    }
+
+    private JSONObject getFont(String fontFamily, Double fontSize, XSLFTextRun xslfTextRun) {
+        JSONObject font = new JSONObject();
+        font.put("family", validator.isEmpty(xslfTextRun.getFontFamily()) ? fontFamily : xslfTextRun.getFontFamily());
+        Double size = xslfTextRun.getFontSize() == null ? fontSize : xslfTextRun.getFontSize();
+        if (size != null)
+            font.put("size", size);
+
+        return font;
     }
 }

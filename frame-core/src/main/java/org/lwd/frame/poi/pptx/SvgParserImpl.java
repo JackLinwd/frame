@@ -6,10 +6,8 @@ import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
 import org.apache.poi.sl.usermodel.PictureData;
-import org.apache.poi.xslf.usermodel.XMLSlideShow;
-import org.apache.poi.xslf.usermodel.XSLFPictureData;
-import org.apache.poi.xslf.usermodel.XSLFPictureShape;
-import org.apache.poi.xslf.usermodel.XSLFSlide;
+import org.apache.poi.xslf.usermodel.*;
+import org.lwd.frame.poi.StreamWriter;
 import org.lwd.frame.util.Http;
 import org.lwd.frame.util.Logger;
 import org.springframework.stereotype.Component;
@@ -34,7 +32,7 @@ public class SvgParserImpl implements Parser {
 
     @Override
     public String getType() {
-        return "svg";
+        return TYPE_SVG;
     }
 
     @Override
@@ -63,5 +61,10 @@ public class SvgParserImpl implements Parser {
         outputStream.close();
 
         return outputStream;
+    }
+
+    @Override
+    public boolean parse(JSONObject object, XSLFShape xslfShape, StreamWriter writer) {
+        return false;
     }
 }

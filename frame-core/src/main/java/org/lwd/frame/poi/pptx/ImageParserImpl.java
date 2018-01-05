@@ -2,10 +2,8 @@ package org.lwd.frame.poi.pptx;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.sl.usermodel.PictureData;
-import org.apache.poi.xslf.usermodel.XMLSlideShow;
-import org.apache.poi.xslf.usermodel.XSLFPictureData;
-import org.apache.poi.xslf.usermodel.XSLFPictureShape;
-import org.apache.poi.xslf.usermodel.XSLFSlide;
+import org.apache.poi.xslf.usermodel.*;
+import org.lwd.frame.poi.StreamWriter;
 import org.lwd.frame.util.Http;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Logger;
@@ -14,6 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.inject.Inject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,12 +32,12 @@ public class ImageParserImpl implements Parser {
 
     @Override
     public String getType() {
-        return "image";
+        return TYPE_IMAGE;
     }
 
     @Override
     public boolean parse(XMLSlideShow xmlSlideShow, XSLFSlide xslfSlide, JSONObject object) {
-        String image = object.getString("image");
+        String image = object.getString(getType());
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         Map<String, String> map = new HashMap<>();
         http.get(image, null, null, map, outputStream);
@@ -72,5 +71,19 @@ public class ImageParserImpl implements Parser {
                     logger.warn(null, "未处理图片类型[{}:{}]！", url, contentType);
                 return PictureData.PictureType.PNG;
         }
+    }
+
+    @Override
+    public boolean parse(JSONObject object, XSLFShape xslfShape, StreamWriter streamWriter) {
+        XSLFPictureData xslfPictureData = ((XSLFPictureShape) xslfShape).getPictureData();
+        try {
+            InputStream inputStream = xslfPictureData.getInputStream();
+            object.put(getType(), streamWriter.write(xslfPictureData.getContentType(), xslfPictureData.getFileName(), inputStream));
+            inputStream.close();
+        } catch (IOException e) {
+            logger.warn(e, "保存图片[{}:{}]流数据时发生异常！", xslfPictureData.getContentType(), xslfPictureData.getFileName());
+        }
+
+        return true;
     }
 }

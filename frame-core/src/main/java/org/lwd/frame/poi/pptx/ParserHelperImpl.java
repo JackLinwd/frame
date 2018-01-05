@@ -46,7 +46,7 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
 
     @Override
     public void rotate(XSLFSimpleShape xslfSimpleShape, JSONObject object) {
-        if (object.containsKey("rotation"))
+        if (object.containsKey("rotation") && object.getDoubleValue("rotation") != 0)
             xslfSimpleShape.setRotation(object.getDoubleValue("rotation"));
         if (json.hasTrue(object, "rotationX"))
             xslfSimpleShape.setFlipVertical(true);
@@ -79,14 +79,10 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
 
     @Override
     public byte[] getImage(JSONObject object, String contentType, ByteArrayOutputStream outputStream) throws IOException {
-        BufferedImage image = this.image.read(outputStream.toByteArray());
-        if (image == null)
-            return null;
+        if (!object.containsKey("subimage"))
+            return outputStream.toByteArray();
 
-        if (object.containsKey("thumbnail")) {
-            JSONObject thumbnail = object.getJSONObject("thumbnail");
-            image = this.image.thumbnail(image, thumbnail.getIntValue("width"), thumbnail.getIntValue("height"));
-        }
+        BufferedImage image = this.image.read(outputStream.toByteArray());
         if (image == null)
             return null;
 
