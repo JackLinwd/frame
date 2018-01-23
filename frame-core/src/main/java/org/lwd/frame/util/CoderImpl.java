@@ -48,11 +48,31 @@ public class CoderImpl implements Coder {
 
     @Override
     public String encodeBase64(byte[] bytes) {
-        return bytes == null ? null : Base64.getUrlEncoder().encodeToString(bytes);
+        return bytes == null ? null : Base64.getEncoder().encodeToString(bytes);
     }
 
     @Override
     public byte[] decodeBase64(String string) {
+        return Base64.getDecoder().decode(string);
+    }
+
+    @Override
+    public String encodeMimeBase64(byte[] bytes) {
+        return bytes == null ? null : Base64.getMimeEncoder().encodeToString(bytes);
+    }
+
+    @Override
+    public byte[] decodeMimeBase64(String string) {
+        return Base64.getMimeDecoder().decode(string);
+    }
+
+    @Override
+    public String encodeUrlBase64(byte[] bytes) {
+        return bytes == null ? null : Base64.getUrlEncoder().encodeToString(bytes);
+    }
+
+    @Override
+    public byte[] decodeUrlBase64(String string) {
         return Base64.getUrlDecoder().decode(string);
     }
 }

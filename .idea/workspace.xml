@@ -8,8 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/DiskStorageImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/DiskStorageImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/Storage.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/Storage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Coder.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Coder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CoderImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CoderImpl.java" />
     </list>
     <ignored path="frame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiskStorageImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DiskStorageImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/DiskStorageImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.303602">
+            <state vertical-scroll-proportion="0.0">
               <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
               <folding>
                 <element signature="e#415#416#0" expanded="true" />
@@ -111,6 +111,31 @@
                 <element signature="e#782#783#0" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
                 <element signature="e#893#894#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Coder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Coder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoderImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CoderImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.9828473">
+              <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+              <folding>
+                <element signature="e#1400#1401#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#1681#1682#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,8 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-dao-test/pom.xml" />
-        <option value="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/DaoTestSupport.java" />
         <option value="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTester.java" />
         <option value="$PROJECT_DIR$/frame-dao-test/src/main/java/org/lwd/frame/dao/test/PageTesterImpl.java" />
         <option value="$PROJECT_DIR$/frame-ctrl-test/pom.xml" />
@@ -209,6 +232,8 @@
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/DiskStorageImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/Storage.java" />
+        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Coder.java" />
+        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CoderImpl.java" />
       </list>
     </option>
   </component>
@@ -373,6 +398,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1147,13 +1206,7 @@
       <workItem from="1513584269886" duration="50000" />
       <workItem from="1514279123322" duration="1348000" />
       <workItem from="1515133036760" duration="1707000" />
-      <workItem from="1516669661172" duration="1814000" />
-    </task>
-    <task id="LOCAL-00001" summary="项目初始化">
-      <created>1510039271864</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1510039271864</updated>
+      <workItem from="1516669661172" duration="1987000" />
     </task>
     <task id="LOCAL-00002" summary="项目初始化">
       <created>1510040021011</created>
@@ -1443,11 +1496,17 @@
       <option name="project" value="LOCAL" />
       <updated>1516671291591</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="重构文件上传功能。">
+      <created>1516672460093</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1516672460138</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70857000" />
+    <option name="totallyTimeSpent" value="71030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1496,7 +1555,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DAO代码优化" />
     <MESSAGE value="增加请求处理队列功能。" />
     <MESSAGE value="http更改。" />
     <MESSAGE value="系统整改" />
@@ -1521,7 +1579,8 @@
     <MESSAGE value="优化获取输入流中文乱码" />
     <MESSAGE value="完善redis配置" />
     <MESSAGE value="完善FreeMarker功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善FreeMarker功能" />
+    <MESSAGE value="重构文件上传功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构文件上传功能。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1583,20 +1642,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-ctrl-test/src/main/java/org/lwd/frame/dao/test/MockRequestImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1457976">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="48" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/awt/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.03259">
@@ -1800,8 +1845,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
           <folding>
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1961,7 +2006,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/storage/DiskStorageImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.303602">
+        <state vertical-scroll-proportion="0.0">
           <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
           <folding>
             <element signature="e#415#416#0" expanded="true" />
@@ -1974,6 +2019,27 @@
             <element signature="e#782#783#0" expanded="true" />
             <element signature="e#841#842#0" expanded="true" />
             <element signature="e#893#894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Coder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/CoderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9828473">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding>
+            <element signature="e#1400#1401#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
           </folding>
         </state>
       </provider>

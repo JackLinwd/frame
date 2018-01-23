@@ -39,4 +39,36 @@ public interface Coder {
      * @return 解码后的数据。
      */
     byte[] decodeBase64(String string);
+
+    /**
+     * 将数据进行Mime BASE64编码。
+     *
+     * @param bytes 要编码的数据。
+     * @return 编码后的字符串。
+     */
+    String encodeMimeBase64(byte[] bytes);
+
+    /**
+     * 将数据进行Mime BASE64解码。
+     *
+     * @param string 要解码的数据。
+     * @return 解码后的数据。
+     */
+    byte[] decodeMimeBase64(String string);
+
+    /**
+     * 将数据进行URL BASE64编码。
+     *
+     * @param bytes 要编码的数据。
+     * @return 编码后的字符串。
+     */
+    String encodeUrlBase64(byte[] bytes);
+
+    /**
+     * 将数据进行URL BASE64解码。
+     *
+     * @param string 要解码的数据。
+     * @return 解码后的数据。
+     */
+    byte[] decodeUrlBase64(String string);
 }
