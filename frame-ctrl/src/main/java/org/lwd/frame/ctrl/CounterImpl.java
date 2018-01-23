@@ -5,10 +5,7 @@ import org.lwd.frame.cache.Cache;
 import org.lwd.frame.ctrl.security.TrustfulIp;
 import org.lwd.frame.storage.StorageListener;
 import org.lwd.frame.storage.Storages;
-import org.lwd.frame.util.Converter;
-import org.lwd.frame.util.Io;
-import org.lwd.frame.util.Json;
-import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
@@ -29,6 +26,8 @@ public class CounterImpl implements Counter, StorageListener {
     private Cache cache;
     @Inject
     private Converter converter;
+    @Inject
+    private Numeric numeric;
     @Inject
     private Io io;
     @Inject
@@ -65,9 +64,12 @@ public class CounterImpl implements Counter, StorageListener {
             return true;
 
         String key = CACHE_DELAY + ip;
-        Long time = cache.get(key);
-        if (time != null && System.currentTimeMillis() - time < ipDelay)
-            return false;
+        Long time = numeric.toLong(cache.get(key));
+        if (time != null && time > 0) {
+            if (System.currentTimeMillis() - time < ipDelay)
+                return false;
+            cache.remove(key);
+        }
 
         int n = ips.computeIfAbsent(ip, k -> new AtomicInteger()).incrementAndGet();
         if (n > ipMax) {
