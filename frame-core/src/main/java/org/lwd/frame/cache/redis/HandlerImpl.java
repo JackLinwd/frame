@@ -3,6 +3,7 @@ package org.lwd.frame.cache.redis;
 import org.lwd.frame.bean.ContextRefreshedListener;
 import org.lwd.frame.cache.Handler;
 import org.lwd.frame.util.Serializer;
+import org.lwd.frame.util.Validator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
@@ -18,10 +19,14 @@ import javax.inject.Inject;
 public class HandlerImpl implements Handler, ContextRefreshedListener {
     @Inject
     private Serializer serializer;
-    @Value("${frame.cache.name:}")
-    private String name;
-    @Value("${frame.cache.redis.host:localhost}")
+    @Inject
+    private Validator validator;
+    @Value("${frame.cache.redis.host:}")
     private String host;
+    @Value("${frame.cache.redis.port:6379}")
+    private int port;
+    @Value("${frame.cache.redis.password:}")
+    private String password;
     @Value("${frame.cache.redis.max-total:500}")
     private int total;
     @Value("${frame.cache.redis.max-idle:5}")
@@ -71,7 +76,7 @@ public class HandlerImpl implements Handler, ContextRefreshedListener {
 
     @Override
     public void onContextRefreshed() {
-        if (!getName().equals(name))
+        if (validator.isEmpty(host))
             return;
 
         JedisPoolConfig config = new JedisPoolConfig();
@@ -79,6 +84,9 @@ public class HandlerImpl implements Handler, ContextRefreshedListener {
         config.setMaxIdle(idle);
         config.setMaxWaitMillis(wait);
         config.setTestOnBorrow(true);
-        pool = new JedisPool(config, host);
+        if (validator.isEmpty(password))
+            pool = new JedisPool(config, host, port);
+        else
+            pool = new JedisPool(config, host, port, 2000, password);
     }
 }
