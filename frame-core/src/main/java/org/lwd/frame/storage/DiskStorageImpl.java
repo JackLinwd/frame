@@ -57,6 +57,13 @@ public class DiskStorageImpl implements Storage {
     }
 
     @Override
+    public void write(String path, byte[] bytes) throws IOException {
+        OutputStream outputStream = getOutputStream(path);
+        outputStream.write(bytes, 0, bytes.length);
+        outputStream.close();
+    }
+
+    @Override
     public InputStream getInputStream(String path) throws IOException {
         return new FileInputStream(getAbsolutePath(path, false));
     }

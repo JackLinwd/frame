@@ -53,7 +53,7 @@ public interface Storage {
      *
      * @param path         读取文件路径。
      * @param outputStream 输出流。
-     * @throws IOException 未处理IO异常。
+     * @throws IOException IO异常。
      */
     void read(String path, OutputStream outputStream) throws IOException;
 
@@ -62,16 +62,25 @@ public interface Storage {
      *
      * @param path        写入文件路径。
      * @param inputStream 输入流。
-     * @throws IOException 未处理IO异常。
+     * @throws IOException IO异常。
      */
     void write(String path, InputStream inputStream) throws IOException;
+
+    /**
+     * 写入文金。
+     *
+     * @param path  写入文件路径。
+     * @param bytes 数据。
+     * @throws IOException IO异常。
+     */
+    void write(String path, byte[] bytes) throws IOException;
 
     /**
      * 获取输入流。
      *
      * @param path 输入文件路径。
      * @return 输入流。
-     * @throws IOException 未处理IO异常。
+     * @throws IOException IO异常。
      */
     InputStream getInputStream(String path) throws IOException;
 
@@ -80,7 +89,7 @@ public interface Storage {
      *
      * @param path 输出文件路径。
      * @return 输出流。
-     * @throws IOException 未处理IO异常。
+     * @throws IOException IO异常。
      */
     OutputStream getOutputStream(String path) throws IOException;
 
