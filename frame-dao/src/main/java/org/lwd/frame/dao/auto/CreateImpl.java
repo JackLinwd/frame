@@ -45,8 +45,11 @@ public class CreateImpl implements Create {
         if (array == null)
             return;
 
-        for (String string : array)
+        for (String string : array) {
             executer.execute(dataSource, string, false);
+            if (string.contains("CREATE TABLE t_dao_auto"))
+                tables.get(dataSource).add("t_dao_auto");
+        }
     }
 
     private String[] read(Class<? extends Model> modelClass) {
