@@ -8,8 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/resources/core.frame.config" afterPath="$PROJECT_DIR$/frame-core/src/main/resources/core.frame.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
     </list>
     <ignored path="frame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HandlerImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HandlerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69982845">
+            <state vertical-scroll-proportion="0.0">
               <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding>
                 <element signature="e#1169#1170#0" expanded="true" />
@@ -61,6 +61,36 @@
                 <element signature="e#1981#1982#0" expanded="true" />
                 <element signature="e#2005#2006#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Freemarker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FreemarkerImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.3910806">
+              <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/SchedulerAspect.java" />
         <option value="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/SchedulerAspectImpl.java" />
         <option value="$PROJECT_DIR$/frame-core-test/src/main/java/org/lwd/frame/test/LoggerAspect.java" />
         <option value="$PROJECT_DIR$/frame-dao-test/pom.xml" />
@@ -130,7 +159,6 @@
         <option value="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/ServiceHelper.java" />
         <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelper.java" />
         <option value="$PROJECT_DIR$/frame-dao/src/main/java/org/lwd/frame/dao/model/ModelHelperImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/StreamWriter.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/Pptx.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/pptx/ImageParserImpl.java" />
@@ -148,6 +176,8 @@
         <option value="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/RequestAdapterImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/resources/core.frame.config" />
+        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java" />
+        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
       </list>
     </option>
   </component>
@@ -312,6 +342,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freemarker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1018,7 +1082,7 @@
       <workItem from="1513584269886" duration="50000" />
       <workItem from="1514279123322" duration="1348000" />
       <workItem from="1515133036760" duration="1707000" />
-      <workItem from="1516669661172" duration="348000" />
+      <workItem from="1516669661172" duration="1094000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1510039271864</created>
@@ -1302,11 +1366,17 @@
       <option name="project" value="LOCAL" />
       <updated>1515134723808</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="完善redis配置">
+      <created>1516670083205</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1516670083205</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69391000" />
+    <option name="totallyTimeSpent" value="70137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1314,6 +1384,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789558" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1337,7 +1408,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36437908" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1355,7 +1425,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DAO优化代码" />
     <MESSAGE value="代码优化" />
     <MESSAGE value="DAO代码优化" />
     <MESSAGE value="增加请求处理队列功能。" />
@@ -1380,7 +1449,8 @@
     <MESSAGE value="完善pptx转json的问题" />
     <MESSAGE value="优化了上传文件接口" />
     <MESSAGE value="优化获取输入流中文乱码" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化获取输入流中文乱码" />
+    <MESSAGE value="完善redis配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善redis配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1442,13 +1512,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-ctrl-test/src/main/java/org/lwd/frame/dao/test/MockHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frame-ctrl-test/src/main/java/org/lwd/frame/dao/test/MockHelperImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1661,20 +1724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/StreamWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26243567">
@@ -1800,7 +1849,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69982845">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
             <element signature="e#1169#1170#0" expanded="true" />
@@ -1813,6 +1862,30 @@
             <element signature="e#1981#1982#0" expanded="true" />
             <element signature="e#2005#2006#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3910806">
+          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
