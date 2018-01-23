@@ -7,9 +7,11 @@ import org.lwd.frame.poi.StreamWriter;
 import org.lwd.frame.util.Http;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.Numeric;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.awt.*;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +27,8 @@ public class ImageParserImpl implements Parser {
     private Http http;
     @Inject
     private Json json;
+    @Inject
+    private Numeric numeric;
     @Inject
     private Logger logger;
     @Inject
@@ -75,7 +79,20 @@ public class ImageParserImpl implements Parser {
 
     @Override
     public boolean parse(JSONObject object, XSLFShape xslfShape, StreamWriter streamWriter) {
-        XSLFPictureData xslfPictureData = ((XSLFPictureShape) xslfShape).getPictureData();
+        XSLFPictureShape xslfPictureShape = (XSLFPictureShape) xslfShape;
+        Insets insets = xslfPictureShape.getClipping();
+        if (insets != null) {
+            JSONObject clip = new JSONObject();
+            clip.put("x", numeric.toInt(insets.left * 0.025D));
+            clip.put("y", numeric.toInt(insets.top * 0.025D));
+            clip.put("width", numeric.toInt((insets.right - insets.left) * 0.025D));
+            clip.put("height", numeric.toInt((insets.bottom - insets.top) * 0.025D));
+            if (clip.getIntValue("x") > 0 || clip.getIntValue("y") > 0
+                    || clip.getIntValue("width") > 0 || clip.getIntValue("height") > 0)
+                object.put("clip", clip);
+        }
+
+        XSLFPictureData xslfPictureData = xslfPictureShape.getPictureData();
         try {
             InputStream inputStream = xslfPictureData.getInputStream();
             object.put(getType(), streamWriter.write(xslfPictureData.getContentType(), xslfPictureData.getFileName(), inputStream));

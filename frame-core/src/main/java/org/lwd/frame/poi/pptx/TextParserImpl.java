@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.common.usermodel.fonts.FontGroup;
 import org.apache.poi.sl.usermodel.Insets2D;
+import org.apache.poi.sl.usermodel.PaintStyle;
 import org.apache.poi.sl.usermodel.TextParagraph;
 import org.apache.poi.sl.usermodel.VerticalAlignment;
 import org.apache.poi.xslf.usermodel.*;
@@ -147,9 +148,12 @@ public class TextParserImpl implements Parser {
                     text.put("bold", true);
                 if (xslfTextRun.isItalic())
                     text.put("italic", true);
+                if (xslfTextRun.isUnderlined())
+                    text.put("underline", true);
                 if (xslfTextRun.isStrikethrough())
                     text.put("strikethrough", true);
                 text.put("font", getFont(fontFamily, fontSize, xslfTextRun));
+                text.put("color", color((PaintStyle.SolidPaint) xslfTextRun.getFontColor()));
                 texts.add(text);
             });
         });
@@ -182,8 +186,20 @@ public class TextParserImpl implements Parser {
         font.put("family", validator.isEmpty(xslfTextRun.getFontFamily()) ? fontFamily : xslfTextRun.getFontFamily());
         Double size = xslfTextRun.getFontSize() == null ? fontSize : xslfTextRun.getFontSize();
         if (size != null)
-            font.put("size", size);
+            font.put("size", size * 96 / 72);
 
         return font;
+    }
+
+    private String color(PaintStyle.SolidPaint solidPaint) {
+        Color color = solidPaint.getSolidColor().getColor();
+
+        return "#" + hex(color.getRed()) + hex(color.getGreen()) + hex(color.getBlue());
+    }
+
+    private String hex(int n) {
+        String hex = Integer.toHexString(n);
+
+        return hex.length() == 1 ? ("0" + hex) : hex;
     }
 }

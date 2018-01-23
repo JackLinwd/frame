@@ -2,15 +2,13 @@ package org.lwd.frame.poi;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import org.apache.poi.xslf.usermodel.XMLSlideShow;
-import org.apache.poi.xslf.usermodel.XSLFPictureShape;
-import org.apache.poi.xslf.usermodel.XSLFShape;
-import org.apache.poi.xslf.usermodel.XSLFSimpleShape;
-import org.apache.poi.xslf.usermodel.XSLFSlide;
-import org.apache.poi.xslf.usermodel.XSLFTextBox;
+import org.apache.poi.sl.usermodel.PaintStyle;
+import org.apache.poi.xslf.usermodel.*;
 import org.lwd.frame.poi.pptx.Parser;
 import org.lwd.frame.poi.pptx.ParserHelper;
+import org.lwd.frame.util.DateTime;
 import org.lwd.frame.util.Logger;
+import org.lwd.frame.util.Numeric;
 import org.lwd.frame.util.Validator;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +18,7 @@ import java.awt.geom.Rectangle2D;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -29,6 +28,10 @@ import java.util.List;
 public class PptxImpl implements Pptx {
     @Inject
     private Validator validator;
+    @Inject
+    private Numeric numeric;
+    @Inject
+    private DateTime dateTime;
     @Inject
     private Logger logger;
     @Inject
@@ -42,6 +45,12 @@ public class PptxImpl implements Pptx {
         XMLSlideShow xmlSlideShow = new XMLSlideShow();
         setSize(xmlSlideShow, object);
         slides(xmlSlideShow, object.getJSONArray("slides"));
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MILLISECOND, -1 * (calendar.get(Calendar.ZONE_OFFSET) + calendar.get(Calendar.DST_OFFSET)));
+        String time = dateTime.toString(calendar.getTime(), "yyyy-MM-dd'T'HH:mm:ss'Z'");
+        xmlSlideShow.getProperties().getCoreProperties().setCreated(time);
+        xmlSlideShow.getProperties().getCoreProperties().setModified(time);
 
         try {
             xmlSlideShow.write(outputStream);
@@ -101,39 +110,93 @@ public class PptxImpl implements Pptx {
     }
 
     private void slides(JSONArray slides, List<XSLFSlide> xslfSlides, StreamWriter streamWriter) {
-        JSONObject slide = new JSONObject();
         xslfSlides.forEach(xslfSlide -> {
             JSONArray elements = new JSONArray();
-            xslfSlide.getShapes().forEach(xslfShape -> {
-                JSONObject element = new JSONObject();
-                getAnchor(element, xslfShape);
-                if (xslfShape instanceof XSLFSimpleShape)
-                    getRotation(element, (XSLFSimpleShape) xslfShape);
-                if (xslfShape instanceof XSLFTextBox)
-                    parserHelper.get(Parser.TYPE_TEXT).parse(element, xslfShape, streamWriter);
-                else if (xslfShape instanceof XSLFPictureShape)
-                    parserHelper.get(Parser.TYPE_IMAGE).parse(element, xslfShape, streamWriter);
-                elements.add(element);
-            });
+            shapes(elements, xslfSlide.getShapes(), streamWriter);
+            JSONObject slide = new JSONObject();
             slide.put("elements", elements);
+            slides.add(slide);
         });
-        slides.add(slide);
+    }
+
+    private void shapes(JSONArray elements, List<XSLFShape> shapes, StreamWriter streamWriter) {
+        shapes.forEach(xslfShape -> {
+            JSONObject element = new JSONObject();
+            getAnchor(element, xslfShape);
+            if (xslfShape instanceof XSLFSimpleShape) {
+                getRotation(element, (XSLFSimpleShape) xslfShape);
+                background(elements, element, (XSLFSimpleShape) xslfShape, streamWriter);
+            }
+            if (xslfShape instanceof XSLFTextBox)
+                parserHelper.get(Parser.TYPE_TEXT).parse(element, xslfShape, streamWriter);
+            else if (xslfShape instanceof XSLFPictureShape)
+                parserHelper.get(Parser.TYPE_IMAGE).parse(element, xslfShape, streamWriter);
+            else if (xslfShape instanceof XSLFGroupShape)
+                shapes(elements, ((XSLFGroupShape) xslfShape).getShapes(), streamWriter);
+            else
+                screenshot(element, xslfShape, streamWriter);
+            elements.add(element);
+        });
     }
 
     private void getAnchor(JSONObject object, XSLFShape xslfShape) {
         Rectangle2D rectangle2D = xslfShape.getAnchor();
-        object.put("x", rectangle2D.getX());
-        object.put("y", rectangle2D.getY());
-        object.put("width", rectangle2D.getWidth());
-        object.put("height", rectangle2D.getHeight());
+        object.put("x", numeric.toInt(rectangle2D.getX()));
+        object.put("y", numeric.toInt(rectangle2D.getY()));
+        object.put("width", numeric.toInt(rectangle2D.getWidth()));
+        object.put("height", numeric.toInt(rectangle2D.getHeight()));
     }
 
     private void getRotation(JSONObject object, XSLFSimpleShape xslfSimpleShape) {
         if (xslfSimpleShape.getRotation() != 0.0D)
-            object.put("rotation", xslfSimpleShape.getRotation());
+            object.put("rotation", numeric.toInt(xslfSimpleShape.getRotation()));
         if (xslfSimpleShape.getFlipVertical())
             object.put("rotationX", true);
         if (xslfSimpleShape.getFlipHorizontal())
             object.put("rotationY", true);
+    }
+
+    private void background(JSONArray elements, JSONObject element, XSLFSimpleShape xslfSimpleShape, StreamWriter streamWriter) {
+        if (!(xslfSimpleShape.getFillStyle().getPaint() instanceof PaintStyle.TexturePaint))
+            return;
+
+        PaintStyle.TexturePaint texturePaint = (PaintStyle.TexturePaint) xslfSimpleShape.getFillStyle().getPaint();
+        try {
+            InputStream inputStream = texturePaint.getImageData();
+            JSONObject object = new JSONObject();
+            object.putAll(element);
+            object.put(Parser.TYPE_IMAGE, streamWriter.write(texturePaint.getContentType(), "", inputStream));
+            elements.add(object);
+            inputStream.close();
+        } catch (IOException e) {
+            logger.warn(e, "保存图片[{}]流数据时发生异常！", texturePaint.getContentType());
+        }
+    }
+
+    private void screenshot(JSONObject object, XSLFShape xslfShape, StreamWriter streamWriter) {
+        System.out.println("pptx:" + xslfShape);
+//        if (logger.isInfoEnable())
+//            logger.info("无法解析PPTx元素[{}]。", xslfShape);
+//
+//        int width = object.getIntValue("width");
+//        int height = object.getIntValue("height");
+//        if (width <= 0 || height <= 0)
+//            return;
+//
+//        try {
+//            BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_4BYTE_ABGR);
+//            Graphics2D graphics2D = image.createGraphics();
+//            xslfShape.draw(graphics2D, new Rectangle2D.Double(0, 0, width, height));
+//            graphics2D.dispose();
+//            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+//            ImageIO.write(image, "PNG", outputStream);
+//            outputStream.close();
+//
+//            ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
+//            object.put(Parser.TYPE_IMAGE, streamWriter.write("image/png", "", inputStream));
+//            inputStream.close();
+//        } catch (Exception e) {
+//            logger.warn(e, "截取PPTx形状为图片时发生异常！");
+//        }
     }
 }
