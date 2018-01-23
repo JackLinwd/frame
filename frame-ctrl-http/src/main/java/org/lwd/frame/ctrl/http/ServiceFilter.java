@@ -11,17 +11,17 @@ import java.io.IOException;
  * @author lwd
  */
 public class ServiceFilter implements Filter {
-    protected ServiceHelper helper;
+    private ServiceHelper serviceHelper;
 
     @Override
     public void init(FilterConfig config) throws ServletException {
-        helper = BeanFactory.getBean(ServiceHelper.class);
-        helper.setPath(config.getServletContext().getRealPath(""), config.getServletContext().getContextPath());
+        serviceHelper = BeanFactory.getBean(ServiceHelper.class);
+        serviceHelper.setPath(config.getServletContext().getRealPath(""), config.getServletContext().getContextPath());
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        if (!helper.service((HttpServletRequest) request, (HttpServletResponse) response))
+        if (!serviceHelper.service((HttpServletRequest) request, (HttpServletResponse) response))
             chain.doFilter(request, response);
     }
 

@@ -1,4 +1,4 @@
-package org.lwd.frame.ctrl.http.upload;
+package org.lwd.frame.ctrl.upload;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author lwd
  */
-@Service(UploadHelper.PREFIX + "json-configs")
+@Service(UploadService.PREFIX + "json-configs")
 public class JsonConfigsImpl implements JsonConfigs, MinuteJob {
     @Inject
     private Context context;
@@ -25,7 +25,7 @@ public class JsonConfigsImpl implements JsonConfigs, MinuteJob {
     private Io io;
     @Inject
     private Json json;
-    @Value("${" + UploadHelper.PREFIX + "json-configs:/WEB-INF/upload}")
+    @Value("${" + UploadService.PREFIX + "json-configs:/WEB-INF/upload}")
     private String configs;
     private Map<String, JsonConfig> map;
 

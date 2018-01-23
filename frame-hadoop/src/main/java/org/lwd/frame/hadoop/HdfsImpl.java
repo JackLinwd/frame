@@ -138,6 +138,11 @@ public class HdfsImpl implements Hdfs, Storage, ContextRefreshedListener {
     }
 
     @Override
+    public void write(String path, byte[] bytes) throws IOException {
+        write(bytes, path);
+    }
+
+    @Override
     public void write(InputStream inputStream, String path) {
         if (isDisabled())
             return;

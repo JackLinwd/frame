@@ -1,4 +1,4 @@
-package org.lwd.frame.ctrl.http.upload;
+package org.lwd.frame.ctrl.upload;
 
 /**
  * @author lwd

@@ -27,6 +27,14 @@ public interface ServiceHelper {
     boolean service(HttpServletRequest request, HttpServletResponse response);
 
     /**
+     * 处理CORS请求。
+     *
+     * @param request  请求HttpServletRequest信息。
+     * @param response 输出HttpServletResponse信息。
+     */
+    void setCors(HttpServletRequest request, HttpServletResponse response);
+
+    /**
      * 设置请求环境。
      *
      * @param request  请求HttpServletRequest信息。

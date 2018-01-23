@@ -9,22 +9,12 @@ import org.lwd.frame.ctrl.context.HeaderAware;
 import org.lwd.frame.ctrl.context.RequestAware;
 import org.lwd.frame.ctrl.context.ResponseAware;
 import org.lwd.frame.ctrl.context.SessionAware;
-import org.lwd.frame.ctrl.http.context.CookieAware;
-import org.lwd.frame.ctrl.http.context.HeaderAdapterImpl;
-import org.lwd.frame.ctrl.http.context.RequestAdapterImpl;
-import org.lwd.frame.ctrl.http.context.ResponseAdapterImpl;
-import org.lwd.frame.ctrl.http.context.SessionAdapterImpl;
-import org.lwd.frame.ctrl.http.upload.UploadHelper;
+import org.lwd.frame.ctrl.http.context.*;
 import org.lwd.frame.ctrl.status.Status;
+import org.lwd.frame.ctrl.upload.UploadService;
 import org.lwd.frame.storage.StorageListener;
 import org.lwd.frame.storage.Storages;
-import org.lwd.frame.util.Context;
-import org.lwd.frame.util.Converter;
-import org.lwd.frame.util.Io;
-import org.lwd.frame.util.Json;
-import org.lwd.frame.util.Logger;
-import org.lwd.frame.util.TimeHash;
-import org.lwd.frame.util.Validator;
+import org.lwd.frame.util.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
@@ -84,7 +74,7 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
     private String ignorePrefixes;
     @Value("${frame.ctrl.http.ignore.names:}")
     private String ignoreNames;
-    @Value("${frame.ctrl.http.ignore.suffixes:.ico,.js,.css,.html,.jpg,.jpeg,.gif,.png,.eot,.woff,.ttf}")
+    @Value("${frame.ctrl.http.ignore.suffixes:.ico,.js,.css,.html,.jpg,.jpeg,.gif,.png,.svg,.eot,.woff,.ttf}")
     private String ignoreSuffixes;
     @Value("${frame.ctrl.http.cors:/WEB-INF/cors.json}")
     private String cors;
@@ -121,8 +111,8 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
 
         String uri = getUri(request);
         String lowerCaseUri = uri.toLowerCase();
-        if (lowerCaseUri.startsWith(UploadHelper.ROOT)) {
-            if (!lowerCaseUri.startsWith(UploadHelper.ROOT + "image/"))
+        if (lowerCaseUri.startsWith(UploadService.ROOT)) {
+            if (!lowerCaseUri.startsWith(UploadService.ROOT + "image/"))
                 response.setHeader("Content-Disposition", "attachment;filename=" + uri.substring(uri.lastIndexOf('/') + 1));
 
             if (logger.isDebugEnable())
@@ -203,7 +193,8 @@ public class ServiceHelperImpl implements ServiceHelper, StorageListener {
         return false;
     }
 
-    private void setCors(HttpServletRequest request, HttpServletResponse response) {
+    @Override
+    public void setCors(HttpServletRequest request, HttpServletResponse response) {
         if (validator.isEmpty(corsOrigins))
             return;
 

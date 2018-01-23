@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 @WebServlet(name = "UploadServlet", urlPatterns = {UploadHelper.URI})
 public class UploadServlet extends HttpServlet {
-    protected UploadHelper uploadHelper;
+    private UploadHelper uploadHelper;
 
     @Override
     public void init(ServletConfig config) throws ServletException {

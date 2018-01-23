@@ -1,11 +1,12 @@
-package org.lwd.frame.ctrl.http.upload;
+package org.lwd.frame.ctrl.upload;
 
 import com.alibaba.fastjson.JSONObject;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
+ * 上传文件处理监听器。
+ *
  * @author lwd
  */
 public interface UploadListener {
@@ -41,12 +42,11 @@ public interface UploadListener {
     /**
      * 处理数据。
      *
-     * @param contentType 文件内容。
-     * @param inputStream 文件输入流。
+     * @param uploadReader 上传数据读取器。
      * @return 处理后的数据。如果返回为null则继续执行存储操作，否则不存储。
      * @throws IOException IO异常。
      */
-    default JSONObject settle(String contentType, InputStream inputStream) throws IOException {
+    default JSONObject settle(UploadReader uploadReader) throws IOException {
         return null;
     }
 

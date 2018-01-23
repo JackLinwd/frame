@@ -1,6 +1,8 @@
 package org.lwd.frame.ctrl.context;
 
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.dao.model.Model;
 
 import java.util.Date;
@@ -86,6 +88,22 @@ public interface Request {
      * @return 字符串数组。
      */
     String[] getAsArray(String name);
+
+    /**
+     * 获取JSON对象请求参数值。
+     *
+     * @param name 参数名称。
+     * @return JSON对象请求参数值。
+     */
+    JSONObject getAsJsonObject(String name);
+
+    /**
+     * 获取JSON数组请求参数值。
+     *
+     * @param name 参数名称。
+     * @return JSON数组请求参数值。
+     */
+    JSONArray getAsJsonArray(String name);
 
     /**
      * 获得所有请求参数值对。

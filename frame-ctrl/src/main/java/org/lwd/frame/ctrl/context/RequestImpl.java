@@ -1,5 +1,7 @@
 package org.lwd.frame.ctrl.context;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.lwd.frame.crypto.Sign;
 import org.lwd.frame.ctrl.Coder;
 import org.lwd.frame.dao.model.Model;
@@ -27,6 +29,8 @@ public class RequestImpl implements Request, RequestAware {
     private Numeric numeric;
     @Inject
     private DateTime dateTime;
+    @Inject
+    private Json json;
     @Inject
     private Logger logger;
     @Inject
@@ -88,6 +92,16 @@ public class RequestImpl implements Request, RequestAware {
     }
 
     @Override
+    public JSONObject getAsJsonObject(String name) {
+        return json.toObject(get(name));
+    }
+
+    @Override
+    public JSONArray getAsJsonArray(String name) {
+        return json.toArray(get(name));
+    }
+
+    @Override
     public Map<String, String> getMap() {
         if (adapter.get() == null)
             return null;
@@ -116,6 +130,8 @@ public class RequestImpl implements Request, RequestAware {
             for (String name : map.keySet()) {
                 if ("id".equals(name)) {
                     model.setId(map.get(name));
+                    if (validator.isEmpty(model.getId()))
+                        model.setId(null);
 
                     continue;
                 }
