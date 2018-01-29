@@ -71,4 +71,21 @@ public interface Coder {
      * @return 解码后的数据。
      */
     byte[] decodeUrlBase64(String string);
+
+    /**
+     * 转化字符串为当前字符集编码的字符串。
+     *
+     * @param string 字符串。
+     * @return 字符串。
+     */
+    String charset(String string);
+
+    /**
+     * 转化字符串为指定字符集编码的字符串。
+     *
+     * @param string  字符串。
+     * @param charset 字符集。
+     * @return 字符串。
+     */
+    String charset(String string, String charset);
 }

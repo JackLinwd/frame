@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.util.Base64;
 
 /**
@@ -17,6 +18,7 @@ public class CoderImpl implements Coder {
     private Context context;
     @Inject
     private Logger logger;
+    private Charset charset = Charset.forName("ISO-8859-1");
 
     @Override
     public String encodeUrl(String string, String charset) {
@@ -74,5 +76,15 @@ public class CoderImpl implements Coder {
     @Override
     public byte[] decodeUrlBase64(String string) {
         return Base64.getUrlDecoder().decode(string);
+    }
+
+    @Override
+    public String charset(String string) {
+        return string == null ? null : new String(string.getBytes(charset));
+    }
+
+    @Override
+    public String charset(String string, String charset) {
+        return string == null ? null : new String(string.getBytes(this.charset), Charset.forName(charset));
     }
 }
