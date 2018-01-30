@@ -1,11 +1,11 @@
 package org.lwd.frame.script;
 
 /**
- * @author lpw
+ * @author lwd
  */
 public interface ScriptValidator {
     /**
      * 脚本验证器。
      */
-    String NAME = "tephra.validator.script";
+    String NAME = "frame.validator.script";
 }

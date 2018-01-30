@@ -22,9 +22,9 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * @author lpw
+ * @author lwd
  */
-@Component("tephra.poi.pptx")
+@Component("frame.poi.pptx")
 public class PptxImpl implements Pptx {
     @Inject
     private Validator validator;

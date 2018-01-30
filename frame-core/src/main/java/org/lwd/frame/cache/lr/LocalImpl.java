@@ -27,9 +27,9 @@ public class LocalImpl implements Local, MinuteJob {
     private Numeric numeric;
     @Inject
     private Logger logger;
-    @Value("${tephra.cache.alive-time:30}")
+    @Value("${frame.cache.alive-time:30}")
     private long aliveTime;
-    @Value("${tephra.cache.max-memory:1g}")
+    @Value("${frame.cache.max-memory:1g}")
     private String maxMemory;
     private Map<String, Element> map = new ConcurrentHashMap<>();
 

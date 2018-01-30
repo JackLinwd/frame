@@ -64,12 +64,15 @@ public class CounterImpl implements Counter, StorageListener {
             return true;
 
         String key = CACHE_DELAY + ip;
-        Long time = numeric.toLong(cache.get(key));
-        if (time != null && time > 0) {
-            if (System.currentTimeMillis() - time < ipDelay)
-                return false;
-            cache.remove(key);
-        }
+//        Long time = numeric.toLong(cache.get(key));
+//        if (time != null && time > 0) {
+//            if (System.currentTimeMillis() - time < ipDelay)
+//                return false;
+//            cache.remove(key);
+//        }
+        Long time = cache.get(key);
+        if (time != null && System.currentTimeMillis() - time < ipDelay)
+            return false;
 
         int n = ips.computeIfAbsent(ip, k -> new AtomicInteger()).incrementAndGet();
         if (n > ipMax) {

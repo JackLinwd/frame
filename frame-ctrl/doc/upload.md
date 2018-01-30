@@ -27,7 +27,7 @@
 
 ## 自定义
 
-通过实现[UploadListener](../src/main/java/org/lpw/frame/ctrl/upload/UploadListener.java)接口可对上传的数据进行验证或处理。
+通过实现[UploadListener](../src/main/java/org/lwd/frame/ctrl/upload/UploadListener.java)接口可对上传的数据进行验证或处理。
 
 或者在`frame.ctrl.upload.json-configs = /WEB-INF/upload`中添加配置JSON文件实现对上传的数据进行验证。
 ```json

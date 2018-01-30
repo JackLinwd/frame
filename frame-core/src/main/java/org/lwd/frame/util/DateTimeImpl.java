@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author lpw
+ * @author lwd
  */
 @Component("frame.util.date-time")
 public class DateTimeImpl implements DateTime {
@@ -150,13 +150,13 @@ public class DateTimeImpl implements DateTime {
     private String getDateFormat() {
         Locale locale = context.getLocale();
 
-        return dateFormat.computeIfAbsent(locale, l -> message.get("tephra.format.date"));
+        return dateFormat.computeIfAbsent(locale, l -> message.get("frame.format.date"));
     }
 
     private String getDateTimeFormat() {
         Locale locale = context.getLocale();
 
-        return dateTimeFormat.computeIfAbsent(locale, l -> message.get("tephra.format.date-time"));
+        return dateTimeFormat.computeIfAbsent(locale, l -> message.get("frame.format.date-time"));
     }
 
     @Override

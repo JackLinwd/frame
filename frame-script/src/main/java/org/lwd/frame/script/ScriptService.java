@@ -9,7 +9,7 @@ public interface ScriptService {
     /**
      * 脚本方法名是否存在验证器。
      */
-    String VALIDATOR_EXISTS_METHOD = "tephra.script.validator.exists-method";
+    String VALIDATOR_EXISTS_METHOD = "frame.script.validator.exists-method";
 
     /**
      * 验证JSON格式的数据是否有效。

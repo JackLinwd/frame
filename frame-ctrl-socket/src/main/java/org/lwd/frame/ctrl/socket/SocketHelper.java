@@ -17,7 +17,7 @@ public interface SocketHelper {
     /**
      * 发送数据到客户端。
      *
-     * @param sessionId Session ID，可以是Socket session ID或Tephra session ID，null则使用当前用户Session ID。
+     * @param sessionId Session ID，可以是Socket session ID或Frame session ID，null则使用当前用户Session ID。
      * @param message   数据。
      */
     void send(String sessionId, byte[] message);

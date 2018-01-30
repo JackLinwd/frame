@@ -3,7 +3,7 @@ package org.lwd.frame.cache.lr;
 /**
  * 远程缓存。
  *
- * @author lpw
+ * @author lwd
  */
 public interface Remote {
     /**
