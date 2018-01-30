@@ -97,11 +97,20 @@ public interface Json {
     byte[] toBytes(Object object);
 
     /**
+     * 是否包含key。
+     *
+     * @param object JSON对象。
+     * @param key    目标key。
+     * @return 如果包含则返回true；否则返回false。
+     */
+    boolean containsKey(JSONObject object, String key);
+
+    /**
      * 验证是否包含值为true的元素。
      *
      * @param object JSON数据。
      * @param key    属性KEY。
-     * @return 如果包含则返回true。
+     * @return 如果包含则返回true；否则返回false。
      */
     boolean hasTrue(JSONObject object, String key);
 }

@@ -8,19 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="991923d3-a175-4fd0-99d5-7f2297c45aba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/LocalImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/LocalImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Remote.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Remote.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DigestImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/crypto/DigestImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/PptxImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/PptxImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/DateTimeImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/DateTimeImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelper.java" afterPath="$PROJECT_DIR$/frame-ctrl-socket/src/main/java/org/lwd/frame/ctrl/socket/SocketHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl/doc/upload.md" afterPath="$PROJECT_DIR$/frame-ctrl/doc/upload.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/CounterImpl.java" afterPath="$PROJECT_DIR$/frame-ctrl/src/main/java/org/lwd/frame/ctrl/CounterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-dao/src/main/resources/dao.frame.config" afterPath="$PROJECT_DIR$/frame-dao/src/main/resources/dao.frame.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-script/src/main/java/org/lwd/frame/script/ScriptService.java" afterPath="$PROJECT_DIR$/frame-script/src/main/java/org/lwd/frame/script/ScriptService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-script/src/main/java/org/lwd/frame/script/ScriptValidator.java" afterPath="$PROJECT_DIR$/frame-script/src/main/java/org/lwd/frame/script/ScriptValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-web/src/main/resources/dao.frame.config" afterPath="$PROJECT_DIR$/frame-web/src/main/resources/dao.frame.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/frame-web/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Json.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Json.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java" afterPath="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java" />
     </list>
     <ignored path="frame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,71 +45,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DateTimeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/DateTimeImpl.java">
+      <file leaf-file-name="JsonImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.54545456">
+              <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Json.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Json.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PptxImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/poi/PptxImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Remote.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/lr/Remote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-ctrl/doc/upload.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.535714">
-              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dao.frame.config" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-dao/src/main/resources/dao.frame.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.214286">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScriptValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frame-script/src/main/java/org/lwd/frame/script/ScriptValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dao.frame.config" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frame-web/src/main/resources/dao.frame.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44324324">
-              <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+              <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -148,8 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frame-ctrl-http/src/main/java/org/lwd/frame/ctrl/http/context/RequestAdapterImpl.java" />
-        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/cache/redis/HandlerImpl.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/resources/core.frame.config" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java" />
         <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java" />
@@ -199,6 +136,8 @@
         <option value="$PROJECT_DIR$/frame-dao/src/main/resources/dao.frame.config" />
         <option value="$PROJECT_DIR$/frame-script/src/main/java/org/lwd/frame/script/ScriptValidator.java" />
         <option value="$PROJECT_DIR$/frame-web/src/main/resources/dao.frame.config" />
+        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java" />
+        <option value="$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Json.java" />
       </list>
     </option>
   </component>
@@ -474,74 +413,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crypto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1178,13 +1049,7 @@
       <workItem from="1516669661172" duration="4499000" />
       <workItem from="1516675181405" duration="446000" />
       <workItem from="1517205442968" duration="250000" />
-      <workItem from="1517295944996" duration="452000" />
-    </task>
-    <task id="LOCAL-00008" summary="frame-ctrl完成">
-      <created>1510128370649</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1510128370649</updated>
+      <workItem from="1517295944996" duration="635000" />
     </task>
     <task id="LOCAL-00009" summary="frame-script&#10;l完成">
       <created>1510128865891</created>
@@ -1474,11 +1339,17 @@
       <option name="project" value="LOCAL" />
       <updated>1517205667222</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="代码优化">
+      <created>1517296439388</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1517296439431</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74690000" />
+    <option name="totallyTimeSpent" value="74873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1527,7 +1398,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善了上传文件" />
     <MESSAGE value="完善了本地缓存" />
     <MESSAGE value="完善文件上传到功能" />
     <MESSAGE value="基本测试模块完成" />
@@ -1552,7 +1422,8 @@
     <MESSAGE value="完善自动建表的功能" />
     <MESSAGE value="优化并发计数器" />
     <MESSAGE value="转码工具优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="转码工具优化" />
+    <MESSAGE value="代码优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1614,20 +1485,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Freemarker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/freemarker/FreemarkerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1995,6 +1852,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44324324">
           <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/Json.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frame-core/src/main/java/org/lwd/frame/util/JsonImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.54545456">
+          <caret line="124" column="42" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
           <folding />
         </state>
       </provider>

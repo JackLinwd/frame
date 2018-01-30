@@ -7,6 +7,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.lang.reflect.Array;
 
 /**
  * @author lwd
@@ -119,6 +120,19 @@ public class JsonImpl implements Json {
             return (JSONArray) object;
 
         try {
+            if (object.getClass().isArray()) {
+                JSONArray array = new JSONArray();
+                for (int i = 0, size = Array.getLength(object); i < size; i++) {
+                    Object obj = Array.get(object, i);
+                    if (obj instanceof String || obj instanceof Number)
+                        array.add(obj);
+                    else
+                        array.add(toObject(obj));
+                }
+
+                return array;
+            }
+
             if (object instanceof String) {
                 String string = (String) object;
                 if (validator.isEmpty(string))
@@ -146,7 +160,12 @@ public class JsonImpl implements Json {
     }
 
     @Override
+    public boolean containsKey(JSONObject object, String key) {
+        return object != null && key != null && object.containsKey(key);
+    }
+
+    @Override
     public boolean hasTrue(JSONObject object, String key) {
-        return object.containsKey(key) && object.getBooleanValue(key);
+        return containsKey(object, key) && object.getBooleanValue(key);
     }
 }
