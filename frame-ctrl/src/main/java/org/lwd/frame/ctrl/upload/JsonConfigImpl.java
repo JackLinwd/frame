@@ -65,9 +65,4 @@ public class JsonConfigImpl implements JsonConfig {
     public int[] getImageSize(String key) {
         return imageSize;
     }
-
-    @Override
-    public String upload(String key, String name, String size, String uri) {
-        return uri;
-    }
 }

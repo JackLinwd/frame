@@ -48,25 +48,25 @@ public class JsonUploadReader implements UploadReader {
 
     @Override
     public long getSize() {
-        return getByteArray().length;
-    }
-
-    @Override
-    public InputStream getInputStream() {
-        return new ByteArrayInputStream(getByteArray());
-    }
-
-    @Override
-    public byte[] getByteArray() {
-        if (bytes == null)
-            bytes = BeanFactory.getBean(Coder.class).decodeBase64(base64);
-
-        return bytes;
+        return getBytes().length;
     }
 
     @Override
     public void write(Storage storage, String path) throws IOException {
-        storage.write(path, getByteArray());
+        storage.write(path, getBytes());
+    }
+
+    @Override
+    public InputStream getInputStream() {
+        return new ByteArrayInputStream(getBytes());
+    }
+
+    @Override
+    public byte[] getBytes() {
+        if (bytes == null)
+            bytes = BeanFactory.getBean(Coder.class).decodeBase64(base64);
+
+        return bytes;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package org.lwd.frame.hadoop;
 
+import org.apache.hadoop.hbase.CompareOperator;
 import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.lwd.frame.dao.model.Model;
@@ -90,26 +91,26 @@ public class HbaseQuery {
         filters.addFilter(filter);
     }
 
-    protected CompareFilter.CompareOp getCompare(Where where) {
+    protected CompareOperator getCompare(Where where) {
         if (where == Where.Equals)
-            return CompareFilter.CompareOp.EQUAL;
+            return CompareOperator.EQUAL;
 
         if (where == Where.NotEquals)
-            return CompareFilter.CompareOp.NOT_EQUAL;
+            return CompareOperator.NOT_EQUAL;
 
         if (where == Where.Less)
-            return CompareFilter.CompareOp.LESS;
+            return CompareOperator.LESS;
 
         if (where == Where.LessEquals)
-            return CompareFilter.CompareOp.LESS_OR_EQUAL;
+            return CompareOperator.LESS_OR_EQUAL;
 
         if (where == Where.Greater)
-            return CompareFilter.CompareOp.GREATER;
+            return CompareOperator.GREATER;
 
         if (where == Where.GreaterEquals)
-            return CompareFilter.CompareOp.GREATER_OR_EQUAL;
+            return CompareOperator.GREATER_OR_EQUAL;
 
-        return CompareFilter.CompareOp.EQUAL;
+        return CompareOperator.EQUAL;
     }
 
     /**

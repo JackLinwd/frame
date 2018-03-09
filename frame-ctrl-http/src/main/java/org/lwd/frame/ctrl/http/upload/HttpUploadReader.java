@@ -51,21 +51,21 @@ public class HttpUploadReader implements UploadReader {
     }
 
     @Override
+    public void write(Storage storage, String path) throws IOException {
+        storage.write(path, inputStream);
+    }
+
+    @Override
     public InputStream getInputStream() {
         return inputStream;
     }
 
     @Override
-    public byte[] getByteArray() {
+    public byte[] getBytes() {
         if (bytes == null)
             bytes = BeanFactory.getBean(Io.class).read(inputStream);
 
         return bytes;
-    }
-
-    @Override
-    public void write(Storage storage, String path) throws IOException {
-        storage.write(path, inputStream);
     }
 
     @Override

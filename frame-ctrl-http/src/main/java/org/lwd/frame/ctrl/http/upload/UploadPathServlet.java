@@ -13,8 +13,8 @@ import java.io.IOException;
 /**
  * @author lwd
  */
-@WebServlet(name = "UploadServlet", urlPatterns = {UploadHelper.UPLOAD})
-public class UploadServlet extends HttpServlet {
+@WebServlet(name = "UploadPathServlet", urlPatterns = {UploadHelper.UPLOAD_PATH})
+public class UploadPathServlet extends HttpServlet {
     private UploadHelper uploadHelper;
 
     @Override
@@ -26,6 +26,6 @@ public class UploadServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        uploadHelper.upload(request, response, UploadHelper.UPLOAD);
+        uploadHelper.upload(request, response, UploadHelper.UPLOAD_PATH);
     }
 }

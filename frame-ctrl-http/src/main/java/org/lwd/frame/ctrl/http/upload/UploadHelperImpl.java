@@ -4,6 +4,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.lwd.frame.atomic.Closables;
+import org.lwd.frame.bean.BeanFactory;
 import org.lwd.frame.ctrl.http.IgnoreUri;
 import org.lwd.frame.ctrl.http.ServiceHelper;
 import org.lwd.frame.ctrl.upload.UploadReader;
@@ -20,7 +21,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lwd
@@ -42,17 +45,21 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri {
     @Value("${" + UploadHelper.PREFIX + "max-size:1m}")
     private String maxSize;
     private ServletFileUpload upload;
+    private Map<String, Uploader> uploaders;
 
     @Override
-    public void upload(HttpServletRequest request, HttpServletResponse response) {
+    public void upload(HttpServletRequest request, HttpServletResponse response, String uploader) {
         try {
             serviceHelper.setCors(request, response);
-            OutputStream outputStream = serviceHelper.setContext(request, response, URI);
+            OutputStream outputStream = serviceHelper.setContext(request, response, UPLOAD);
             List<UploadReader> readers = new ArrayList<>();
             for (FileItem item : getUpload(request).parseRequest(request))
                 if (!item.isFormField())
                     readers.add(new HttpUploadReader(item));
-            outputStream.write(json.toBytes(uploadService.uploads(readers)));
+            if (readers.isEmpty())
+                return;
+
+            outputStream.write(uploaders.get(uploader).upload(readers));
             outputStream.flush();
             outputStream.close();
         } catch (Throwable e) {
@@ -71,7 +78,12 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri {
                     upload = new ServletFileUpload(factory);
                     upload.setSizeMax(converter.toBitSize(maxSize));
                 }
+                if (uploaders == null) {
+                    uploaders = new HashMap<>();
+                    BeanFactory.getBeans(Uploader.class).forEach(uploader -> uploaders.put(uploader.getName(), uploader));
+                }
             }
+
         }
 
         return upload;
@@ -79,6 +91,6 @@ public class UploadHelperImpl implements UploadHelper, IgnoreUri {
 
     @Override
     public String[] getIgnoreUris() {
-        return new String[]{URI};
+        return new String[]{UPLOAD, UPLOAD_PATH};
     }
 }

@@ -42,11 +42,20 @@ public interface UploadService {
     /**
      * 处理上传请求。
      *
-     * @param readers 上传数据读取实例。
+     * @param readers 上传数据读取实例集。
      * @return 处理结果。
      * @throws IOException IO异常。
      */
     JSONArray uploads(List<UploadReader> readers) throws IOException;
+
+    /**
+     * 处理上传请求。
+     *
+     * @param reader 上传数据读取实例。
+     * @return 处理结果。
+     * @throws IOException IO异常。
+     */
+    JSONObject upload(UploadReader reader) throws IOException;
 
     /**
      * 删除上传的文件。

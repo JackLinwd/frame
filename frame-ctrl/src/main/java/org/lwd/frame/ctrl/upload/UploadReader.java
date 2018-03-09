@@ -49,7 +49,7 @@ public interface UploadReader {
      *
      * @return 数据。
      */
-    byte[] getByteArray();
+    byte[] getBytes();
 
     /**
      * 将上传文件写入存储器。
