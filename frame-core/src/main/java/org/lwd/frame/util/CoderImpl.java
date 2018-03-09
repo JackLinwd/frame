@@ -14,11 +14,28 @@ import java.util.Base64;
  */
 @Component("frame.util.coder")
 public class CoderImpl implements Coder {
+    private static final char[] HEX = "0123456789abcdef".toCharArray();
+
     @Inject
     private Context context;
     @Inject
     private Logger logger;
     private Charset charset = Charset.forName("ISO-8859-1");
+
+    @Override
+    public String hex(byte[] bytes) {
+        if (bytes == null)
+            return null;
+
+        char[] chars = new char[bytes.length << 1];
+        for (int i = 0; i < bytes.length; i++) {
+            int n = i << 1;
+            chars[n] = HEX[bytes[i] >> 4 & 0xf];
+            chars[n + 1] = HEX[bytes[i] & 0xf];
+        }
+
+        return new String(chars);
+    }
 
     @Override
     public String encodeUrl(String string, String charset) {

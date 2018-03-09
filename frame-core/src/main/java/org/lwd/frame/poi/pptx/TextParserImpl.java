@@ -4,19 +4,16 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.poi.common.usermodel.fonts.FontGroup;
 import org.apache.poi.sl.usermodel.Insets2D;
-import org.apache.poi.sl.usermodel.PaintStyle;
 import org.apache.poi.sl.usermodel.TextParagraph;
-import org.apache.poi.sl.usermodel.VerticalAlignment;
 import org.apache.poi.xslf.usermodel.*;
 import org.lwd.frame.poi.StreamWriter;
 import org.lwd.frame.util.Json;
 import org.lwd.frame.util.Numeric;
 import org.lwd.frame.util.Validator;
-import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeStyle;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.awt.Color;
+import java.awt.*;
 
 /**
  * @author lwd
@@ -41,6 +38,7 @@ public class TextParserImpl implements Parser {
     public boolean parse(XMLSlideShow xmlSlideShow, XSLFSlide xslfSlide, JSONObject object) {
         XSLFTextBox xslfTextBox = xslfSlide.createTextBox();
         xslfTextBox.clearText();
+        xslfTextBox.setInsets(new Insets2D(0.0D, 0.0D, 0.0D, 0.0D));
         xslfTextBox.setAnchor(parserHelper.getRectangle(object));
         parserHelper.rotate(xslfTextBox, object);
         XSLFTextParagraph xslfTextParagraph = newParagraph(xslfTextBox, object);
@@ -133,10 +131,20 @@ public class TextParserImpl implements Parser {
     public boolean parse(JSONObject object, XSLFShape xslfShape, StreamWriter writer) {
         object.put("type", getType());
         JSONArray texts = new JSONArray();
-        ((XSLFTextBox) xslfShape).getTextParagraphs().forEach(xslfTextParagraph -> {
+        XSLFTextShape xslfTextShape = (XSLFTextShape) xslfShape;
+        object.put("verticalAlign", getVerticalAlign(xslfTextShape));
+        xslfTextShape.getTextParagraphs().forEach(xslfTextParagraph -> {
             JSONObject paragraph = new JSONObject();
             paragraph.put("type", getType());
             paragraph.put("align", getTextAlign(xslfTextParagraph));
+
+            if (!texts.isEmpty()) {
+                JSONObject text = new JSONObject();
+                text.putAll(paragraph);
+                text.put(getType(), "\n");
+                texts.add(text);
+            }
+
             String fontFamily = xslfTextParagraph.getDefaultFontFamily();
             Double fontSize = xslfTextParagraph.getDefaultFontSize();
             xslfTextParagraph.getTextRuns().forEach(xslfTextRun -> {
@@ -153,7 +161,7 @@ public class TextParserImpl implements Parser {
                 if (xslfTextRun.isStrikethrough())
                     text.put("strikethrough", true);
                 text.put("font", getFont(fontFamily, fontSize, xslfTextRun));
-                text.put("color", color((PaintStyle.SolidPaint) xslfTextRun.getFontColor()));
+                text.put("color", parserHelper.getHexColor(xslfTextRun.getFontColor(), false));
                 texts.add(text);
             });
         });
@@ -166,6 +174,17 @@ public class TextParserImpl implements Parser {
             object.put("texts", texts);
 
         return true;
+    }
+
+    private String getVerticalAlign(XSLFTextShape xslfTextShape) {
+        switch (xslfTextShape.getVerticalAlignment()) {
+            case MIDDLE:
+                return "middle";
+            case BOTTOM:
+                return "bottom";
+            default:
+                return null;
+        }
     }
 
     private String getTextAlign(XSLFTextParagraph xslfTextParagraph) {
@@ -186,20 +205,8 @@ public class TextParserImpl implements Parser {
         font.put("family", validator.isEmpty(xslfTextRun.getFontFamily()) ? fontFamily : xslfTextRun.getFontFamily());
         Double size = xslfTextRun.getFontSize() == null ? fontSize : xslfTextRun.getFontSize();
         if (size != null)
-            font.put("size", size * 96 / 72);
+            font.put("size", numeric.toInt(size * 96 / 72));
 
         return font;
-    }
-
-    private String color(PaintStyle.SolidPaint solidPaint) {
-        Color color = solidPaint.getSolidColor().getColor();
-
-        return "#" + hex(color.getRed()) + hex(color.getGreen()) + hex(color.getBlue());
-    }
-
-    private String hex(int n) {
-        String hex = Integer.toHexString(n);
-
-        return hex.length() == 1 ? ("0" + hex) : hex;
     }
 }

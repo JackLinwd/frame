@@ -1,6 +1,7 @@
 package org.lwd.frame.poi.pptx;
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.poi.sl.usermodel.PaintStyle;
 import org.apache.poi.xslf.usermodel.XSLFSimpleShape;
 import org.lwd.frame.bean.BeanFactory;
 import org.lwd.frame.bean.ContextRefreshedListener;
@@ -75,6 +76,30 @@ public class ParserHelperImpl implements ParserHelper, ContextRefreshedListener 
             ns = numeric.toInts(color);
 
         return new Color(ns[0], ns[1], ns[2]);
+    }
+
+    @Override
+    public String getHexColor(PaintStyle paintStyle, boolean ignoreWhite) {
+        return paintStyle instanceof PaintStyle.SolidPaint ?
+                toHex(((PaintStyle.SolidPaint) paintStyle).getSolidColor().getColor(), ignoreWhite) : null;
+    }
+
+    @Override
+    public String toHex(Color color) {
+        return toHex(color, false);
+    }
+
+    private String toHex(Color color, boolean ignoreWhite) {
+        if (color == null || (ignoreWhite && color.getRed() == 255 && color.getGreen() == 255 && color.getBlue() == 255))
+            return null;
+
+        return "#" + hex(color.getRed()) + hex(color.getGreen()) + hex(color.getBlue());
+    }
+
+    private String hex(int n) {
+        String hex = Integer.toHexString(n);
+
+        return hex.length() == 1 ? ("0" + hex) : hex;
     }
 
     @Override

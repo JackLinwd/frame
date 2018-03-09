@@ -20,4 +20,15 @@ public interface StreamWriter {
      * @throws IOException 未处理IO异常。
      */
     String write(String contentType, String filename, InputStream inputStream) throws IOException;
+
+    /**
+     * 写入。
+     *
+     * @param contentType 数据格式。
+     * @param filename    文件名。
+     * @param bytes       数据流。
+     * @return 文件保存位置。
+     * @throws IOException 未处理IO异常。
+     */
+    String write(String contentType, String filename, byte[] bytes) throws IOException;
 }

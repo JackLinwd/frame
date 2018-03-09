@@ -1,6 +1,7 @@
 package org.lwd.frame.poi.pptx;
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.poi.sl.usermodel.PaintStyle;
 import org.apache.poi.xslf.usermodel.XSLFSimpleShape;
 
 import java.awt.Color;
@@ -46,6 +47,23 @@ public interface ParserHelper {
      * @return 颜色对象；如果不存在或获取失败则返回null。
      */
     Color getColor(JSONObject object, String key);
+
+    /**
+     * 获取画笔颜色值。
+     *
+     * @param paintStyle  画笔。
+     * @param ignoreWhite 是否忽略白色，是且为白色时返回null。
+     * @return 颜色16进制值；获取失败或忽略白色则返回null。
+     */
+    String getHexColor(PaintStyle paintStyle, boolean ignoreWhite);
+
+    /**
+     * 转换颜色对象为16进制值。
+     *
+     * @param color 颜色对象。
+     * @return 颜色16进制值；转换失败则返回null。
+     */
+    String toHex(Color color);
 
     /**
      * 获取图片数据。

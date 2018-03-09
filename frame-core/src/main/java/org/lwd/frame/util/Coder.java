@@ -7,6 +7,14 @@ package org.lwd.frame.util;
  */
 public interface Coder {
     /**
+     * 将byte数据转化为hex字符串。
+     *
+     * @param bytes byte数据。
+     * @return hex字符串。
+     */
+    String hex(byte[] bytes);
+
+    /**
      * 将字符串进行URL编码转换。
      *
      * @param string  要转化的字符串。

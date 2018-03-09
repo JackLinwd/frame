@@ -2,24 +2,25 @@ package org.lwd.frame.poi;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.poi.sl.usermodel.FillStyle;
 import org.apache.poi.sl.usermodel.PaintStyle;
 import org.apache.poi.xslf.usermodel.*;
 import org.lwd.frame.poi.pptx.Parser;
 import org.lwd.frame.poi.pptx.ParserHelper;
-import org.lwd.frame.util.DateTime;
-import org.lwd.frame.util.Logger;
-import org.lwd.frame.util.Numeric;
-import org.lwd.frame.util.Validator;
+import org.lwd.frame.util.*;
+import org.lwd.frame.util.Image;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lwd
@@ -32,6 +33,8 @@ public class PptxImpl implements Pptx {
     private Numeric numeric;
     @Inject
     private DateTime dateTime;
+    @Inject
+    private Image image;
     @Inject
     private Logger logger;
     @Inject
@@ -93,12 +96,14 @@ public class PptxImpl implements Pptx {
         try {
             XMLSlideShow xmlSlideShow = new XMLSlideShow(inputStream);
             JSONObject size = new JSONObject();
+            size.put("x", 0);
+            size.put("y", 0);
             size.put("width", xmlSlideShow.getPageSize().width);
             size.put("height", xmlSlideShow.getPageSize().height);
             object.put("size", size);
 
             JSONArray slides = new JSONArray();
-            slides(slides, xmlSlideShow.getSlides(), streamWriter);
+            slides(slides, xmlSlideShow.getSlides(), size, layouts(xmlSlideShow, size, streamWriter), streamWriter);
             object.put("slides", slides);
             xmlSlideShow.close();
             inputStream.close();
@@ -109,9 +114,27 @@ public class PptxImpl implements Pptx {
         return object;
     }
 
-    private void slides(JSONArray slides, List<XSLFSlide> xslfSlides, StreamWriter streamWriter) {
+    private Map<String, JSONArray> layouts(XMLSlideShow xmlSlideShow, JSONObject size, StreamWriter streamWriter) {
+        Map<String, JSONArray> map = new HashMap<>();
+        xmlSlideShow.getSlideMasters().forEach(xslfSlideMaster -> {
+            for (XSLFSlideLayout xslfSlideLayout : xslfSlideMaster.getSlideLayouts()) {
+                JSONArray elements = new JSONArray();
+                fillStyle(elements, size, xslfSlideLayout.getBackground().getFillStyle(), true, streamWriter);
+                shapes(elements, xslfSlideLayout.getShapes(), streamWriter);
+                map.put(xslfSlideLayout.getName(), elements);
+            }
+        });
+
+        return map;
+    }
+
+    private void slides(JSONArray slides, List<XSLFSlide> xslfSlides, JSONObject size, Map<String, JSONArray> layouts,
+                        StreamWriter streamWriter) {
         xslfSlides.forEach(xslfSlide -> {
             JSONArray elements = new JSONArray();
+            if (layouts.containsKey(xslfSlide.getSlideLayout().getName()))
+                elements.addAll(layouts.get(xslfSlide.getSlideLayout().getName()));
+            fillStyle(elements, size, xslfSlide.getBackground().getFillStyle(), true, streamWriter);
             shapes(elements, xslfSlide.getShapes(), streamWriter);
             JSONObject slide = new JSONObject();
             slide.put("elements", elements);
@@ -124,10 +147,14 @@ public class PptxImpl implements Pptx {
             JSONObject element = new JSONObject();
             getAnchor(element, xslfShape);
             if (xslfShape instanceof XSLFSimpleShape) {
-                getRotation(element, (XSLFSimpleShape) xslfShape);
-                background(elements, element, (XSLFSimpleShape) xslfShape, streamWriter);
+                XSLFSimpleShape xslfSimpleShape = (XSLFSimpleShape) xslfShape;
+                getRotation(element, xslfSimpleShape);
+                if (xslfSimpleShape.getShapeType() != null)
+                    element.put("shape", xslfSimpleShape.getShapeType().getOoxmlName());
+                fillStyle(elements, element, xslfSimpleShape.getFillStyle(), false, streamWriter);
+                getBorder(elements, element, xslfSimpleShape);
             }
-            if (xslfShape instanceof XSLFTextBox)
+            if (xslfShape instanceof XSLFTextShape)
                 parserHelper.get(Parser.TYPE_TEXT).parse(element, xslfShape, streamWriter);
             else if (xslfShape instanceof XSLFPictureShape)
                 parserHelper.get(Parser.TYPE_IMAGE).parse(element, xslfShape, streamWriter);
@@ -156,11 +183,34 @@ public class PptxImpl implements Pptx {
             object.put("rotationY", true);
     }
 
-    private void background(JSONArray elements, JSONObject element, XSLFSimpleShape xslfSimpleShape, StreamWriter streamWriter) {
-        if (!(xslfSimpleShape.getFillStyle().getPaint() instanceof PaintStyle.TexturePaint))
+    private void fillStyle(JSONArray elements, JSONObject element, FillStyle fillStyle, boolean ignoreWhite, StreamWriter streamWriter) {
+        if (fillStyle == null)
             return;
 
-        PaintStyle.TexturePaint texturePaint = (PaintStyle.TexturePaint) xslfSimpleShape.getFillStyle().getPaint();
+        PaintStyle paintStyle = fillStyle.getPaint();
+        if (paintStyle == null)
+            return;
+
+        if (paintStyle instanceof PaintStyle.SolidPaint)
+            fillColor(elements, element, paintStyle, ignoreWhite);
+        else if (paintStyle instanceof PaintStyle.TexturePaint)
+            fillTexture(elements, element, paintStyle, streamWriter);
+    }
+
+    private void fillColor(JSONArray elements, JSONObject element, PaintStyle paintStyle, boolean ignoreWhite) {
+        String color = parserHelper.getHexColor(paintStyle, ignoreWhite);
+        if (color == null)
+            return;
+
+        JSONObject object = new JSONObject();
+        object.putAll(element);
+        object.put("type", "bgcolor");
+        object.put("bgcolor", color);
+        elements.add(object);
+    }
+
+    private void fillTexture(JSONArray elements, JSONObject element, PaintStyle paintStyle, StreamWriter streamWriter) {
+        PaintStyle.TexturePaint texturePaint = (PaintStyle.TexturePaint) paintStyle;
         try {
             InputStream inputStream = texturePaint.getImageData();
             JSONObject object = new JSONObject();
@@ -171,6 +221,23 @@ public class PptxImpl implements Pptx {
         } catch (IOException e) {
             logger.warn(e, "保存图片[{}]流数据时发生异常！", texturePaint.getContentType());
         }
+    }
+
+    private void getBorder(JSONArray elements, JSONObject element, XSLFSimpleShape xslfSimpleShape) {
+        if (xslfSimpleShape.getLineDash() == null)
+            return;
+
+        int width = numeric.toInt(xslfSimpleShape.getLineWidth() * 96 / 72);
+        if (width <= 0)
+            return;
+
+        JSONObject object = new JSONObject();
+        object.putAll(element);
+        object.put("type", "border");
+        object.put("color", parserHelper.toHex(xslfSimpleShape.getLineColor()));
+        object.put("dash", xslfSimpleShape.getLineDash().name().toLowerCase());
+        object.put("border", width);
+        elements.add(object);
     }
 
     private void screenshot(JSONObject object, XSLFShape xslfShape, StreamWriter streamWriter) {
