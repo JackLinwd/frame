@@ -39,4 +39,13 @@ public interface Validator {
      * @return 如果符合则返回true；否则返回false。
      */
     boolean isMatchRegex(String regex, String string);
+
+    /**
+     * 验证byte数组是否以指定byte数组开头。
+     *
+     * @param bytes  byte数组。
+     * @param prefix byte开头。
+     * @return 如果是则返回true，否则返回false。
+     */
+    boolean startsWith(byte[] bytes, byte[] prefix);
 }

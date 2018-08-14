@@ -28,8 +28,8 @@ public class ValidatorImpl implements Validator {
         if (object.getClass().isArray())
             return Array.getLength(object) == 0;
 
-        if(object instanceof Iterable)
-            return !((Iterable<?>)object).iterator().hasNext();
+        if (object instanceof Iterable)
+            return !((Iterable<?>) object).iterator().hasNext();
 
         if (object instanceof Map)
             return ((Map<?, ?>) object).isEmpty();
@@ -54,5 +54,17 @@ public class ValidatorImpl implements Validator {
 
     private Pattern getPattern(String regex) {
         return patterns.computeIfAbsent(regex, Pattern::compile);
+    }
+
+    @Override
+    public boolean startsWith(byte[] bytes, byte[] prefix) {
+        if (isEmpty(bytes) || isEmpty(prefix) || bytes.length < prefix.length)
+            return false;
+
+        for (int i = 0; i < prefix.length; i++)
+            if (bytes[i] != prefix[i])
+                return false;
+
+        return true;
     }
 }

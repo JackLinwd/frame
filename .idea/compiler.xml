@@ -1,121 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
-    <wildcardResourcePatterns>
-      <entry name="!?*.java" />
-      <entry name="!?*.form" />
-      <entry name="!?*.class" />
-      <entry name="!?*.groovy" />
-      <entry name="!?*.scala" />
-      <entry name="!?*.flex" />
-      <entry name="!?*.kt" />
-      <entry name="!?*.clj" />
-      <entry name="!?*.aj" />
-    </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-core" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-core" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-dao" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-dao" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-ctrl" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-ctrl" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-ctrl-http" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-ctrl-http" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-ctrl-socket" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-ctrl-socket" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-script" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-script" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-hadoop" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-hadoop" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-carousel" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="frame-carousel" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-web" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+        <module name="frame-core" />
+        <module name="frame-core-test" />
+        <module name="frame-ctrl" />
+        <module name="frame-ctrl-http" />
+        <module name="frame-ctrl-socket" />
+        <module name="frame-ctrl-test" />
+        <module name="frame-dao" />
+        <module name="frame-dao-test" />
+        <module name="frame-hadoop" />
+        <module name="frame-script" />
         <module name="frame-web" />
       </profile>
-      <profile default="false" name="Annotation profile for frame-core-test" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-core-test" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-dao-test" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-dao-test" />
-      </profile>
-      <profile default="false" name="Annotation profile for frame-ctrl-test" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="frame-ctrl-test" />
-      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="frame" target="1.8" />
-      <module name="frame-carousel" target="1.8" />
-      <module name="frame-core" target="1.8" />
-      <module name="frame-core-test" target="1.8" />
-      <module name="frame-ctrl" target="1.8" />
-      <module name="frame-ctrl-http" target="1.8" />
-      <module name="frame-ctrl-socket" target="1.8" />
-      <module name="frame-ctrl-test" target="1.8" />
-      <module name="frame-dao" target="1.8" />
-      <module name="frame-dao-test" target="1.8" />
-      <module name="frame-hadoop" target="1.8" />
-      <module name="frame-script" target="1.8" />
-      <module name="frame-web" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
